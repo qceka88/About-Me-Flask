@@ -312,7 +312,12 @@ h6,
     color: #FFFFFF;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
-
+/*** My contacts Style ***/
+.my-contacts-style {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-auto-rows: 100px;
+}
 
 /*** My Skills Style ***/
 .my-skills-style {
