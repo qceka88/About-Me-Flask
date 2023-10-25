@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="/static/css/style.css" rel="stylesheet">
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -42,7 +43,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
 
 
     <!-- Navbar & Hero Start -->
@@ -64,7 +64,7 @@
                     <a href="#certificates" class="nav-item nav-link">Certificates</a>
                     <a href="#experience" class="nav-item nav-link">Experience</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a></div>
-                <a href="#chatbot" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">T-101
+                <a onclick="toggleForm()" class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">T-101
                     CHAT</a>
             </div>
         </nav>
@@ -76,12 +76,6 @@
                         <h1 class="text-white mb-4 animated slideInDown">Yanko Rashkov</h1>
                         <p class="text-white pb-3 animated slideInDown max">I`m a Software Developer. Welcome to my
                             portfolio! </p>
-                        {#                        <a href=""#}
-                        {#                           class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read#}
-                        {#                            More</a>#}
-                        {#                        <a href=""#}
-                        {#                           class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact#}
-                        {#                            Us</a>#}
                     </div>
                     <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
                          data-wow-delay="0.2s">
@@ -102,46 +96,20 @@
 
 
     <!-- ChatBot Start  -->
-  <!--  <div id="chatbot" class="container d-flex justify-content-center">
-        <div class="card mt-5">
-            <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
-                <i class="fas fa-chevron-left"></i>
-                <span class="pb-3">Live chat</span>
-                <i class="fas fa-times"></i>
-            </div>
-            <div class="d-flex flex-row p-3">
-                <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
-                     width="30" height="30">
-                <div class="chat ml-2 p-3">Hello and thankyou for visiting birdlymind. Please click the
-                    video above
-                </div>
-            </div>
 
-            <div class="d-flex flex-row p-3">
-                <div class="bg-white mr-2 p-3"><span
-                        class="text-muted">Hello and thankyou for visiting birdlynind.</span>
-                </div>
-                <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png"
-                     width="30" height="30">
-            </div>
 
-            <div class="d-flex flex-row p-3">
-                <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
-                     width="30" height="30">
-                <div class="myvideo ml-2"><img src="https://imgur.com/GOxU1jx.png" width="200"></div>
-            </div>
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <h3>Chat with us</h3>
 
-            <div class="d-flex flex-row p-3">
-                <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
-                     width="30" height="30">
-                <div class="chat ml-2 p-3"><span class="text-muted dot">. . .</span></div>
-            </div>
+            <label for="msg">Message</label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
 
-            <div class="form-group px-3">
-                <textarea class="form-control" rows="5" placeholder="Type your message"></textarea>
-            </div>
-        </div>
-    </div> -->
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
     <!--  ChatBot  End -->
 
     <!-- About Me Start -->
@@ -335,7 +303,6 @@
                 <h5 class="mb-5">-- My personal projects --</h5>
             </div>
             <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
-
                 <div class="owl-carousel testimonial-carousel wow fadeInUp">
                     <div class="testimonial-item rounded p-4">
                         <div class="bg-light rounded">
@@ -475,7 +442,8 @@
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
                         <a href="/static/img/certificates/PythonWebFrameworks.jpeg">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonWebFrameworks.jpeg"
+                            <img class="feature-item rounded"
+                                 src="/static/img/certificates/PythonWebFrameworks.jpeg"
                                  style="width: 140px; height: 200px;" alt="CloudAndContainers">
                             <h5 class="mt-4 mb-3">Cloud and Containers</h5>
                         </a>
@@ -854,6 +822,10 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+
+    <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
+
+
 </div>
 
 <!-- JavaScript Libraries -->

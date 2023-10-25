@@ -4,6 +4,8 @@
     --secondary: #8F12FD;
     --light: #F0F6FF;
     --dark: #262B47;
+    --gray: #ffffff;
+    --gray2: #ababab;
 }
 
 
@@ -241,7 +243,7 @@ h6,
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: #FFFFFF;
+        background: linear-gradient(to right, var(--gray), var(--gray2));
     }
 
     .sticky-top.navbar-light .navbar-nav .nav-link::before {
@@ -312,10 +314,11 @@ h6,
     color: #FFFFFF;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
+
 /*** My contacts Style ***/
 .my-footer-style {
     display: grid;
-    grid-template-columns: repeat(auto-fit,100px);
+    grid-template-columns: repeat(auto-fit, 100px);
     grid-auto-rows: 10px;
     grid-gap: 50px;
 }
@@ -335,6 +338,7 @@ h6,
     grid-auto-rows: 15px;
     grid-gap: 30px;
 }
+
 /*** About me projects Style ***/
 .my-start2-style {
     display: grid;
@@ -342,6 +346,7 @@ h6,
     grid-auto-rows: 15px;
     grid-gap: 25px;
 }
+
 /*** Screenshot ***/
 .screenshot-carousel {
     position: relative;
@@ -528,51 +533,80 @@ h6,
 }
 
 /*** Chat ***/
-/***
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-body{
-	background: #EEEEEE;
-	font-family: 'Roboto', sans-serif;
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  padding:10px 40px;
+  background-color: #04AA6D;
+  color: #c45c5c;
+  font-size:17px;
+  max-width:300px;
+  border-radius:20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
 }
-.card{
-	width: 300px;
-	border: none;
-	border-radius: 15px;
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+
 }
-.adiv{
-	background: #04CB28;
-	border-radius: 15px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	font-size: 12px;
-	height: 46px;
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  border-radius:20px;
+  background-color: #b2b2b2;
+  color:#777;
 }
-.chat{
-	border: none;
-	background: #E2FFE8;
-	font-size: 10px;
-	border-radius: 20px;
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  border-radius:20px;
+  background: #ddd;
+  resize: none;
+  min-height: 200px;
+  color:#777;
 }
-.bg-white{
-	border: 1px solid #E7E7E9;
-	font-size: 10px;
-	border-radius: 20px;
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
 }
-.myvideo img{
-	border-radius: 20px
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+   font-size:17px;
+  padding: 10px 20px;
+  border: none;
+  border-radius:20px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
 }
-.dot{
-	font-weight: bold;
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #1974D2;
 }
-.form-control{
-	border-radius: 12px;
-	border: 1px solid #F0F0F0;
-	font-size: 8px;
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 0.8;
 }
-.form-control:focus{
-	box-shadow: none;
-	}
-.form-control::placeholder{
-	font-size: 8px;
-	color: #C4C4C4;
-} ***/
