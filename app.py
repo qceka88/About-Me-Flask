@@ -20,7 +20,7 @@ information = """
 """
 
 test_context = {
-    "CV": ["/static/pdf/Yanko_CV.pdf", 1],
+    "CV": "/static/pdf/Yanko_CV.pdf",
     "personal_information": information,
 }
 
