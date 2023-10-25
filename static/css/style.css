@@ -135,7 +135,7 @@ h6,
 .back-to-top {
     position: fixed;
     display: none;
-    right: 45px;
+    right: 80px;
     bottom: 45px;
     z-index: 99;
     border: none;
@@ -166,7 +166,7 @@ h6,
     transform: translateX(-50%);
     border: 10px solid;
     border-color: var(--light) transparent transparent transparent;
-    transition: .5s;
+    transition: .1s;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
