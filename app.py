@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.views import View
 
 app = Flask(__name__,
@@ -25,23 +25,37 @@ test_context = {
 }
 
 
+class MyDevice:
+    def device_detect(self):
+        user_agent = request.headers.get("User-Agent")
+
+        if "iphone" in user_agent.lower() or 'android' in user_agent.lower():
+            return True
+
+        return False
+
+
 class MyTime:
 
     def active_coding_time(self):
         start_date = datetime(year=2022, month=5, day=7, hour=10, minute=0, second=0, microsecond=0)
         today = datetime.now()
         my_time = relativedelta(today, start_date)
+
         return {"years": my_time.years, "months": my_time.months, "days": my_time.days}
 
 
-class IndexView(View, MyTime):
+class IndexView(View, MyDevice, MyTime):
+    methods = ['GET', 'POST']
 
     def __init__(self, some_context, template):
         self.some_context = some_context
         self.template = template
 
     def dispatch_request(self):
+        self.some_context['mobile_device'] = self.device_detect()
         self.some_context.update(self.active_coding_time())
+
         return render_template(self.template, **self.some_context)
 
 
