@@ -64,7 +64,8 @@
                     <a href="#certificates" class="nav-item nav-link">Certificates</a>
                     <a href="#experience" class="nav-item nav-link">Experience</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a></div>
-                <a onclick="toggleForm()" class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">T-101
+                <a onclick="toggleForm()"
+                   class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">T-101
                     CHAT</a>
             </div>
         </nav>
@@ -96,18 +97,16 @@
 
 
     <!-- ChatBot Start  -->
+    <div class="chat-popup form-container" id="myForm">
+        <form action="/action_page.php">
+            <i class="fa-solid fa-chalkboard-user text-primary-gradient"></i>
+            <h3 class="text-primary-gradient">Under Construction</h3>
+            <h3 class="text-primary-gradient">T-101 Chat</h3>
 
-
-    <div class="chat-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <i class="fa-solid fa-chalkboard-user"></i>
-            <h3>Chat with us</h3>
-
-            <label for="msg">Message</label>
+            <label class="text-primary-gradient" for="msg">Message</label>
             <textarea placeholder="Type message.." name="msg" required></textarea>
 
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="submit" class="btn btn-primary-gradient rounded-pill ">Send</button>
         </form>
     </div>
     <!--  ChatBot  End -->
@@ -153,8 +152,8 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ CV }}" target="_blank"
-                       class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"><i
+                    <a onclick="window.open('{{ CV }}','_blank');" href="{{ CV }}" download=""
+                       class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"  ><i
                             class="fa fa-download"></i> Download CV</a>
                 </div>
                 <div class="col-lg-6">
@@ -441,9 +440,8 @@
             <div class="row gy-5 gx-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg">
-                            <img class="feature-item rounded"
-                                 src="/static/img/certificates/PythonWebFrameworks.jpeg"
+                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg" target="_blank">
+                            <img class="feature-item rounded" src="/static/img/certificates/PythonWebFrameworks.jpeg"
                                  style="width: 140px; height: 200px;" alt="CloudAndContainers">
                             <h5 class="mt-4 mb-3">Cloud and Containers</h5>
                         </a>
@@ -452,7 +450,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg">
+                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonWebFrameworks.jpeg"
                                  style="width: 140px; height: 200px;" alt="django">
                             <h5 class="mt-4 mb-3">Python Web Frameworks</h5>
@@ -464,7 +462,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebBasic.jpeg">
+                        <a href="/static/img/certificates/PythonWebBasic.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonWebBasic.jpeg"
                                  style="width: 140px; height: 200px;"
                                  alt="django basics">
@@ -476,8 +474,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonOOP.jpeg">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4" >
+                        <a href="/static/img/certificates/PythonOOP.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonOOP.jpeg"
                                  style="width: 140px; height: 200px;"
                                  alt="python oop">
@@ -490,7 +488,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonAdvanced.jpeg">
+                        <a href="/static/img/certificates/PythonAdvanced.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonAdvanced.jpeg"
                                  style="width: 140px; height: 200px;"
                                  alt="python advanced">
@@ -503,7 +501,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonFundamentals.jpeg">
+                        <a href="/static/img/certificates/PythonFundamentals.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonFundamentals.jpeg"
                                  style="width: 140px; height: 200px;"
                                  alt="python fundamentals">
@@ -516,7 +514,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonBasic.jpeg">
+                        <a href="/static/img/certificates/PythonBasic.jpeg" target="_blank">
                             <img class="feature-item rounded" src="/static/img/certificates/PythonFundamentals.jpeg"
                                  style="width: 140px; height: 200px;"
                                  alt="python basic">

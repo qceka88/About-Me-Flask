@@ -4,7 +4,7 @@ services:
 
   web-app:
     image: yankoaboutmecr.azurecr.io/about_me:1
-    container_name: my-portfolio
+    container_name: my-portfolio-yanko
     build:
       dockerfile: Dockerfile
     ports:
