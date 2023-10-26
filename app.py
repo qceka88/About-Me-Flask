@@ -25,6 +25,10 @@ test_context = {
 }
 
 
+# TODO: Fix mobile version
+# TODO: Eventually add Modal to certificate images (Find how to modal more than one picture)
+# TODO: Implement chatbot
+
 class MyDevice:
     def device_detect(self):
         user_agent = request.headers.get("User-Agent")
