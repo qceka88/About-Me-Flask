@@ -264,9 +264,9 @@ h6,
 .hero-header {
     margin-bottom: 6rem;
     padding: 16rem 0 0 0;
-    background: url(../img/bg-circle.png),
-    url(../img/bg-triangle.png),
-    url(../img/bg-bottom.png),
+    background: url(../img/body/bg-circle.png),
+    url(../img/body/bg-triangle.png),
+    url(../img/body/bg-bottom.png),
     linear-gradient(to bottom right, var(--primary), var(--secondary));
     background-position: left 0px top 0px,
     right 0px top 50%,
@@ -462,9 +462,9 @@ h6,
 .footer {
     margin-top: 6rem;
     padding-top: 9rem;
-    background: url(../img/bg-circle.png),
-    url(../img/bg-triangle.png),
-    url(../img/bg-top.png),
+    background: url(../img/body/bg-circle.png),
+    url(../img/body/bg-triangle.png),
+    url(../img/body/bg-top.png),
     linear-gradient(to bottom right, var(--primary), var(--secondary));
     background-position: left 0px bottom 0px,
     right 0px top 50%,

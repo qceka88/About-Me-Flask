@@ -8,8 +8,9 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+
     <!-- Favicon -->
-    <link href="/static/img/favicon.ico" rel="icon">
+    <link href="{{ url_for('static', filename='img/body/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +23,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -50,6 +50,7 @@
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
                 <h1 class="m-0">Portfolio</h1>
+
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -64,6 +65,7 @@
                     <a href="#certificates" class="nav-item nav-link">Certificates</a>
                     <a href="#experience" class="nav-item nav-link">Experience</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a></div>
+                {{ request.user_agent }}
                 <a onclick="toggleForm()"
                    class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">T-101
                     CHAT</a>
@@ -81,12 +83,20 @@
                     <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
                          data-wow-delay="0.2s">
                         <div id="screenshot-carousel" class="owl-carousel screenshot-carousel">
-                            <img class="img" src="/static/img/laptop/laptop-python-logo.png" alt="python">
-                            <img class="img" src="/static/img/laptop/laptop-django-logo.png" alt="django">
-                            <img class="img" src="/static/img/laptop/laptop-docker-logo.png" alt="docker">
-                            <img class="img" src="/static/img/laptop/laptop-postgre-sql-logo.png" alt="postgresql">
-                            <img class="img" src="/static/img/laptop/laptop-terraform-logo.png" alt="terraform">
-                            <img class="img" src="/static/img/laptop/laptop-github-logo.png" alt="github">
+                            <img class="img" src="{{ url_for('static', filename='img/laptop/laptop-python-logo.png') }}"
+                                 alt="python">
+                            <img class="img" src="{{ url_for('static', filename='img/laptop/laptop-django-logo.png') }}"
+                                 alt="django">
+                            <img class="img" src="{{ url_for('static', filename='img/laptop/laptop-docker-logo.png') }}"
+                                 alt="docker">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-postgre-sql-logo.png') }}"
+                                 alt="postgresql">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-terraform-logo.png') }}"
+                                 alt="terraform">
+                            <img class="img" src="{{ url_for('static', filename='img/laptop/laptop-github-logo.png') }}"
+                                 alt="github">
                         </div>
                     </div>
                 </div>
@@ -153,12 +163,12 @@
                         </div>
                     </div>
                     <a onclick="window.open('{{ CV }}','_blank');" href="{{ CV }}" download=""
-                       class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"  ><i
+                       class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"><i
                             class="fa fa-download"></i> Download CV</a>
                 </div>
                 <div class="col-lg-6">
                     <img class="img-fluid wow fadeInUp rounded-circle" width="500" height="500" data-wow-delay="0.5s"
-                         src="/static/img/my_picture.png" alt="my-myself">
+                         src="{{ url_for('static', filename='img/body/my_picture.png') }}" alt="my-myself">
                 </div>
             </div>
         </div>
@@ -176,7 +186,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="https://www.python.org/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-python.png" width="150" height="150" alt="python">
+                            <img src="{{ url_for('static', filename='img/skills/skills-python.png') }}" width="150"
+                                 height="150" alt="python">
                         </div>
                     </a>
                     <h5 class="mb-3">Python</h5>
@@ -184,7 +195,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://www.djangoproject.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-django.png" width="150" height="150" alt="django">
+                            <img src="{{ url_for('static', filename='img/skills/skills-django.png') }}" width="150"
+                                 height="150" alt="django">
                         </div>
                     </a>
                     <h5 class="mb-3">Django</h5>
@@ -192,7 +204,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <a href="https://www.docker.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-docker.png" width="150" height="150" alt="docker">
+                            <img src="{{ url_for('static', filename='img/skills/skills-docker.png') }}" width="150"
+                                 height="150" alt="docker">
                         </div>
                     </a>
                     <h5 class="mb-3">Docker</h5>
@@ -201,7 +214,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <a href="https://www.terraform.io/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-terraform.png" width="150" height="150" alt="terraform">
+                            <img src="{{ url_for('static', filename='img/skills/skills-terraform.png') }}" width="150"
+                                 height="150" alt="terraform">
                         </div>
                     </a>
                     <h5 class="mb-3">Terraform</h5>
@@ -209,7 +223,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <a href="https://www.postgresql.org/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-postgre-sql.png" width="150" height="150"
+                            <img src="{{ url_for('static', filename='img/skills/skills-postgre-sql.png') }}" width="150"
+                                 height="150"
                                  alt="postgresql">
                         </div>
                     </a>
@@ -218,7 +233,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <a href="https://github.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-github.png" width="150" height="150" alt="github">
+                            <img src="{{ url_for('static', filename='img/skills/skills-github.png') }}" width="150"
+                                 height="150" alt="github">
                         </div>
                     </a>
                     <h5 class="mb-3">GitHub</h5>
@@ -226,7 +242,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="https://azure.microsoft.com/en-us" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-azure.png" width="150" height="150" alt="azure">
+                            <img src="{{ url_for('static', filename='img/skills/skills-azure.png') }}" width="150"
+                                 height="150" alt="azure">
                         </div>
                     </a>
                     <h5 class="mb-3">Azure</h5>
@@ -234,7 +251,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <a href="https://html.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-html.png" width="150" height="150" alt="html">
+                            <img src="{{ url_for('static', filename='img/skills/skills-html.png') }}" width="150"
+                                 height="150" alt="html">
                         </div>
                     </a>
                     <h5 class="mb-3">HTML</h5>
@@ -242,7 +260,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-css.png" width="150" height="150" alt="css">
+                            <img src="{{ url_for('static', filename='img/skills/skills-css.png') }}" width="150"
+                                 height="150" alt="css">
                         </div>
                     </a>
                     <h5 class="mb-3">CSS</h5>
@@ -250,7 +269,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-flask.png" width="150" height="150" alt="flask">
+                            <img src="{{ url_for('static', filename='img/skills/skills-flask.png') }}" width="150"
+                                 height="150" alt="flask">
                         </div>
                     </a>
                     <h5 class="mb-3">Flask</h5>
@@ -258,7 +278,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <a href="https://www.linux.com/what-is-linux/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-linux.png" width="150" height="150" alt="linux">
+                            <img src="{{ url_for('static', filename='img/skills/skills-linux.png') }}" width="150"
+                                 height="150" alt="linux">
                         </div>
                     </a>
                     <h5 class="mb-3">Linux</h5>
@@ -266,7 +287,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <a href="https://grafana.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-grafana.png" width="150" height="150" alt="grafana">
+                            <img src="{{ url_for('static', filename='img/skills/skills-grafana.png') }}" width="150"
+                                 height="150" alt="grafana">
                         </div>
                     </a>
                     <h5 class="mb-3">Grafana</h5>
@@ -274,7 +296,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="https://prometheus.io/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-prometheus.png" width="150" height="150"
+                            <img src="{{ url_for('static', filename='img/skills/skills-prometheus.png') }}" width="150"
+                                 height="150"
                                  alt="prometheus">
                         </div>
                     </a>
@@ -283,7 +306,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a href="https://prometheus.io/docs/alerting/latest/alertmanager/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
-                            <img src="/static/img/skills/skills-alermanager.png" width="150" height="150"
+                            <img src="{{ url_for('static', filename='img/skills/skills-alertmanager.png') }}"
+                                 width="150" height="150"
                                  alt="alertmanager">
                         </div>
                     </a>
@@ -308,7 +332,8 @@
                             <div class="border-bottom p-4 mb-4">
                                 <h4 class="text-primary-gradient mb-1">MyMotoMadness</h4>
                                 <h1 class="mb-3">
-                                    <img src="/static/img/projects/mymotomadness.PNG" alt="MyMotoMadness">
+                                    <img src="{{ url_for('static', filename='img/projects/mymotomadness.PNG') }}"
+                                         alt="MyMotoMadness">
                                 </h1>
                                 <span>Web Project with Django. About selling offers. Users, registrations,
                                             CRUDs, groups, PMs, emails, admin panel, authorization.</span>
@@ -337,7 +362,8 @@
                             <div class="border-bottom p-4 mb-4">
                                 <h4 class="text-primary-gradient mb-1">About Me</h4>
                                 <h1 class="mb-3">
-                                    <img src="/static/img/projects/aboutme.PNG" alt="About Me">
+                                    <img src="{{ url_for('static', filename='img/projects/aboutme.PNG') }}"
+                                         alt="About Me">
                                 </h1>
                                 <span>Simple web project with Flask. It is web site with my portfolio to show
                                             my skills, certificates, experience, projects and interests.</span>
@@ -365,7 +391,7 @@
                             <div class="border-bottom p-4 mb-4">
                                 <h4 class="text-primary-gradient mb-1">Text From Image Translate</h4>
                                 <h1 class="mb-3">
-                                    <img src="/static/img/projects/imagetranslator.PNG"
+                                    <img src="{{ url_for('static', filename='img/projects/imagetranslator.PNG') }}"
                                          alt="imageTextTranslator">
                                 </h1>
                                 <span>Small project with Tkinter. It`s a app for extract and translate text from
@@ -394,7 +420,8 @@
                             <div class="border-bottom p-4 mb-4">
                                 <h4 class="text-primary-gradient mb-1">Fuel Calculator</h4>
                                 <h1 class="mb-3">
-                                    <img src="/static/img/projects/fuelcalculator.PNG" alt="fuel calculator">
+                                    <img src="{{ url_for('static', filename='img/projects/fuelcalculator.PNG') }}"
+                                         alt="fuel calculator">
                                 </h1>
                                 <span>My first project. Small project with Tkinter/BeautifulSoup.
                                             It is about calculating price of fuel based on distance,
@@ -440,8 +467,10 @@
             <div class="row gy-5 gx-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonWebFrameworks.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
                                  style="width: 140px; height: 200px;" alt="CloudAndContainers">
                             <h5 class="mt-4 mb-3">Cloud and Containers</h5>
                         </a>
@@ -450,8 +479,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebFrameworks.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonWebFrameworks.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
                                  style="width: 140px; height: 200px;" alt="django">
                             <h5 class="mt-4 mb-3">Python Web Frameworks</h5>
                         </a>
@@ -462,10 +493,13 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonWebBasic.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonWebBasic.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
                                  style="width: 140px; height: 200px;"
-                                 alt="django basics">
+                                 alt="django basics"
+                            >
                             <h5 class="mt-4 mb-3">Python Web Basics</h5>
                         </a>
                         <a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">Complete data
@@ -474,9 +508,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative bg-light pt-5 pb-4 px-4" >
-                        <a href="/static/img/certificates/PythonOOP.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonOOP.jpeg"
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a href="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}" target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
                                  style="width: 140px; height: 200px;"
                                  alt="python oop">
                             <h5 class="te mt-4 mb-3">Python OOP</h5>
@@ -488,8 +523,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonAdvanced.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonAdvanced.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
                                  style="width: 140px; height: 200px;"
                                  alt="python advanced">
                             <h5 class="te mt-4 mb-3">Python Advanced</h5>
@@ -501,8 +538,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonFundamentals.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonFundamentals.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
                                  style="width: 140px; height: 200px;"
                                  alt="python fundamentals">
                             <h5 class="te mt-4 mb-3">Python Fundamentals</h5>
@@ -514,8 +553,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a href="/static/img/certificates/PythonBasic.jpeg" target="_blank">
-                            <img class="feature-item rounded" src="/static/img/certificates/PythonFundamentals.jpeg"
+                        <a href="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded"
+                                 src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
                                  style="width: 140px; height: 200px;"
                                  alt="python basic">
                             <h5 class="te mt-4 mb-3">Python Basics</h5>
@@ -829,14 +870,14 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/wow/wow.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/counterup/counterup.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
 <!-- Template Javascript -->
-<script src="/static/js/main.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>
