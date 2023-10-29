@@ -27,8 +27,8 @@ test_context = {
 
 # TODO: Fix mobile version
 # TODO: Eventually add Modal to certificate images (Find how to modal more than one picture)
-# TODO: Implement chatbot
-
+# TODO: Implement chatbot - in progress
+# TODO: Change Clouds picture and link to certificate MOBILE/DESKTOP
 class MyDevice:
     def device_detect(self):
         user_agent = request.headers.get("User-Agent")
@@ -36,7 +36,7 @@ class MyDevice:
         if "iphone" in user_agent.lower() or 'android' in user_agent.lower():
             return True
 
-        return False
+        return True
 
 
 class MyTime:
