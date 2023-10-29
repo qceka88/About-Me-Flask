@@ -74,7 +74,7 @@
         items: 1
     });
 
-        // Screenshot carousel
+    // Screenshot carousel
     $(".screenshot-carousel-mobile").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -114,6 +114,7 @@
 
 })(jQuery);
 
+// Open/Close chat window
 function toggleForm() {
     var form = document.getElementById("MyChat");
     if (form.style.display === "none") {
@@ -122,3 +123,18 @@ function toggleForm() {
         form.style.display = "none";
     }
 }
+
+// For initial bot mesage
+function updateDateTime() {
+    // create a new `Date` object
+    const now = new Date();
+
+    // get the current date and time as a string
+    const currentDateTime = now.toLocaleString();
+
+    // update the `textContent` property of the `span` element with the `id` of `datetime`
+    document.querySelector('#datetime').textContent = currentDateTime;
+}
+
+// call the `updateDateTime` function every minute
+setInterval(updateDateTime, 60000);
