@@ -65,9 +65,10 @@
                     <a href="#experience" class="nav-item nav-link">Experience</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                     {% if mobile_device %}
-                        <a onclick="toggleForm()"
-                           class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 nav-item nav-link">
-                            T-101 CHAT</a>
+                        <button  onclick="toggleForm()"
+                                class="btn btn-secondary-gradient rounded-pill nav-item nav-link py-1 px-2">
+                            T-101 CHAT
+                        </button>
                     {% endif %}
                 </div>
                 {% if not mobile_device %}
@@ -151,7 +152,7 @@
 
 
     <!-- ChatBot Start  -->
-    <div class="chat-popup form-container" id="myForm">
+    <div class="chat-popup form-container" id="MyChat">
         <form action="/action_page.php">
             <i class="fa-solid fa-chalkboard-user text-primary-gradient"></i>
             <h3 class="text-primary-gradient">Under Construction</h3>

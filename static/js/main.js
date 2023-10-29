@@ -59,7 +59,7 @@
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
-        delay: 5,
+        delay: 10,
         time: 2000
     });
 
@@ -70,7 +70,7 @@
         smartSpeed: 1000,
         loop: true,
         dots: false,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 2500,
         items: 1
     });
 
@@ -115,7 +115,7 @@
 })(jQuery);
 
 function toggleForm() {
-    var form = document.getElementById("myForm");
+    var form = document.getElementById("MyChat");
     if (form.style.display === "none") {
         form.style.display = "block";
     } else {
