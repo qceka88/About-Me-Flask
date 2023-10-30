@@ -29,7 +29,8 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -153,12 +154,20 @@
 
 
     <!-- ChatBot Start  -->
-    <div class="message-box-popup bodies" id="MyChat">
+    <div class="message-box-popup" id="MyChat">
         <section class="message-box">
             <header class="msger-header">
                 <div class="msger-header-title justify-content-center d-inline-flex">
-                    <h5 class="text-primary-gradient"><i class="fa-solid fa-chalkboard-user "> T-101 </i></h5>
-                                        <button onclick="toggleForm()" class="btn btn-secondary-gradient rounded" style="text-align: right">X</button>
+                    <h5><i class="fa-solid fa-chalkboard-user px-1 me-5 pt-2 text-primary-gradient"></i></h5>
+                    <h4 class="text-primary-gradient px-5 pt-1">T-101 Chat</h4>
+                    {% if not mobile_device %}
+                        <button onclick="toggleForm()" class="btn btn-primary-gradient rounded-circle"
+                                style="left: 11%;">
+                            X
+                        </button>
+                    {% else %}
+                        <h3 onclick="toggleForm()" class="text-primary-gradient ">X</h3>
+                    {% endif %}
                 </div>
 
             </header>
@@ -167,16 +176,13 @@
                 <div class="msg left-msg">
                     <div class="msg-img"
                          style="background-image: url({{ url_for('static', filename='img/chat/bot_image.jpg') }})"></div>
-
                     <div class="msg-bubble">
                         <div class="msg-info">
                             <div class="msg-info-name">T-101</div>
-                            <span id="datetime">{{ textContent }}</span>
-                            <div class="msg-info-time">12:45</div>
+                            <span id="time-now" class="msg-info-time"></span>
                         </div>
-
                         <div class="msg-text">
-                            Hi, welcome to T-101! Go ahead and send me a message. 😄
+                            Hi, welcome! My name is T-101 and I`m trained to answer questions about Yanko.
                         </div>
                     </div>
                 </div>
@@ -184,8 +190,8 @@
             </main>
 
             <form class="msger-inputarea">
-                <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
-                <button type="submit" class="msger-send-btn">Send</button>
+                <input type="text" class="msger-input me-2" id="textInput" placeholder="Enter your message...">
+                <button type="submit" class="btn btn-primary-gradient rounded-pill">Send</button>
             </form>
         </section>
         <!-- partial -->
@@ -248,17 +254,8 @@
             function get(selector, root = document) {
                 return root.querySelector(selector);
             }
-
-            function formatDate(date) {
-                const h = "0" + date.getHours();
-                const m = "0" + date.getMinutes();
-
-                return `${h.slice(-2)}:${m.slice(-2)}`;
-            }
-
         </script>
     </div>
-
     <!--  ChatBot  End -->
 
     <!-- About Me Start -->
@@ -748,6 +745,7 @@
             <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="text-primary-gradient fw-medium">Certificates</h1>
                 <h5 class="mb-5">-- Find my certificates --</h5>
+                TODO: Fix cloud and containers certificate
             </div>
             {% if mobile_device %}
                 <div class="my-certificates-mobile-style justify-content-center">
@@ -1181,14 +1179,14 @@
                             with you.</p>
                         <div class="row gy-5 gx-5 justify-content-center">
                             <div class="col-md-3">
-                                <i class="fa fa-user fa-2x me-1 text-primary-gradient"></i>
+                                <i class="fa fa-user fa-2x me-2 text-primary-gradient"></i>
                                 <div class="d-inline-block">
                                     Name:
                                     <h5>Yanko Rashkov</h5>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <i class="fa fa-map-marker-alt  fa-2x me-1 text-secondary-gradient"></i>
+                                <i class="fa fa-map-marker-alt  fa-2x me-2 text-secondary-gradient"></i>
                                 <div class="d-inline-block">
                                     Location:
                                     <h5>Varna, Bulgria</h5>
@@ -1289,6 +1287,21 @@
 
 <!-- Template Javascript -->
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/lib/wow/wow.min.js"></script>
+<script src="/static/lib/easing/easing.min.js"></script>
+<script src="/static/lib/waypoints/waypoints.min.js"></script>
+<script src="/static/lib/counterup/counterup.min.js"></script>
+<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="/static/js/main.js"></script>
+
 </body>
+
 
 </html>

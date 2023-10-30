@@ -124,17 +124,21 @@ function toggleForm() {
     }
 }
 
-// For initial bot mesage
-function updateDateTime() {
-    // create a new `Date` object
-    const now = new Date();
+// For initial bot message
 
-    // get the current date and time as a string
-    const currentDateTime = now.toLocaleString();
 
-    // update the `textContent` property of the `span` element with the `id` of `datetime`
-    document.querySelector('#datetime').textContent = currentDateTime;
+function getCurrentDateAndTime() {
+    const dateTime = new Date();
+    return formatDate(dateTime);
 }
 
-// call the `updateDateTime` function every minute
-setInterval(updateDateTime, 60000);
+const dateDisplay = document.getElementById("time-now");
+dateDisplay.innerHTML = getCurrentDateAndTime();
+
+function formatDate(date) {
+    const h = "0" + date.getHours();
+    const m = "0" + date.getMinutes();
+
+    return `${h.slice(-2)}:${m.slice(-2)}`;
+}
+
