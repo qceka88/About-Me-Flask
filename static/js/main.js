@@ -110,8 +110,6 @@
             }
         }
     });
-
-
 })(jQuery);
 
 // Open/Close chat window
@@ -124,9 +122,7 @@ function toggleForm() {
     }
 }
 
-// For initial bot message
-
-
+// For initial bot message take current time.
 function getCurrentDateAndTime() {
     const dateTime = new Date();
     return formatDate(dateTime);
@@ -135,6 +131,7 @@ function getCurrentDateAndTime() {
 const dateDisplay = document.getElementById("time-now");
 dateDisplay.innerHTML = getCurrentDateAndTime();
 
+// Format hours for chat messages
 function formatDate(date) {
     const h = "0" + date.getHours();
     const m = "0" + date.getMinutes();
