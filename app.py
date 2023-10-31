@@ -4,6 +4,8 @@ from dateutil.relativedelta import relativedelta
 from flask import Flask, render_template, request
 from flask.views import View
 
+from ChatBot.chat_bot_actions import BotResponse
+
 app = Flask(__name__,
             static_url_path='/static',
             static_folder='static',
@@ -61,8 +63,11 @@ class IndexView(View, MyDevice, MyTime):
 
         return render_template(self.template, **self.some_context)
 
-
 app.add_url_rule('/', view_func=IndexView.as_view("class_view", test_context, "index.html"))
-
+@app.route("/get")
+def get_bot_response():
+    user_text = request.args.get('msg')
+    bot = BotResponse()
+    return bot.chatbot_response(user_text)
 if __name__ == '__main__':
     app.run(debug=True)
