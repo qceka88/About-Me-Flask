@@ -7,31 +7,32 @@ import numpy as np
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
-nltk.download('popular')
-nltk.download('omw-1.4')
-nltk.download("punkt")
-nltk.download("wordnet")
-lemmatizer = WordNetLemmatizer()
+
 
 
 class TrainedData:
 
     def __init__(self):
+        nltk.download('popular')
+        nltk.download('omw-1.4')
+        nltk.download("punkt")
+        nltk.download("wordnet")
+        self.lemmatizer = WordNetLemmatizer()
         self.model = load_model('model.h5')
-        self.intents = json.loads(open('data.json').read())
+        self.intents = json.loads(open('training_source.json').read())
         self.words = pickle.load(open('texts.pkl', 'rb'))
         self.labels = pickle.load(open('labels.pkl', 'rb'))
 
 
-class Lemmatizer:
+class Lemmatizer(TrainedData):
 
     def clean_up_sentence(self, sentence):
         sentence_words = nltk.word_tokenize(sentence)
-        sentence_words = [lemmatizer.lemmatize(w.lower()) for w in sentence_words]
+        sentence_words = [self.lemmatizer.lemmatize(w.lower()) for w in sentence_words]
         return sentence_words
 
 
-class BOW(TrainedData, Lemmatizer):
+class BOW(Lemmatizer):
 
     def bag_of_words(self, sentence):
         sentence_words = self.clean_up_sentence(sentence)
@@ -80,3 +81,6 @@ class BotResponse(GetResponse, Predict):
         result = self.get_response(intents)
 
         return result
+
+
+bot = BotResponse()
