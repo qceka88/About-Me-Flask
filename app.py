@@ -1,10 +1,24 @@
+import json
+import pickle
+import random
+
+import nltk
+import numpy as np
 from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
 from flask import Flask, render_template, request
 from flask.views import View
 
-from ChatBot.chat_bot_actions import BotResponse, TrainedData, bot
+from keras.models import load_model
+from nltk.stem import WordNetLemmatizer
+
+from ChatBot.chat_bot_actions import BotResponse, TrainedData
+
+nltk.download('popular')
+nltk.download('omw-1.4')
+nltk.download("punkt")
+nltk.download("wordnet")
 
 app = Flask(__name__,
             static_url_path='/static',
@@ -29,7 +43,14 @@ test_context = {
 
 # TODO: Eventually add Modal to certificate images (Find how to modal more than one picture)
 # TODO: Implement chatbot - in progress
-# TODO: Change Clouds picture and link to certificate MOBILE/DESKTOP
+
+
+model = load_model('ChatBot/model.h5')
+intents = json.loads(open('ChatBot/training_source.json').read())
+words = pickle.load(open('ChatBot/texts.pkl', 'rb'))
+labels = pickle.load(open('ChatBot/labels.pkl', 'rb'))
+
+bot = BotResponse(model, intents, words, labels)
 class MyDevice:
     def device_detect(self):
         user_agent = request.headers.get("User-Agent")

@@ -68,6 +68,11 @@
          "patterns": [],
          "responses": ["Loading hospital details"],
          "context": [""]
+        },
+      {"tag": "beer",
+         "patterns": ["Do Yanko drink beers?", "Does he drink beer well?", "Is Yanko drink beer?"],
+         "responses": ["Yes, he drink beer.", "Yanko love`s beer!", "Also and rakia!"],
+         "context": ["yanko_drink_beer"]
         }
    ]
 }

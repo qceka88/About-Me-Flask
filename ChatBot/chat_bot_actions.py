@@ -9,19 +9,14 @@ from nltk.stem import WordNetLemmatizer
 
 
 
-
 class TrainedData:
 
-    def __init__(self):
-        nltk.download('popular')
-        nltk.download('omw-1.4')
-        nltk.download("punkt")
-        nltk.download("wordnet")
+    def __init__(self, model, intents, words, labels):
         self.lemmatizer = WordNetLemmatizer()
-        self.model = load_model('model.h5')
-        self.intents = json.loads(open('training_source.json').read())
-        self.words = pickle.load(open('texts.pkl', 'rb'))
-        self.labels = pickle.load(open('labels.pkl', 'rb'))
+        self.model = model
+        self.intents = intents
+        self.words = words
+        self.labels = labels
 
 
 class Lemmatizer(TrainedData):
@@ -49,7 +44,7 @@ class Predict(BOW):
 
     def prediction(self, sentence):
         p = self.bag_of_words(sentence)
-        predict_result = self.model.predict(np.array(p))[0]
+        predict_result = self.model.predict(np.array([p]))[0]
         result = [[i, r] for i, r in enumerate(predict_result) if r > self.ERROR_THRESHOLD]
         result.sort(key=lambda x: x[1], reverse=True)
 
@@ -79,8 +74,6 @@ class BotResponse(GetResponse, Predict):
     def chatbot_response(self, received_message):
         intents = self.prediction(received_message)
         result = self.get_response(intents)
-
         return result
 
 
-bot = BotResponse()

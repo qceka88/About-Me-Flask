@@ -14,14 +14,13 @@ import tensorflow as tf
 
 class Data:
 
-    def __init__(self):
+    def __init__(self, source_file):
         self.words = []
         self.labels = []
         self.documents = []
         self.training = []
         self.ignore_symbols = ["?", "!"]
-        self.source_file = open("training_source.json").read()
-        self.intents = json.loads(self.source_file)
+        self.intents = json.loads(source_file)
         self.model = None
 
 
@@ -93,9 +92,7 @@ class Model(Trainer):
 
     def create_model(self):
         self.model = Sequential()
-        self.model.add(Dense(256, input_shape=(len(self.train_x[0]),), activation='relu'))
-        self.model.add(Dropout(0.5))
-        self.model.add(Dense(128, activation='relu'))
+        self.model.add(Dense(128, input_shape=(len(self.train_x[0]),), activation='relu'))
         self.model.add(Dropout(0.5))
         self.model.add(Dense(64, activation='relu'))
         self.model.add(Dropout(0.5))
@@ -115,8 +112,9 @@ class FitModel(Model):
     def save_model(self):
         self.model.save('model.h5', self.hist)
 
-data = Data()
-model = FitModel()
+data_file = open("training_source.json").read()
+
+model = FitModel(data_file)
 model.process_initial_data_from_source()
 model.lemmatize_and_lower_words()
 model.dump_words_and_classes()
