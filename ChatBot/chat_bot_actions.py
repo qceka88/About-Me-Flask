@@ -1,12 +1,8 @@
-import json
-import pickle
 import random
 
 import nltk
 import numpy as np
-from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
-
 
 
 class TrainedData:
@@ -75,5 +71,3 @@ class BotResponse(GetResponse, Predict):
         intents = self.prediction(received_message)
         result = self.get_response(intents)
         return result
-
-

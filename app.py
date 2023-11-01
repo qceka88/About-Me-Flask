@@ -92,4 +92,5 @@ def get_bot_response():
     return bot.chatbot_response(user_text)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,
+            port=5001)
