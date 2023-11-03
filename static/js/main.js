@@ -32,8 +32,8 @@
             event.preventDefault();
 
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1000, 'easeInOutExpo');
+                scrollTop: $(this.hash).offset().top - 35
+            }, 250, 'easeInOutExpo');
 
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -52,7 +52,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1000, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 500, 'easeInOutExpo');
         return false;
     });
 
@@ -113,12 +113,13 @@
 })(jQuery);
 
 // Open/Close chat window
+
 function toggleForm() {
-    var form = document.getElementById("MyChat");
-    if (form.style.display === "none") {
-        form.style.display = "block";
-    } else {
+    var form = document.getElementById("mychat");
+    if (form.style.display === "block") {
         form.style.display = "none";
+    } else {
+        form.style.display = "block";
     }
 }
 
@@ -138,4 +139,62 @@ function formatDate(date) {
 
     return `${h.slice(-2)}:${m.slice(-2)}`;
 }
+// Chatbot get message and return response
+function chatBot(){
+            const msgerForm = get(".msger-inputarea");
+            const msgerInput = get(".msger-input");
+            const msgerChat = get(".msger-chat");
 
+            const BOT_IMG = '/static/img/chat/bot_image.jpg';
+            const PERSON_IMG = '/static/img/chat/user_picture.jpg';
+            const BOT_NAME = "    T-101";
+            const PERSON_NAME = "You";
+
+            msgerForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                const msgText = msgerInput.value;
+                if (!msgText) return;
+
+                appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+                msgerInput.value = "";
+                botResponse(msgText);
+            });
+
+            function appendMessage(name, img, side, text) {
+                //   Simple solution for small apps
+                const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+
+                msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+                msgerChat.scrollTop += 500;
+            }
+
+            function botResponse(rawText) {
+
+                // Bot Response
+                $.get("/get", {msg: rawText}).done(function (data) {
+                    console.log(rawText);
+                    console.log(data);
+                    const msgText = data;
+                    appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+                });
+            }
+
+            // Utils
+            function get(selector, root = document) {
+                return root.querySelector(selector);
+            }
+}
