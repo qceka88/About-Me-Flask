@@ -139,62 +139,62 @@ function formatDate(date) {
 
     return `${h.slice(-2)}:${m.slice(-2)}`;
 }
+
 // Chatbot get message and return response
-function chatBot(){
-            const msgerForm = get(".msger-inputarea");
-            const msgerInput = get(".msger-input");
-            const msgerChat = get(".msger-chat");
+function chatBot() {
 
-            const BOT_IMG = '/static/img/chat/bot_image.jpg';
-            const PERSON_IMG = '/static/img/chat/user_picture.jpg';
-            const BOT_NAME = "    T-101";
-            const PERSON_NAME = "You";
+    const messengerForm = get(".messageBox-inputArea");
+    const messengerInput = get(".messageBox-input");
+    const messengerChat = get(".messageBox-chat");
 
-            msgerForm.addEventListener("submit", event => {
-                event.preventDefault();
+    const BOT_IMG = '/static/img/chat/bot_image.jpg';
+    const PERSON_IMG = '/static/img/chat/user_picture.jpg';
+    const BOT_NAME = "    T-101";
+    const PERSON_NAME = "You";
 
-                const msgText = msgerInput.value;
-                if (!msgText) return;
+    messengerForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-                appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
-                msgerInput.value = "";
-                botResponse(msgText);
-            });
+        const messageText = messengerInput.value;
+        if (!messageText) return;
 
-            function appendMessage(name, img, side, text) {
-                //   Simple solution for small apps
-                const msgHTML = `
-<div class="msg ${side}-msg">
-  <div class="msg-img" style="background-image: url(${img})"></div>
+        appendMessage(PERSON_NAME, PERSON_IMG, "visitor", messageText);
+        messengerInput.value = "";
+        botResponse(messageText);
+    });
 
-  <div class="msg-bubble">
-    <div class="msg-info">
-      <div class="msg-info-name">${name}</div>
-      <div class="msg-info-time">${formatDate(new Date())}</div>
+    function appendMessage(name, image, side, text) {
+        //   Simple solution for small apps
+        const messageHTML = `
+<div class="message ${side}-message">
+  <div class="message-image" style="background-image: url(${image})"></div>
+
+  <div class="message-bubble">
+    <div class="message-info">
+      <div class="message-info-name">${name}</div>
+      <div class="message-info-time">${formatDate(new Date())}</div>
     </div>
-
-    <div class="msg-text">${text}</div>
+    <div class="message-text">${text}</div>
   </div>
 </div>
 `;
 
-                msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-                msgerChat.scrollTop += 500;
-            }
+        messengerChat.insertAdjacentHTML("beforeend", messageHTML);
+        messengerChat.scrollTop += 500;
+    }
 
-            function botResponse(rawText) {
+    function botResponse(rawText) {
 
-                // Bot Response
-                $.get("/get", {msg: rawText}).done(function (data) {
-                    console.log(rawText);
-                    console.log(data);
-                    const msgText = data;
-                    appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-                });
-            }
+        // Bot Response
+        $.get("/get", {"message": rawText}).done(function (data) {
+            const messageText = data;
+            console.log(messageText)
+            appendMessage(BOT_NAME, BOT_IMG, "chat-bot", messageText);
+        });
+    }
 
-            // Utils
-            function get(selector, root = document) {
-                return root.querySelector(selector);
-            }
+    // Utils
+    function get(selector, root = document) {
+        return root.querySelector(selector);
+    }
 }

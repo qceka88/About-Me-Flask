@@ -84,7 +84,7 @@ class BotResponseView(View):
     methods = ['GET']
 
     def dispatch_request(self):
-        user_text = request.args.get('msg')
+        user_text = request.args.get('message')
         response = bot.chatbot_response(user_text)
         return jsonify(response)
 
@@ -93,5 +93,4 @@ app.add_url_rule('/', view_func=IndexView.as_view("class_view", test_context, "i
 app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response'))
 
 if __name__ == '__main__':
-    app.run(debug=True,
-            port=5001)
+    app.run()

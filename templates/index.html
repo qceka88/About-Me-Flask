@@ -158,9 +158,9 @@
     {% else %}
         class="message-box-mobile-popup"
     {% endif %}>
-        <section class="message-box">
-            <header class="msger-header">
-                <div class="msger-header-title justify-content-center d-inline-flex">
+        <section class="messageBox">
+            <header class="messageBox-header">
+                <div class="messageBox-header-title justify-content-center d-inline-flex">
                     <h5><i class="fa-solid fa-chalkboard-user px-1 me-5 pt-2 text-primary-gradient"></i></h5>
                     <h4 class="text-primary-gradient px-5 pt-1">T-101 Chat</h4>
                     {% if not mobile_device %}
@@ -177,30 +177,27 @@
                 </div>
 
             </header>
-            <main class="msger-chat">
-                <div class="msg left-msg">
-                    <div class="msg-img"
+            <main class="messageBox-chat">
+                <div class="message chat-bot-message">
+                    <div class="message-image"
                          style="background-image: url({{ url_for('static', filename='img/chat/bot_image.jpg') }})"></div>
-                    <div class="msg-bubble">
-                        <div class="msg-info">
-                            <div class="msg-info-name">T-101</div>
-                            <span id="time-now" class="msg-info-time"></span>
+                    <div class="message-bubble">
+                        <div class="message-info">
+                            <div class="message-info-name">T-101</div>
+                            <span id="time-now" class="message-info-time"></span>
                         </div>
-                        <div class="msg-text">
+                        <div class="message-text">
                             Hi, welcome! My name is T-101 and I`m trained to answer questions about Yanko.
                         </div>
                     </div>
                 </div>
             </main>
 
-            <form class="msger-inputarea">
-                <input type="text" class="msger-input me-2" id="textInput" placeholder="Enter your message...">
+            <form class="messageBox-inputArea">
+                <input type="text" class="messageBox-input me-2" id="textInput" placeholder="Enter your message..." autocomplete="off">
                 <button onclick="chatBot()" type="submit" class="btn btn-primary-gradient rounded-circle fa fa-paper-plane fa-x2"></button>
             </form>
         </section>
-
-
-
     </div>
     <!--  ChatBot  End -->
 
