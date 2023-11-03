@@ -1,19 +1,14 @@
 import json
 import pickle
-import random
-
-import nltk
-import numpy as np
 from datetime import datetime
 
+import nltk
 from dateutil.relativedelta import relativedelta
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask.views import View
-
 from keras.models import load_model
-from nltk.stem import WordNetLemmatizer
 
-from ChatBot.chat_bot_actions import BotResponse, TrainedData
+from ChatBot.chat_bot_actions import BotResponse
 
 nltk.download('popular')
 nltk.download('omw-1.4')
@@ -40,7 +35,6 @@ test_context = {
     "personal_information": information,
 }
 
-
 # TODO: Eventually add Modal to certificate images (Find how to modal more than one picture)
 # TODO: Implement chatbot - in progress
 
@@ -51,6 +45,8 @@ words = pickle.load(open('ChatBot/texts.pkl', 'rb'))
 labels = pickle.load(open('ChatBot/labels.pkl', 'rb'))
 
 bot = BotResponse(model, intents, words, labels)
+
+
 class MyDevice:
     def device_detect(self):
         user_agent = request.headers.get("User-Agent")
@@ -84,12 +80,18 @@ class IndexView(View, MyDevice, MyTime):
 
         return render_template(self.template, **self.some_context)
 
-app.add_url_rule('/', view_func=IndexView.as_view("class_view", test_context, "index.html"))
 
-@app.route("/get")
-def get_bot_response():
-    user_text = request.args.get('msg')
-    return bot.chatbot_response(user_text)
+class BotResponseView(View):
+    methods = ['GET']
+
+    def dispatch_request(self):
+        user_text = request.args.get('msg')
+        response = bot.chatbot_response(user_text)
+        return jsonify(response)
+
+
+app.add_url_rule('/', view_func=IndexView.as_view("class_view", test_context, "index.html"))
+app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response'))
 
 if __name__ == '__main__':
     app.run(debug=True,

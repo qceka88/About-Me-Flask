@@ -2,3 +2,4 @@ terminal_commands.sh
 *.xml
 *.pyc
 /test/
+*.dockerignore
