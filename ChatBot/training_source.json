@@ -1,17 +1,19 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hello!", "Hi!", "Is anyone there?","Hey","Hola",  "Good day"],
-         "responses": ["Hello, what do you want to know about Yanko?", "Good to see you!", "Hi there, how can I help?", "Hello human, how can I help you? I`m trained to answer questions about Yanko."],
-         "context": [""]
+         "responses": ["Hello, what do you want to know about Yanko?", "Good to see you!", "Hi there, how can I help?",
+          "Hello human, how can I help you? I`m trained to answer questions about Yanko."],
+         "context": ["hello_how_are_you"]
         },
         {"tag": "goodbye",
          "patterns": ["Bye.", "See you later.", "Goodbye.", "Nice chatting to you, bye.", "Till next time."],
-         "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone for too long.", "Goodbye my human friend.", "You, will be back!"],
+         "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone for too long.",
+          "Goodbye my human friend.", "You, will be back!", "Human I will be happy to see you again!"],
          "context": [""]
         },
         {"tag": "thanks",
          "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks!", "Thanks for helping me!"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome!"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome! Thank you too.", "I`m at your service!"],
          "context": [""]
         },
         {"tag": "noanswer",
@@ -20,23 +22,26 @@
          "context": [""]
         },
        {"tag": "yanko",
-         "patterns": ["What do you know about Yanko?", "Who is Yanko?", "Tell me about Yanko?", "What can you tell me about Yanko?" ],
-         "responses": [""],
+         "patterns": ["What do you know about Yanko?", "Who is Yanko?", "Tell me about Yanko?", "What can you tell me about Yanko?", "Tell me more about Yanko?" ],
+         "responses": ["Yanko is Junior Software developer with experience in BackEnd, FrontEnd, DevOps.Also is graduated Naval Architect with master degree and twelve years solid experience in the shipbuilding industry."],
          "context": ["who_is_yanko"]
         },
         {"tag": "tech_stack",
-         "patterns": ["What is tech stack of Yanko?", "What software know?", "Tell me the skills?", "Tell me about tech stack of Yanko?", "What programs know Yanko?", "What is Yanko knowledge?" ],
-         "responses": ["Yanko know: Python, Django, Docker, Terraform, PostgreSQL, GitHub, Azure, HTML, CSS, Flask, Linux, Prometheus, Alertmanager, Grafana."],
+         "patterns": ["What is tech stack of Yanko?", "What software know?", "Tell me the skills?", "Tell me about tech stack of Yanko?",
+          "What programs know Yanko?", "What is Yanko knowledge?", "What is tech knowledge of Yanko?" ],
+         "responses": ["Tech stack of Yanko: Python, Django, Docker, Terraform, PostgreSQL, GitHub, Azure, HTML, CSS, Flask, Linux, Prometheus, Alertmanager, Grafana.",
+         "Yanko have skills with Python, Django, Docker, Terraform, PostgreSQL, GitHub, Azure, HTML, CSS, Flask, Linux, Prometheus, Alertmanager, Grafana.",
+         "Yanko gained experience with Python, Django, Docker, Terraform, PostgreSQL, GitHub, Azure, HTML, CSS, Flask, Linux, Prometheus, Alertmanager, Grafana."],
          "context": ["what_is_tech_skills_stack_of_yanko"]
         },
         {"tag": "python",
-         "patterns": ["What Python experience have?", "What  Python skills have Yanko?", "Tell me about Python?", "What can do with Python?", "What is him Python knowledge?" ],
+         "patterns": ["What Python experience have?", "What Python skills have Yanko?", "Tell me about Python?", "What can do with Python?", "What is him Python knowledge?" ],
          "responses": ["From more than year and half, Yanko is studying Python. Learned data types, OOP, Design Patterns, SOLID principles, Python Libraries, Unit Testing."],
          "context": ["python_knowledge"]
         },
         {"tag": "django",
-         "patterns": ["What Django experience have?", "What  Django skills have Yanko?", "Tell me about Django?", "What can do with Django?", "What is him Django knowledge?" ],
-         "responses": ["With Django, Yanko gained experience with FBV, CVB, ORM, MVT, MVC, signals, django principles, django template language."],
+         "patterns": ["What Django experience have?", "What Django skills have Yanko?", "Tell me about Django?", "What can do with Django?", "What is him Django knowledge?" ],
+         "responses": ["With Django, Yanko gained experience with FBV, CVB, ORM, MVT, MVC, signals, django principles, django template language. CURD, back end, serverside."],
          "context": ["django_knowledge"]
         },
         {"tag": "docker",
@@ -44,11 +49,58 @@
          "responses": ["With Docker, Yanko gained experience to build images ,containers, to orchestrate containers with docker compose. Deploy images using Azure CLI and Docker CLI."],
          "context": ["docker_knowledge"]
         },
-
         {"tag": "terraform",
-         "patterns": ["What Terraform experience have?", "What  Terraform skills have Yanko?", "Tell me about Terraform?", "What can do with Terraform?", "What is him Terraform knowledge?"],
-         "responses": ["With Terrafom, Yanko "],
-         "context": ["docker_knowledge"]
+         "patterns": ["What Terraform experience have?", "What Terraform skills have Yanko?", "Tell me about Terraform?", "What can do with Terraform?", "What is him Terraform knowledge?"],
+         "responses": ["With Terraform, Yanko have skills to Build configurations for building and deploy apps. Also gained experience to build CI/CD & Azure configurations."],
+         "context": ["terraform_knowledge"]
+        },
+        {"tag": "postgresql",
+         "patterns": ["What PostgreSQL experience have?", "What PostgreSQL skills have Yanko?", "Tell me about PostgreSQL?", "What can do with PostgreSQL?", "What is him PostgreSQL knowledge?"],
+         "responses": ["With PostgreSQL, Yanko have experience to build DB with docker and to use it with ORM. CRUD on db tables."],
+         "context": ["postgresql_knowledge"]
+        },
+        {"tag": "github_gitlab_git",
+         "patterns": ["What GitHub experience have?", "What GitHub skills have Yanko?", "Tell me about GitHub?", "What can do with GitHub?",
+          "What is him GitHub knowledge?", "Can Yanko use version control system?", "Do Yanko use source control system?", "What version control system can use?"],
+         "responses": ["During the long path of education Yanko has learned to use Git/GitHub/GitLab version control systems. You can check his profiles in Contact section."],
+         "context": ["github_gitlab_git_knowledge"]
+        },
+        {"tag": "html_css",
+         "patterns": ["What HTML experience have?", "What HTML skills have Yanko?", "Tell me about HTML?", "What can do with HTML?", "What is him HTML knowledge?",
+         "What CSS experience have?", "What CSS skills have Yanko?", "Tell me about CSS?", "What can do with CSS?", "What is him CSS knowledge?", "Can Yanko perform a front end task?"],
+         "responses": [""],
+         "context": ["html_css_knowledge"]
+        },
+        {"tag": "azure",
+         "patterns": ["What Azure experience have?", "What Azure skills have Yanko?", "Tell me about Azure?", "What can do with Azure?", "What is him Azure knowledge?"],
+         "responses": ["During the education Yanko has gained experience with Azure GUI and Azure CLI to build different type of configurations in Azure."],
+         "context": ["azure_knowledge"]
+        },
+        {"tag": "flask",
+         "patterns": ["What Flask experience have?", "What Flask skills have Yanko?", "Tell me about Flask?", "What can do with Flask?", "What is him Flask knowledge?"],
+         "responses": ["This portfolio web site is build with Flask."],
+         "context": ["flask_knowledge"]
+        },
+        {"tag": "linux",
+         "patterns": ["What Linux experience have?", "What Linux skills have Yanko?", "Tell me about Linux?", "Can Yano use Linux?",
+          "What can do with Linux?", "What is him Linux knowledge?"],
+         "responses": ["Yanko can use Linux OS and operate under this environment. He have experience with Ubuntu/Mint distributions."],
+         "context": ["linux_knowledge"]
+        },
+        {"tag": "grafana_prometheus_alertmanager",
+         "patterns": ["What Prometheus experience have?", "What Prometheus skills have Yanko?", "Tell me about Prometheus?","Can Yano use Prometheus?", "What can do with Prometheus?", "What is him Prometheus knowledge?",
+         "What Alertmanager experience have?", "What Alertmanager skills have Yanko?", "Tell me about Alertmanager?","Can Yano use Alertmanager?", "What can do with Alertmanager?", "What is him Alertmanager knowledge?",
+          "What Grafana experience have?", "What Grafana skills have Yanko?", "Tell me about Grafana?","Can Yano use Grafana?", "What can do with Grafana?", "What is him Grafana knowledge?"],
+         "responses": ["In his path Yanko learned how to configurate a monitoring system of web app using Prometheus, Grafana, Alertmanager with web hook."],
+         "context": ["grafana_prometheus_alertmanager_knowledge"]
+        },
+        {"tag": "joke",
+         "patterns": ["Tell me a Joke.", "I want to hear Joke.", "Tell me one more joke.", "This was funny tell me another one.", "I want another joke.", "Yes", "I want to hear"],
+         "responses": ["THe ultimate Hide and Seek champion is ' ; '. <br>Do you want another one?", "99 little bugs in the code, 99 little bugs, you take one down and patch it around, 125 little bugs in the code.",
+         "Programming is 10% writing code and 90% understanding why it’s not working.<br> Wanna another one?",
+         "Why do programmers prefer dark mode? Because light attracts bugs.", "Programmer: An organism that turns coffee into software.  Do you want another one?",
+          "My mind is like an internet browser, 19 tabs open, 3 of them are frozen, ads popping up everywhere, I have no idea where the music is coming from. <br> Do you want another one?"],
+         "context": ["tell_me_joke"]
         }
    ]
 }
