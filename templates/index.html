@@ -159,23 +159,20 @@
         class="message-box-mobile-popup"
     {% endif %}>
         <section class="messageBox">
-            <header class="messageBox-header">
-                <div class="messageBox-header-title justify-content-center d-inline-flex">
+            <header class="messageBox-header justify-content-center d-inline-flex">
                     <h5><i class="fa-solid fa-chalkboard-user px-1 me-5 pt-2 text-primary-gradient"></i></h5>
-                    <h4 class="text-primary-gradient px-5 pt-1">T-101 Chat</h4>
+                    <h4 class="text-primary-gradient justify-content-center px-5 pt-1">T-101 Chat</h4>
                     {% if not mobile_device %}
-                        <button onclick="toggleForm()" class="btn btn-primary-gradient rounded-circle "
-                                style="left: 11%;">
+                        <button onclick="toggleForm()" class="messageBox-header-close btn btn-primary-gradient rounded-circle "
+                        >
                             X
                         </button>
                     {% else %}
-                        <button onclick="toggleForm()" class="btn btn-primary-gradient rounded"
-                                style="left: 15%;">
+                        <button onclick="toggleForm()" class="messageBox-header-close-mobile btn btn-primary-gradient rounded"
+                               >
                             X
                         </button>
                     {% endif %}
-                </div>
-
             </header>
             <main class="messageBox-chat">
                 <div class="message chat-bot-message">
@@ -963,7 +960,9 @@
                                         <h4 class="text-primary-gradient mb-1">Django</h4>
                                         <h1 class="mb-3">
                                         </h1>
-                                        <span>Upgrade my Python experience with work with Django. Gained experience with Django ORM, working with DB, FBV, CBV, middleware, MVT, MVC, signals, django principles.</span>
+                                        <span>Upgrade my Python experience with work with Django.
+                                            Gained experience with Django ORM, working with DB, FBV, CBV,
+                                            middleware, MVT, MVC, signals, django principles.</span>
                                     </div>
                                     <div class="p-4 pt-0">
                                         <div class="d-flex justify-content-between mb-3"><span>MCV</span><i
@@ -985,7 +984,7 @@
                                         <h4 class="text-primary-gradient mb-1">DevOps</h4>
                                         <h1 class="mb-3">
                                         </h1>
-                                        <span>Added DevOPS to my Dev experince. Gained skills with, Docker, Containers,
+                                        <span>Added DevOPS to my Dev experience. Gained skills with, Docker, Containers,
                                             Terraform, orchestrating containers, build images, clouds.</span>
                                     </div>
                                     <div class="p-4 pt-0">
@@ -1205,7 +1204,11 @@
 
 
     <!-- Back to Top -->
+    {% if not mobile_device %}
     <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    {% else %}
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top-mobile pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    {% endif %}
 
     <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
 

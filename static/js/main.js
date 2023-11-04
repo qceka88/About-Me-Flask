@@ -56,6 +56,19 @@
         return false;
     });
 
+    // Back to top button-mobile
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top-mobile').fadeIn('slow');
+        } else {
+            $('.back-to-top-mobile').fadeOut('slow');
+        }
+    });
+    $('.back-to-top-mobile').click(function () {
+        $('html, body').animate({scrollTop: 0}, 500, 'easeInOutExpo');
+        return false;
+    });
+
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({

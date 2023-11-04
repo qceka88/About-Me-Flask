@@ -1,33 +1,54 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hello!", "Hi!", "Is anyone there?","Hey","Hola",  "Good day"],
-         "responses": ["Hello, what do you want to know about Yanko?", "Good to see you!", "Hi there, how can I help?"],
+         "responses": ["Hello, what do you want to know about Yanko?", "Good to see you!", "Hi there, how can I help?", "Hello human, how can I help you? I`m trained to answer questions about Yanko."],
          "context": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone too long."],
+         "patterns": ["Bye.", "See you later.", "Goodbye.", "Nice chatting to you, bye.", "Till next time."],
+         "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone for too long.", "Goodbye my human friend.", "You, will be back!"],
          "context": [""]
         },
         {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem."],
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks!", "Thanks for helping me!"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome!"],
          "context": [""]
         },
         {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "patterns": ["", " ", "       "],
+         "responses": ["Sorry, I can't understand you.", "Please give me more info.", "Not sure I understand.", "Please, be more specific."],
          "context": [""]
         },
-        {"tag": "tech_stack",
-         "patterns": ["What is tech stack of Yanko?", "What software know?", "Tell me the skills?", "Tell me about tech stack of Yanko?", "What support is offered"],
-         "responses": ["#skills", "Yanko know: Python, Django, Docker, Terraform, PostgreSQL"],
-         "context": ["what_is_tech_stack_of_yanko"]
+       {"tag": "yanko",
+         "patterns": ["What do you know about Yanko?", "Who is Yanko?", "Tell me about Yanko?", "What can you tell me about Yanko?" ],
+         "responses": [""],
+         "context": ["who_is_yanko"]
         },
-      {"tag": "beer",
-         "patterns": ["Do Yanko drink beers?", "Does he drink beer well?", "Is Yanko drink beer?"],
-         "responses": ["Yes, he drink beer.", "Yanko love`s beer!", "Also and rakia!"],
-         "context": ["yanko_drink_beer"]
+        {"tag": "tech_stack",
+         "patterns": ["What is tech stack of Yanko?", "What software know?", "Tell me the skills?", "Tell me about tech stack of Yanko?", "What programs know Yanko?", "What is Yanko knowledge?" ],
+         "responses": ["Yanko know: Python, Django, Docker, Terraform, PostgreSQL, GitHub, Azure, HTML, CSS, Flask, Linux, Prometheus, Alertmanager, Grafana."],
+         "context": ["what_is_tech_skills_stack_of_yanko"]
+        },
+        {"tag": "python",
+         "patterns": ["What Python experience have?", "What  Python skills have Yanko?", "Tell me about Python?", "What can do with Python?", "What is him Python knowledge?" ],
+         "responses": ["From more than year and half, Yanko is studying Python. Learned data types, OOP, Design Patterns, SOLID principles, Python Libraries, Unit Testing."],
+         "context": ["python_knowledge"]
+        },
+        {"tag": "django",
+         "patterns": ["What Django experience have?", "What  Django skills have Yanko?", "Tell me about Django?", "What can do with Django?", "What is him Django knowledge?" ],
+         "responses": ["With Django, Yanko gained experience with FBV, CVB, ORM, MVT, MVC, signals, django principles, django template language."],
+         "context": ["django_knowledge"]
+        },
+        {"tag": "docker",
+         "patterns": ["What Docker experience have?", "What  Docker skills have Yanko?", "Tell me about Docker?", "What can do with Docker?", "What is him Docker knowledge?"],
+         "responses": ["With Docker, Yanko gained experience to build images ,containers, to orchestrate containers with docker compose. Deploy images using Azure CLI and Docker CLI."],
+         "context": ["docker_knowledge"]
+        },
+
+        {"tag": "terraform",
+         "patterns": ["What Terraform experience have?", "What  Terraform skills have Yanko?", "Tell me about Terraform?", "What can do with Terraform?", "What is him Terraform knowledge?"],
+         "responses": ["With Terrafom, Yanko "],
+         "context": ["docker_knowledge"]
         }
    ]
 }

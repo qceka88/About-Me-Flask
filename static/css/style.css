@@ -6,13 +6,11 @@
     --dark: #262B47;
     --nav1: #ffffff;
     --nav2: #ababab;
-    --chat1: #ffffff;
-    --chat2: rgba(147, 147, 147, 0.9);
-    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    --msger-bg: #fff;
+    --chat1: rgba(255, 255, 255, 0.8);
+    --chat2: rgba(147, 147, 147, 0.8);
     --border: 2px solid #ddd;
-    --left-msg-bg: #ececec;
-    --right-msg-bg: #579ffb;
+    --bot-msg-bg: #ececec;
+    --visitor-msg-bg: rgba(66, 148, 227, 0.8);
 }
 
 
@@ -146,6 +144,16 @@ h6,
     display: none;
     right: 80px;
     bottom: 45px;
+    z-index: 99;
+    border: none;
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.back-to-top-mobile {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
     z-index: 99;
     border: none;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
@@ -554,9 +562,9 @@ h6,
 .message-box-popup {
     display: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 80px;
     border-radius: 20px;
-    right: 150px;
+    right: 50px;
     z-index: 2500;
 }
 
@@ -574,7 +582,7 @@ h6,
     flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 367px;
+    max-width: 363px;
     margin: 25px 10px;
     height: 450px;
     border: var(--border);
@@ -588,9 +596,18 @@ h6,
     border-top-right-radius: 15px;
     font-size: medium;
     text-align: left;
+    width: 100%;
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));;
     color: #666;
+}
+
+.messageBox-header-close {
+    margin-left: 2.1rem;
+}
+
+.messageBox-header-close-mobile {
+    margin-left: 45px;
 }
 
 .messageBox-chat {
@@ -632,7 +649,7 @@ h6,
     max-width: 270px;
     padding: 15px;
     border-radius: 15px;
-    background: var(--left-msg-bg);
+    background: var(--chat1);
 }
 
 .message-info {
@@ -661,7 +678,7 @@ h6,
 }
 
 .visitor-message .message-bubble {
-    background: var(--primary);
+    background: var(--visitor-msg-bg);
     color: #fff;
     border-bottom-right-radius: 0;
 }

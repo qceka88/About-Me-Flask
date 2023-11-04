@@ -25,9 +25,9 @@ app.config['SECRET_KEY'] = 'FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2'  # Chang
 information = """
     Newbie in programming, but with a big passion and constant willingness to learn more about this science and to use it to 
     develop new technologies and cross new borders. Have a good basis from SoftUni in programming and DevOps. I want to
-    be a part of this impressive and dynamic industry. I have also master degree from Technical University Varna as
-    'Naval Architect/Hull Design engineer'. Also have twelve years experience in shipbuilding industry. Good team player
-    or good as single unit, no mather of the situation always stay in condition.
+    be a part of this impressive and dynamic industry. I have also a master's degree from Technical University Varna as
+    'Naval Architect/Hull Design engineer'. Also, have twelve years of experience in the shipbuilding industry. Good team player
+    or good as a single unit, no matter of the situation always stays in condition.
 """
 
 test_context = {
@@ -35,7 +35,7 @@ test_context = {
     "personal_information": information,
 }
 
-# TODO: Eventually add Modal to certificate images (Find how to modal more than one picture)
+# TODO: In the future add Modal func to certificate images (Find how to modal more than one picture)
 # TODO: Train the chatbot
 
 
