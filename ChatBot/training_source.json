@@ -68,7 +68,7 @@
         {"tag": "html_css",
          "patterns": ["What HTML experience have?", "What HTML skills have Yanko?", "Tell me about HTML?", "What can do with HTML?", "What is him HTML knowledge?",
          "What CSS experience have?", "What CSS skills have Yanko?", "Tell me about CSS?", "What can do with CSS?", "What is him CSS knowledge?", "Can Yanko perform a front end task?"],
-         "responses": [""],
+         "responses": ["Yanko have experience with HTML and CSS to create nice and responsive front end in web site."],
          "context": ["html_css_knowledge"]
         },
         {"tag": "azure",
