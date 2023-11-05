@@ -3,11 +3,14 @@ version: "3.8"
 services:
 
   web-app:
-    #image: yankoaboutmecr.azurecr.io/about_me:1
-    image: about_me:1
-    container_name: my-portfolio-yanko
     build:
       dockerfile: Dockerfile
+    image: yankoaboutmecr.azurecr.io/about_me:1
+    #image: about_me:1
+    container_name: my-portfolio-yanko
     ports:
-      - "5000:5000"
-#    domainname: "about-me"
+      - "80:80"
+    domainname: "yr-portfolio"
+    command: >
+       python app.py
+

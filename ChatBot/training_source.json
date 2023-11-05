@@ -13,7 +13,7 @@
         },
         {"tag": "thanks",
          "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks!", "Thanks for helping me!"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome! Thank you too.", "I`m at your service!"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome!", "I`m at your service!"],
          "context": [""]
         },
         {"tag": "noanswer",
@@ -60,15 +60,15 @@
          "context": ["postgresql_knowledge"]
         },
         {"tag": "github_gitlab_git",
-         "patterns": ["What GitHub experience have?", "What GitHub skills have Yanko?", "Tell me about GitHub?", "What can do with GitHub?",
-          "What is him GitHub knowledge?", "Can Yanko use version control system?", "Do Yanko use source control system?", "What version control system can use?"],
+         "patterns": ["What GitHub experience have?","What GitLab experience have?", "What GitHub skills have Yanko?", "What GitLab skills have Yanko?", "Tell me about GitHub?", "What can do with GitHub?", "What can do with Git?",
+          "What is his GitHub knowledge?", "What is his GitLab knowledge?", "Can Yanko use version control system?", "Do Yanko use source control system?", "What version control system can use?"],
          "responses": ["During the long path of education Yanko has learned to use Git/GitHub/GitLab version control systems. You can check his profiles in Contact section."],
          "context": ["github_gitlab_git_knowledge"]
         },
         {"tag": "html_css",
          "patterns": ["What HTML experience have?", "What HTML skills have Yanko?", "Tell me about HTML?", "What can do with HTML?", "What is him HTML knowledge?",
          "What CSS experience have?", "What CSS skills have Yanko?", "Tell me about CSS?", "What can do with CSS?", "What is him CSS knowledge?", "Can Yanko perform a front end task?"],
-         "responses": ["Yanko have experience with HTML and CSS to create nice and responsive front end in web site."],
+         "responses": ["Yanko have experience with HTML and CSS to create good looking front end in web site."],
          "context": ["html_css_knowledge"]
         },
         {"tag": "azure",
@@ -95,11 +95,13 @@
          "context": ["grafana_prometheus_alertmanager_knowledge"]
         },
         {"tag": "joke",
-         "patterns": ["Tell me a Joke.", "I want to hear Joke.", "Tell me one more joke.", "This was funny tell me another one.", "I want another joke.", "Yes", "I want to hear"],
+         "patterns": ["Tell me a Joke.", "I want to hear Joke.", "Tell me one more joke.", "This was funny tell me another one.", "I want another joke.", "Yes", "I want to hear", "Tell me more jokes.", "More jokes.", "Another one."],
          "responses": ["THe ultimate Hide and Seek champion is ' ; '. <br>Do you want another one?", "99 little bugs in the code, 99 little bugs, you take one down and patch it around, 125 little bugs in the code.",
          "Programming is 10% writing code and 90% understanding why it’s not working.<br> Wanna another one?",
          "Why do programmers prefer dark mode? Because light attracts bugs.", "Programmer: An organism that turns coffee into software.  Do you want another one?",
-          "My mind is like an internet browser, 19 tabs open, 3 of them are frozen, ads popping up everywhere, I have no idea where the music is coming from. <br> Do you want another one?"],
+          "My mind is like an internet browser, 19 tabs open, 3 of them are frozen, ads popping up everywhere, I have no idea where the music is coming from. <br> Do you want another one?",
+         "A programmer had a problem. He decided to use Java. He now has a ProblemFactory.<br> Wanna another one?", "To understand what recursion is, you must first understand recursion.",
+         "UNIX is user friendly. It’s just very particular about who its friends are. <r> Another one?"],
          "context": ["tell_me_joke"]
         }
    ]
