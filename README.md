@@ -2,6 +2,9 @@
 
  Portfolio web site: Flask Project
 
+#Upgrade design in progress.
+
+
 
 This is simple web app with Flask. And small Chatbot.
 
