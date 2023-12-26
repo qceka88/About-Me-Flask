@@ -153,19 +153,12 @@ h6,
     position: fixed;
     display: none;
     right: 15px;
-    bottom: 55px;
+    bottom: 15px;
     z-index: 99;
     border: none;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
-/*.back-to-top-mobile {*/
-/*    position: fixed;*/
-/*    display: none;*/
-/*    right: 15px;*/
-/*    bottom: 15px;*/
-/*    z-index: 99;*/
-/*    border: none;*/
-/*    background: linear-gradient(to bottom right, var(--primary), var(--secondary));*/
+
 
 .mobileChatButton {
     position: fixed;
