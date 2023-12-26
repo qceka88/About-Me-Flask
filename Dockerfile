@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 80
 
 # Define our command to be run when launching the container
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=80"]

@@ -1,24 +1,25 @@
-import json
-import pickle
-
-import nltk
+# import json
+# import pickle
+#
+# import nltk
 from flask import Flask
-from keras.models import load_model
 
-from ChatBot.chat_bot_actions import BotResponse
-from WebApp.views import IndexView, BotResponseView
+# from keras.models import load_model
+#
+# from ChatBot.chat_bot_actions import BotResponse
+from WebApp.views import IndexView
 
-nltk.download('popular')
-nltk.download('omw-1.4')
-nltk.download("punkt")
-nltk.download("wordnet")
-
-# Initialise Chatbot Object
-model = load_model('ChatBot/model.h5')
-intents = json.loads(open('ChatBot/training_source.json').read())
-words = pickle.load(open('ChatBot/texts.pkl', 'rb'))
-labels = pickle.load(open('ChatBot/labels.pkl', 'rb'))
-bot = BotResponse(model, intents, words, labels)
+# nltk.download('popular')
+# nltk.download('omw-1.4')
+# nltk.download("punkt")
+# nltk.download("wordnet")
+#
+# # Initialise Chatbot Object
+# model = load_model('ChatBot/model.h5')
+# intents = json.loads(open('ChatBot/training_source.json').read())
+# words = pickle.load(open('ChatBot/texts.pkl', 'rb'))
+# labels = pickle.load(open('ChatBot/labels.pkl', 'rb'))
+# bot = BotResponse(model, intents, words, labels)
 
 # initialise Flask App
 app = Flask(__name__,
@@ -31,7 +32,18 @@ app.config['SECRET_KEY'] = 'FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2'
 
 # Define URL
 app.add_url_rule('/', view_func=IndexView.as_view("class_view", "index.html"))
-app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response', bot))
+# app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response', bot))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
+
+
+# TODO: Study experience/work experience button -  CENTER - Add 3D effect in button
+# TODO: CENTER CHAT WINDOW IN MOBILE VERSION
+# TODO: Center send button Symbol
+# TODO: Fix Close button.
+# TODO: Find better place  for OPEN chat button  in mobile Version
+# TODO: Put nice and good picture of BOT
+# TODO: Rename chat bot
+# TODO: Add new Certificate
+# TODO: Check color for bubble response of the BOT
