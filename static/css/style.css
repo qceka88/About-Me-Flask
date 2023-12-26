@@ -370,7 +370,7 @@ h6,
 .my-certificates-mobile-style {
     display: grid;
     grid-template-columns: repeat(2, 180px);
-    grid-auto-rows: 275px;
+    grid-auto-rows: 290px;
     grid-gap: 15px;
 }
 

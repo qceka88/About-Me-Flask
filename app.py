@@ -40,8 +40,6 @@ if __name__ == '__main__':
 
 # TODO: Study experience/work experience button -  CENTER - Add 3D effect in button
 # TODO: CENTER CHAT WINDOW IN MOBILE VERSION
-# TODO: Center send button Symbol
 # TODO: Fix Close button.
 # TODO: Put nice and good picture of BOT
-# TODO: Add new Certificate
 # TODO: Check color for bubble response of the BOT

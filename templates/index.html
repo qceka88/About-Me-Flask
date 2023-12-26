@@ -86,11 +86,11 @@
                        onclick="closeNav()"
                             {% endif %}>Certificates</a>
                     <a href="#experience" class="nav-item nav-link"
-                    {% if mobile_device %}
+                            {% if mobile_device %}
                        onclick="closeNav()"
                             {% endif %}>Experience</a>
                     <a href="#contact" class="nav-item nav-link"
-                    {% if mobile_device %}
+                            {% if mobile_device %}
                        onclick="closeNav()"
                             {% endif %}>Contact</a>
                 </div>
@@ -713,12 +713,27 @@
                 <div class="my-certificates-mobile-style justify-content-center">
                     <div class="col-lg-3 col-sm-6 text-center wow fadeInUp" data-wow-delay="0.1s">
                         <div class="position-relative bg-light pt-3 pb-2">
+                            <a href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                               target="_blank">
+                                <img class="feature-item rounded"
+                                     src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                                     style="width: 125px; height: 180px;" alt="CloudAndContainers">
+                                <h6 class="te mt-1 mb-1">Software Engineering and DevOps</h6>
+                            </a>
+                            <h6><a href="https://softuni.bg/certificates/details/201259/4622e9c3" target="_blank">
+                                Complete data of certificate</a>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light pt-3 pb-2">
                             <a href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
                                target="_blank">
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
                                      style="width: 125px; height: 180px;" alt="CloudAndContainers">
-                                <h6 class="te mt-1 mb-1">Cloud and Containers</h6>
+                                <h6 class="te mt-1 mb-4">Cloud and Containers</h6>
+
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/192051/93153a4b" target="_blank">
                                 Complete data of certificate</a>
@@ -732,7 +747,7 @@
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
                                      style="width: 125px; height: 180px;" alt="django">
-                                <h6 class="te mt-1 mb-1">Python Web Frameworks</h6>
+                                <h6 class="te mt-1 mb-4">Python Web Frameworks</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/182349/e14592a6" target="_blank">
                                 Complete data of certificate</a>
@@ -746,7 +761,7 @@
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
                                      style="width: 125px; height: 180px;" alt="django basics">
-                                <h6 class="te mt-1 mb-1">Python Web Basics</h6>
+                                <h6 class="te mt-1 mb-4">Python Web Basics</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">
                                 Complete data of certificate</a>
@@ -760,7 +775,7 @@
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
                                      style="width: 125px; height: 180px;" alt="python oop">
-                                <h6 class="te mt-1 mb-1">Python OOP</h6>
+                                <h6 class="te mt-1 mb-4">Python OOP</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/168051/135e14f7" target="_blank">
                                 Complete data of certificate</a>
@@ -775,7 +790,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
                                      style="width: 125px; height: 180px;"
                                      alt="python advanced">
-                                <h6 class="te mt-1 mb-1">Python Advanced</h6>
+                                <h6 class="te mt-1 mb-4">Python Advanced</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/159368/6eca017f" target="_blank">
                                 Complete data of certificate</a>
@@ -790,7 +805,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
                                      style="width: 125px; height: 180px;"
                                      alt="python fundamentals">
-                                <h6 class="te mt-1 mb-1">Python Fundamentals</h6>
+                                <h6 class="te mt-1 mb-4">Python Fundamentals</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/148718/012cedf6" target="_blank">
                                 Complete data of certificate</a>
@@ -805,7 +820,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
                                      style="width: 125px; height: 180px;"
                                      alt="python basic">
-                                <h6 class="te mt-1 mb-1">Python Basics</h6>
+                                <h6 class="te mt-1 mb-4">Python Basics</h6>
                             </a>
                             <h6><a href="https://softuni.bg/certificates/details/135311/0f9fd045" target="_blank">
                                 Complete data of certificate</a>
@@ -817,12 +832,25 @@
                 <div class="row gy-5 gx-4 justify-content-center">
                     <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="position-relative bg-light pt-5 pb-4 px-4">
+                            <a href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                               target="_blank">
+                                <img class="feature-item rounded"
+                                     src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                                     style="width: 140px; height: 200px;" alt="SoftwareEngineeringAndDevOps">
+                                <h5 class="mt-3 mb-0">Software Engineering and DevOps</h5>
+                            </a>
+                            <a href="https://softuni.bg/certificates/details/201259/4622e9c3" target="_blank">
+                                Complete data of certificate</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light pt-5 pb-4 px-4">
                             <a href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
                                target="_blank">
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
                                      style="width: 140px; height: 200px;" alt="CloudAndContainers">
-                                <h5 class="mt-4 mb-3">Cloud and Containers</h5>
+                                <h5 class="mt-3 mb-4">Cloud and Containers</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/192051/93153a4b" target="_blank">
                                 Complete data of certificate</a>
@@ -835,7 +863,7 @@
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/PythonWebFrameworks.jpeg') }}"
                                      style="width: 140px; height: 200px;" alt="django">
-                                <h5 class="mt-4 mb-3">Python Web Frameworks</h5>
+                                <h5 class="mt-3 mb-0">Python Web Frameworks</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/182349/e14592a6" target="_blank">
                                 Complete data of certificate</a>
@@ -850,7 +878,7 @@
                                      style="width: 140px; height: 200px;"
                                      alt="django basics"
                                 >
-                                <h5 class="mt-4 mb-3">Python Web Basics</h5>
+                                <h5 class="mt-3 mb-4">Python Web Basics</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">
                                 Complete data of certificate
@@ -865,7 +893,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
                                      style="width: 140px; height: 200px;"
                                      alt="python oop">
-                                <h5 class="te mt-4 mb-3">Python OOP</h5>
+                                <h5 class="te mt-3 mb-4">Python OOP</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/168051/135e14f7" target="_blank">
                                 Complete data of certificate
@@ -880,7 +908,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
                                      style="width: 140px; height: 200px;"
                                      alt="python advanced">
-                                <h5 class="te mt-4 mb-3">Python Advanced</h5>
+                                <h5 class="te mt-3 mb-4">Python Advanced</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/159368/6eca017f" target="_blank">
                                 Complete data of certificate
@@ -895,7 +923,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
                                      style="width: 140px; height: 200px;"
                                      alt="python fundamentals">
-                                <h5 class="te mt-4 mb-3">Python Fundamentals</h5>
+                                <h5 class="te mt-3 mb-4">Python Fundamentals</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/148718/012cedf6" target="_blank">
                                 Complete data of certificate
@@ -910,7 +938,7 @@
                                      src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
                                      style="width: 140px; height: 200px;"
                                      alt="python basic">
-                                <h5 class="te mt-4 mb-3">Python Basics</h5>
+                                <h5 class="te mt-3 mb-4">Python Basics</h5>
                             </a>
                             <a href="https://softuni.bg/certificates/details/135311/0f9fd045" target="_blank">
                                 Complete data of certificate
@@ -919,195 +947,198 @@
                     </div>
                 </div>
             {% endif %}
-        </div>
-    </div>
-    <!-- Certificates End -->
-
-    <!-- Experience Start -->
-    <div class="container-xxl py-5" id="experience">
-        <div class="container py-5 px-lg-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="text-primary-gradient fw-medium">Experince</h1>
-                <h5 class="mb-5">-- Learn more about my experience --</h5>
             </div>
-            <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
-                {% if mobile_device %}
-                    <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5 px-2">
-                        <li class="nav-item">
-                            <button class="nav-link active px-2" data-bs-toggle="pill" href="#tab-1">Study Experience
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link px-2" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
-                        </li>
-                    </ul>
-                {% else %}
-                    <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Study Experience
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
-                        </li>
-                    </ul>
-                {% endif %}
-                <div class="tab-content text-start">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="owl-carousel testimonial-carousel wow fadeInUp">
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Python</h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>Year and a half actively studying Python. Advanced knowledge to work with data types, OOP and OOP principles, functions, libraries, web scrapping.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
-                                        <div class="d-flex justify-content-between mb-3"><span>Data types</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3"><span>OOP</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <span>Libraries</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>Unit Testing</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+        </div>
+        <!-- Certificates End -->
+
+        <!-- Experience Start -->
+        <div class="container-xxl py-5" id="experience">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="text-primary-gradient fw-medium">Experince</h1>
+                    <h5 class="mb-5">-- Learn more about my experience --</h5>
+                </div>
+                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                    {% if mobile_device %}
+                        <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5 px-2">
+                            <li class="nav-item">
+                                <button class="nav-link active px-2" data-bs-toggle="pill" href="#tab-1">Study
+                                    Experience
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link px-2" data-bs-toggle="pill" href="#tab-2">Work Experience
+                                </button>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Study Experience
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
+                            </li>
+                        </ul>
+                    {% endif %}
+                    <div class="tab-content text-start">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="owl-carousel testimonial-carousel wow fadeInUp">
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Python</h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>Year and a half actively studying Python. Advanced knowledge to work with data types, OOP and OOP principles, functions, libraries, web scrapping.</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div class="d-flex justify-content-between mb-3"><span>Data types</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>OOP</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span>Libraries</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Unit Testing</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Django</h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>Upgrade my Python experience with work with Django.
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Django</h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>Upgrade my Python experience with work with Django.
                                             Gained experience with Django ORM, working with DB, FBV, CBV,
                                             middleware, MVT, MVC, signals, django principles.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
-                                        <div class="d-flex justify-content-between mb-3"><span>MCV</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3"><span>MVT</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <span>CVB</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>FBV</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div class="d-flex justify-content-between mb-3"><span>MCV</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>MVT</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span>CVB</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>FBV</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">DevOps</h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>Added DevOPS to my Dev experience. Gained skills with, Docker, Containers,
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">DevOps</h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>Added DevOPS to my Dev experience. Gained skills with, Docker, Containers,
                                             Terraform, orchestrating containers, build images, clouds.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
-                                        <div class="d-flex justify-content-between mb-3"><span>Docker</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3"><span>Terraform</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <span>GitHub CI\CD</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>Azure</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div class="d-flex justify-content-between mb-3"><span>Docker</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Terraform</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span>GitHub CI\CD</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Azure</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Azure</h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>Gained experience with Azure. Using Azure GUI, Azure CLI, deployment with docker containers or terraform configuration.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
-                                        <div class="d-flex justify-content-between mb-3"><span>Azure GUI</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3"><span>Azure CLI</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <span>Configuration</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>Orchestrating</span><i
-                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Azure</h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>Gained experience with Azure. Using Azure GUI, Azure CLI, deployment with docker containers or terraform configuration.</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <div class="d-flex justify-content-between mb-3"><span>Azure GUI</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Azure CLI</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <span>Configuration</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Orchestrating</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane fade show p-0">
-                        <div class="owl-carousel testimonial-carousel wow fadeInUp">
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Hull Engineer/Draftsman</h4>
-                                        <h4 class="text-primary-gradient mb-1"><br></h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>Keppel FELS Baltech Ltd.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="owl-carousel testimonial-carousel wow fadeInUp">
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Hull Engineer/Draftsman</h4>
+                                            <h4 class="text-primary-gradient mb-1"><br></h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>Keppel FELS Baltech Ltd.</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
                                         <span> Prepare drawings for different hull or steel outfit drawings and prepare 3D
                                             models for structures, heavy lifting documentation, and calculations of OIL RIGS.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Hull Design Engineer</h4>
-                                        <h4 class="text-primary-gradient mb-1"><br></h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>AllStarsEngineering Bulgaria Ltd.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Hull Design Engineer</h4>
+                                            <h4 class="text-primary-gradient mb-1"><br></h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>AllStarsEngineering Bulgaria Ltd.</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
                                         <span> Prepare drawings for different hull or steel outfit drawings and prepare 3D
                                             models for structures, heavy lifting documentation, and calculations of Mega Cruise Ships.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Structure/Steel Outfit/</h4>
-                                        <h4 class="text-primary-gradient mb-1">Hull Designer</h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>MTG-Doplhin plc.</span>
-                                    </div>
-                                    <div class="p-4 pt-0">
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Structure/Steel Outfit/</h4>
+                                            <h4 class="text-primary-gradient mb-1">Hull Designer</h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>MTG-Doplhin plc.</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
                                         <span>Design, draw, 3D model, different hull and steel outfit structures of
                                             merchant ships. Also, I was involved in
                                                 inclining tests for ships in front of B.V. organization. </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-item rounded p-4">
-                                <div class="bg-light rounded">
-                                    <div class="border-bottom p-4 mb-4">
-                                        <h4 class="text-primary-gradient mb-1">Hull Design Engineer</h4>
-                                        <h4 class="text-primary-gradient mb-1"><br></h4>
-                                        <h1 class="mb-3">
-                                        </h1>
-                                        <span>"SMEV" Ltd. </span>
-                                    </div>
-                                    <div class="p-4 pt-0">
+                                <div class="testimonial-item rounded p-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Hull Design Engineer</h4>
+                                            <h4 class="text-primary-gradient mb-1"><br></h4>
+                                            <h1 class="mb-3">
+                                            </h1>
+                                            <span>"SMEV" Ltd. </span>
+                                        </div>
+                                        <div class="p-4 pt-0">
                                         <span> Prepare drawings for different hull or steel outfit drawings and prepare 3D
                                             models for structures, heavy lifting documentation, and calculations of super yachts.</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1116,143 +1147,145 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Experience End -->
+        <!-- Experience End -->
 
-    <!-- Contact Start -->
-    <div class="container-xxl py-5" id="contact">
-        <div class="container py-5 px-lg-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="text-primary-gradient fw-medium">Contact Me</h1>
-                <h5 class="mb-5">-- Get In Touch --</h5>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="wow fadeInUp" data-wow-delay="0.3s">
-                        <p class="text-center mb-5">Feel free to get in touch with me. I am always open to discussing
-                            new projects, creative ideas or opportunities to be a part of your visions. Email me or call
-                            me with any questions or inquiries. I will be happy to answer your questions and set up a
-                            meeting
-                            with you.</p>
-                        <div class="row gy-5 gx-5 justify-content-center">
-                            <div class="col-md-3">
-                                <i class="fa fa-user fa-2x me-2 text-primary-gradient"></i>
-                                <div class="d-inline-block">
-                                    Name:
-                                    <h5>Yanko Rashkov</h5>
+        <!-- Contact Start -->
+        <div class="container-xxl py-5" id="contact">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="text-primary-gradient fw-medium">Contact Me</h1>
+                    <h5 class="mb-5">-- Get In Touch --</h5>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <p class="text-center mb-5">Feel free to get in touch with me. I am always open to
+                                discussing
+                                new projects, creative ideas or opportunities to be a part of your visions. Email me or
+                                call
+                                me with any questions or inquiries. I will be happy to answer your questions and set up
+                                a
+                                meeting
+                                with you.</p>
+                            <div class="row gy-5 gx-5 justify-content-center">
+                                <div class="col-md-3">
+                                    <i class="fa fa-user fa-2x me-2 text-primary-gradient"></i>
+                                    <div class="d-inline-block">
+                                        Name:
+                                        <h5>Yanko Rashkov</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <i class="fa fa-map-marker-alt  fa-2x me-2 text-secondary-gradient"></i>
-                                <div class="d-inline-block">
-                                    Location:
-                                    <h5>Varna, Bulgria</h5>
+                                <div class="col-md-3">
+                                    <i class="fa fa-map-marker-alt  fa-2x me-2 text-secondary-gradient"></i>
+                                    <div class="d-inline-block">
+                                        Location:
+                                        <h5>Varna, Bulgria</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <i class="fa fa-phone fa-2x me-2 text-secondary-gradient"></i>
-                                <div class="d-inline-block">
-                                    Phone:
-                                    <h5>+359889110846</h5>
+                                <div class="col-md-4">
+                                    <i class="fa fa-phone fa-2x me-2 text-secondary-gradient"></i>
+                                    <div class="d-inline-block">
+                                        Phone:
+                                        <h5>+359889110846</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-5">
-                                <i class="fa fa-envelope  fa-2x me-2 text-secondary-gradient"></i>
-                                <div class="d-inline-block">
-                                    E-mail:
-                                    <h5>yanko.rashkov@gmail.com</h5>
+                                <div class="col-md-5">
+                                    <i class="fa fa-envelope  fa-2x me-2 text-secondary-gradient"></i>
+                                    <div class="d-inline-block">
+                                        E-mail:
+                                        <h5>yanko.rashkov@gmail.com</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
-                                   href="https://github.com/qceka88" target="_blank">
-                                    <i class="fab fa-github fa-2x"></i>
-                                </a>
-                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
-                                   href="https://discordapp.com/users/972173428012482630" target="_blank">
-                                    <i class="fab fa-discord fa-2x"></i>
-                                </a>
-                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
-                                   href="https://www.linkedin.com/in/yanko-rashkov-9a8980aa/" target="_blank">
-                                    <i class="fab fa-linkedin fa-2x"></i>
-                                </a>
-                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
-                                   href="https://www.facebook.com/preslavascript" target="_blank">
-                                    <i class="fab fa-facebook fa-2x"></i>
-                                </a>
-                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
-                                   href="https://gitlab.com/qceka88" target="_blank">
-                                    <i class="fab fa-gitlab fa-2x"></i>
-                                </a>
+                                <div class="col-12 text-center">
+                                    <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
+                                       href="https://github.com/qceka88" target="_blank">
+                                        <i class="fab fa-github fa-2x"></i>
+                                    </a>
+                                    <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
+                                       href="https://discordapp.com/users/972173428012482630" target="_blank">
+                                        <i class="fab fa-discord fa-2x"></i>
+                                    </a>
+                                    <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
+                                       href="https://www.linkedin.com/in/yanko-rashkov-9a8980aa/" target="_blank">
+                                        <i class="fab fa-linkedin fa-2x"></i>
+                                    </a>
+                                    <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
+                                       href="https://www.facebook.com/preslavascript" target="_blank">
+                                        <i class="fab fa-facebook fa-2x"></i>
+                                    </a>
+                                    <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
+                                       href="https://gitlab.com/qceka88" target="_blank">
+                                        <i class="fab fa-gitlab fa-2x"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
+        <!-- Contact End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-light footer wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5 px-lg-5">
-            <div class="my-footer-style justify-content-center">
-                <div class="col-md-5">
-                    <a href="#about" class="btn btn-link">About</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#skills" class="btn btn-link">Skills</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#projects" class="btn btn-link">Projects</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#certificates" class="btn btn-link">Certificates</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#experience" class="btn btn-link">Experience</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#contact" class="btn btn-link">Contact</a>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-secondary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="my-footer-style justify-content-center">
+                    <div class="col-md-5">
+                        <a href="#about" class="btn btn-link">About</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#skills" class="btn btn-link">Skills</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#projects" class="btn btn-link">Projects</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#certificates" class="btn btn-link">Certificates</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#experience" class="btn btn-link">Experience</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#contact" class="btn btn-link">Contact</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container px-lg-5">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Yanko Rashkov</a>, All Right Reserved.
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Yanko Rashkov</a>, All Right Reserved.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        {% if not mobile_device %}
+            <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+        {% else %}
+            <a href="#" class="btn btn-lg btn-lg-square back-to-top-mobile pt-2"><i
+                    class="bi bi-arrow-up text-white"></i></a>
+        {% endif %}
+
+        <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
+
     </div>
-    <!-- Footer End -->
 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
-    <!-- Back to Top -->
-    {% if not mobile_device %}
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
-    {% else %}
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top-mobile pt-2"><i
-                class="bi bi-arrow-up text-white"></i></a>
-    {% endif %}
-
-    <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
-
-</div>
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
-<script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
-
-<!-- Template Javascript -->
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 
 </body>
