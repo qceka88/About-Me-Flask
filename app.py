@@ -42,8 +42,6 @@ if __name__ == '__main__':
 # TODO: CENTER CHAT WINDOW IN MOBILE VERSION
 # TODO: Center send button Symbol
 # TODO: Fix Close button.
-# TODO: Find better place  for OPEN chat button  in mobile Version
 # TODO: Put nice and good picture of BOT
-# TODO: Rename chat bot
 # TODO: Add new Certificate
 # TODO: Check color for bubble response of the BOT

@@ -586,6 +586,7 @@ h6,
     position: fixed;
     bottom: 50px;
     border-radius: 20px;
+    place-content: center;
     z-index: 2500;
 }
 
@@ -608,19 +609,12 @@ h6,
     border-top-right-radius: 20px;
     font-size: medium;
     text-align: left;
+    place-content: center;
     width: 100%;
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));;
     color: #666;
-    grid-template-columns: repeat(3, 50px);
-}
-
-.messageBox-header-close {
-    margin-left: 2.1rem;
-}
-
-.messageBox-header-close-mobile {
-    margin-left: 45px;
+    grid-column-gap: 87px;
 }
 
 .messageBox-chat {

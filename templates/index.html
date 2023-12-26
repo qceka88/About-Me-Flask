@@ -52,32 +52,53 @@
                 <h1 class="m-0">Portfolio</h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
-        <div>
-            {% if mobile_device %}
+            <div>
+                {% if mobile_device %}
                     <button href="#mychat" onclick="toggleForm()"
                             class="navbar-toggler bg-secondary-gradient text-white px-2">
                         <i class="fas fa-robot"></i>
                     </button>
                 {% endif %}
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-        </div>
+                <button id="navBut" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="#home" class="nav-item nav-link active">Home</a>
-                    <a href="#about" class="nav-item nav-link">About</a>
-                    <a href="#skills" class="nav-item nav-link">Skills</a>
-                    <a href="#projects" class="nav-item nav-link">Projects</a>
-                    <a href="#certificates" class="nav-item nav-link">Certificates</a>
-                    <a href="#experience" class="nav-item nav-link">Experience</a>
-                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <a href="#home" class="nav-item nav-link active"
+                            {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>Home</a>
+                    <a href="#about" class="nav-item nav-link "
+                            {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>About</a>
+                    <a href="#skills" class="nav-item nav-link"
+                            {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>Skills</a>
+                    <a href="#projects" class="nav-item nav-link" {% if mobile_device %}
+                       onclick="closeNav()"
+                    {% endif %}>Projects</a>
+                    <a href="#certificates" class="nav-item nav-link"
+                            {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>Certificates</a>
+                    <a href="#experience" class="nav-item nav-link"
+                    {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>Experience</a>
+                    <a href="#contact" class="nav-item nav-link"
+                    {% if mobile_device %}
+                       onclick="closeNav()"
+                            {% endif %}>Contact</a>
                 </div>
 
-                    <button onclick="toggleForm()"
-                            class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
-                        CHAT BOT
-                    </button>
+                <button onclick="toggleForm()"
+                        class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
+                    CHAT BOT
+                </button>
 
             </div>
         </nav>
@@ -161,25 +182,15 @@
             {% if not mobile_device %}
          class="message-box-popup"
             {% else %}
-         class="message-box-mobile-popup" style="place-content: center"
+         class="message-box-mobile-popup"
             {% endif %}>
         <section class="messageBox">
             <header class="messageBox-header justify-content-center d-inline-flex">
-                <h5><i class="fa-solid fa-chalkboard-user px-1 me-5 pt-2 text-primary-gradient"></i></h5>
-                <h4 class="text-primary-gradient justify-content-center px-5 pt-1">Chat</h4>
-                {% if not mobile_device %}
-                    <button onclick="toggleForm()"
-                            class="messageBox-header-close btn btn-primary-gradient rounded-circle "
-                    >
-                        X
-                    </button>
-                {% else %}
-                    <button onclick="toggleForm()"
-                            class="messageBox-header-close-mobile btn btn-primary-gradient rounded"
-                    >
-                        X
-                    </button>
-                {% endif %}
+                <h5><i class="fa-solid fa-chalkboard-user pt-3 text-primary-gradient"></i></h5>
+                <h4 class="text-primary-gradient pt-2">CHAT BOT</h4>
+                <button onclick="toggleForm()" class="btn btn-primary-gradient rounded-circle my-1">
+                    X
+                </button>
             </header>
             <main class="messageBox-chat">
                 <div class="message chat-bot-message">
@@ -187,11 +198,11 @@
                          style="background-image: url({{ url_for('static', filename='img/chat/bot_image.jpg') }})"></div>
                     <div class="message-bubble">
                         <div class="message-info">
-                            <div class="message-info-name">T-101</div>
+                            <div class="message-info-name">Robo</div>
                             <span id="time-now" class="message-info-time"></span>
                         </div>
                         <div class="message-text">
-                            Welcome to chat! My name is T-101 and I`m trained to answer questions about Yanko. Also I
+                            Welcome to chat! My name is Robo and I`m trained to answer questions about Yanko. Also I
                             can tell you a joke.
                         </div>
                     </div>
@@ -202,7 +213,9 @@
                 <input type="text" class="messageBox-input me-2" id="textInput" placeholder="Enter your message..."
                        autocomplete="off">
                 <button onclick="chatBot()" type="submit"
-                        class="btn btn-primary-gradient rounded-circle fa fa-paper-plane fa-x2"></button>
+                        class="btn btn-secondary-gradient rounded-circle text-white px-1 py-1">
+                    <i class="fa fa-paper-plane px-1 py-1 me-1"></i>
+                </button>
             </form>
         </section>
     </div>
@@ -1221,7 +1234,7 @@
     {% if not mobile_device %}
         <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
     {% else %}
-        <a href="#" class="btn btn-sm btn-sm-square back-to-top-mobile pt-2"><i
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top-mobile pt-2"><i
                 class="bi bi-arrow-up text-white"></i></a>
     {% endif %}
 

@@ -136,6 +136,14 @@ function toggleForm() {
     }
 }
 
+function closeNav() {
+    var form = document.getElementById("navbarCollapse");
+    const navButton = document.getElementById("navBut");
+    if (form.style.display !== "none") {
+        navButton.click()
+    }
+}
+
 // For initial bot message take current time.
 function getCurrentDateAndTime() {
     const dateTime = new Date();
