@@ -653,10 +653,11 @@ h6,
 }
 
 .message-bubble {
+    color: whitesmoke;
     max-width: 270px;
     padding: 15px;
     border-radius: 15px;
-    background: var(--chat1);
+    background: rgba(0, 86, 148, 0.65);
 }
 
 .message-info {
