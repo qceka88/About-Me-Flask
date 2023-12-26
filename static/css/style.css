@@ -153,6 +153,25 @@ h6,
     position: fixed;
     display: none;
     right: 15px;
+    bottom: 55px;
+    z-index: 99;
+    border: none;
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+/*.back-to-top-mobile {*/
+/*    position: fixed;*/
+/*    display: none;*/
+/*    right: 15px;*/
+/*    bottom: 15px;*/
+/*    z-index: 99;*/
+/*    border: none;*/
+/*    background: linear-gradient(to bottom right, var(--primary), var(--secondary));*/
+
+.mobileChatButton {
+    position: fixed;
+    /*display: none;*/
+    display: flex;
+    right: 15px;
     bottom: 15px;
     z-index: 99;
     border: none;
@@ -593,13 +612,14 @@ h6,
 
 .messageBox-header {
     border-top-left-radius: 20px;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 20px;
     font-size: medium;
     text-align: left;
     width: 100%;
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));;
     color: #666;
+    grid-template-columns: repeat(3, 50px);
 }
 
 .messageBox-header-close {

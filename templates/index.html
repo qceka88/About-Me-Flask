@@ -52,9 +52,18 @@
                 <h1 class="m-0">Portfolio</h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
+        <div>
+            {% if mobile_device %}
+                    <button href="#mychat" onclick="toggleForm()"
+                            class="btn btn-sm btn-primary-gradient rounded-pill text-white">
+{#                        <i class="fa fa-commenting" aria-hidden="true"></i>#}
+                            CHAT
+                    </button>
+                {% endif %}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+        </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
                     <a href="#home" class="nav-item nav-link active">Home</a>
@@ -64,19 +73,13 @@
                     <a href="#certificates" class="nav-item nav-link">Certificates</a>
                     <a href="#experience" class="nav-item nav-link">Experience</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
-                    {% if mobile_device %}
-                        <button href="#mychat" onclick="toggleForm()"
-                                class="btn btn-secondary-gradient rounded-pill nav-item nav-link py-1 px-2 text-white">
-                            CHAT BOT
-                        </button>
-                    {% endif %}
                 </div>
-                {% if not mobile_device %}
+
                     <button onclick="toggleForm()"
                             class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
-                        T-101 CHAT
+                        CHAT BOT
                     </button>
-                {% endif %}
+
             </div>
         </nav>
 
@@ -159,7 +162,7 @@
             {% if not mobile_device %}
          class="message-box-popup"
             {% else %}
-         class="message-box-mobile-popup"
+         class="message-box-mobile-popup" style="place-content: center"
             {% endif %}>
         <section class="messageBox">
             <header class="messageBox-header justify-content-center d-inline-flex">
@@ -196,7 +199,7 @@
                 </div>
             </main>
 
-            <form class="messageBox-inputArea" >
+            <form class="messageBox-inputArea">
                 <input type="text" class="messageBox-input me-2" id="textInput" placeholder="Enter your message..."
                        autocomplete="off">
                 <button onclick="chatBot()" type="submit"
@@ -1219,8 +1222,12 @@
     {% if not mobile_device %}
         <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
     {% else %}
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top-mobile pt-2"><i
+        <a href="#" class="btn btn-sm btn-sm-square back-to-top-mobile pt-2"><i
                 class="bi bi-arrow-up text-white"></i></a>
+        <button href="#mychat" onclick="toggleForm()"
+                class="btn btn-sm btn-sm-square mobileChatButton text-white">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+        </button>
     {% endif %}
 
     <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>

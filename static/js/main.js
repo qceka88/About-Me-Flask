@@ -32,7 +32,7 @@
             event.preventDefault();
 
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 35
+                scrollTop: $(this.hash).offset().top - 45
             }, 250, 'easeInOutExpo');
 
             if ($(this).parents('.navbar-nav').length) {
