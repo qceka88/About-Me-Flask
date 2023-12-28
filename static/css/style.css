@@ -325,8 +325,8 @@ h6,
 .pricing .nav-link {
     padding: 12px 30px;
     font-weight: 500;
-    color: var(--dark);
-    background: #b0b0b0;
+    color: #5d5d5d;
+    background: #c4c0c0;
 }
 
 .pricing .nav-item:first-child .nav-link {
@@ -759,7 +759,7 @@ h6,
     background 0.3s cubic-bezier(0,0,0.58,1);
   cursor: pointer;
 }
-.button-3d:before {
+.button-3d:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -768,12 +768,12 @@ h6,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+  background: linear-gradient(to bottom left, #2a5f8c, #7600dc);
   border-radius: inherit;
   transform: translate3d(0, 0.5em, -1em);
   transition: transform 0.3s cubic-bezier(0,0,0.58,1);
 }
-.button-3d:after {
+.button-3d:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -789,16 +789,16 @@ h6,
 .button-3d:hover {
   transform: translateY(-0.25em);
 }
-.button-3d:hover:before {
+.button-3d:hover:after {
   transform: translate3d(0, 0.75em, -1em);
 }
-.button-3d:hover:after {
+.button-3d:hover:before {
   transform: translate3d(0, 1.05em, -1em);
 }
 .button-3d:active {
   transform: translate(0, 0.5em);
 }
-.button-3d:active:before,
-.button-3d:active:after {
+.button-3d:active:after,
+.button-3d:active:before {
   transform: translate3d(0,0,-1em);
 }
