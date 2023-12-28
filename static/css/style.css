@@ -326,7 +326,7 @@ h6,
     padding: 12px 30px;
     font-weight: 500;
     color: var(--dark);
-    background: #FFFFFF;
+    background: #b0b0b0;
 }
 
 .pricing .nav-item:first-child .nav-link {
@@ -596,7 +596,6 @@ h6,
     justify-content: space-between;
     width: 100%;
     max-width: 363px;
-    /*margin: 25px 10px;*/
     height: 450px;
     border: var(--border);
     border-radius: 20px;
@@ -614,7 +613,20 @@ h6,
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap: 23%;
+    grid-column-gap:  21%;
+}
+
+.messageBox-header-mobile{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: medium;
+    text-align: left;
+    place-content: center;
+    width: 100%;
+    border-bottom: var(--border);
+    background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
+    color: #666;
+    grid-column-gap:  23%;
 }
 
 .messageBox-chat {
@@ -724,15 +736,69 @@ h6,
 }
 
 .messageBox-chat {
-    background-color: linear-gradient(to bottom left var(--chat1), var(--chat2));
+    background-color: linear-gradient(to bottom left, var(--chat1), var(--chat2));
 }
 
-
-.mobileMaxWidth {
-    width: 404px;
-}
 
 .customSpinnerStyle {
     width: 3rem;
     height: 3rem;
+}
+
+.button-3d {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+  padding: 1.25em 1.5em;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0,0,0.58,1),
+    background 0.3s cubic-bezier(0,0,0.58,1);
+  cursor: pointer;
+}
+.button-3d:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+  border-radius: inherit;
+  transform: translate3d(0, 0.5em, -1em);
+  transition: transform 0.3s cubic-bezier(0,0,0.58,1);
+}
+.button-3d:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  filter: blur(4px);
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, .7em, -1em);
+  transition: transform 0.3s cubic-bezier(0,0,0.58,1);
+}
+.button-3d:hover {
+  transform: translateY(-0.25em);
+}
+.button-3d:hover:before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+.button-3d:hover:after {
+  transform: translate3d(0, 1.05em, -1em);
+}
+.button-3d:active {
+  transform: translate(0, 0.5em);
+}
+.button-3d:active:before,
+.button-3d:active:after {
+  transform: translate3d(0,0,-1em);
 }

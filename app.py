@@ -3,7 +3,6 @@ import pickle
 
 import nltk
 from flask import Flask
-
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
@@ -37,6 +36,5 @@ app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response', bot))
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
 
-
 # TODO: Study experience/work experience button -  CENTER - Add 3D effect in button
-
+# TODO: Add more data for ChatBot

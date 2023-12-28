@@ -127,7 +127,7 @@
 
 // Open/Close chat window
 
-function toggleForm() {
+function openCloseChat() {
     var form = document.getElementById("mychat");
     if (form.style.display === "block") {
         form.style.display = "none";
