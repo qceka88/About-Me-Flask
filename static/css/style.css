@@ -596,7 +596,7 @@ h6,
     justify-content: space-between;
     width: 100%;
     max-width: 363px;
-    margin: 25px 10px;
+    /*margin: 25px 10px;*/
     height: 450px;
     border: var(--border);
     border-radius: 20px;
@@ -612,9 +612,9 @@ h6,
     place-content: center;
     width: 100%;
     border-bottom: var(--border);
-    background: linear-gradient(to bottom left, var(--chat1), var(--chat2));;
+    background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap: 87px;
+    grid-column-gap: 23%;
 }
 
 .messageBox-chat {
@@ -657,7 +657,9 @@ h6,
     max-width: 270px;
     padding: 15px;
     border-radius: 15px;
-    background: rgba(0, 86, 148, 0.65);
+    /*background: rgba(1, 86, 147, 0.65);*/
+    /*background: linear-gradient(to bottom left, rgb(66 148 227 / 65%), rgb(143 18 253 / 65%));*/
+    background: repeating-linear-gradient(to bottom right, rgb(66 148 227 / 80%), rgb(97 96 238 / 80%));
 }
 
 .message-info {

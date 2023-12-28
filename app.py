@@ -39,5 +39,4 @@ if __name__ == '__main__':
 
 
 # TODO: Study experience/work experience button -  CENTER - Add 3D effect in button
-# TODO: CENTER CHAT WINDOW IN MOBILE VERSION
 

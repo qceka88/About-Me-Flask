@@ -136,7 +136,7 @@ function toggleForm() {
     }
 }
 
-function closeNav() {
+function closeNavBar() {
     var form = document.getElementById("navbarCollapse");
     const navButton = document.getElementById("navBut");
     if (form.style.display !== "none") {
@@ -170,7 +170,7 @@ function chatBot() {
 
     const BOT_IMG = '/static/img/chat/bot_image.jpg';
     const PERSON_IMG = '/static/img/chat/user_picture.jpg';
-    const BOT_NAME = "    T-101";
+    const BOT_NAME = "    Robo";
     const PERSON_NAME = "You";
 
     messengerForm.addEventListener("submit", event => {
