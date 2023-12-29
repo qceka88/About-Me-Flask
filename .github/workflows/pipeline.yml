@@ -1,10 +1,10 @@
 name: CI/CD Workflow for Flask App with deploy in Render.com
 
 on:
-#  push:
-#    branches: [ "main" ]
-  schedule:
-    - cron: '*/1 * * * *'
+  push:
+    branches: [ "main" ]
+#  schedule:
+#    - cron: '*/1 * * * *'
 
 jobs:
 
