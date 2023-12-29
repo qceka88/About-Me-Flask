@@ -39,7 +39,7 @@ jobs:
         with:
           service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
-      - name: Wait Render to finish deploy - 3:30m
+      - name: Wait Render to finish deploy - 4:30m
         run: sleep 270
     needs: build
 
