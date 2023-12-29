@@ -34,13 +34,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to production in Render.com
-        uses: johnbeynon/render-deploy-action@v0.0.8
-        with:
-          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
-          api-key: ${{ secrets.MY_RENDER_API_KEY }}
-      - name: Wait Render to finish deploy - 4:30m
-        run: sleep 270
+      - name: Fake deploy
+        run: echo "Test"
+#      - name: Deploy to production in Render.com
+#        uses: johnbeynon/render-deploy-action@v0.0.8
+#        with:
+#          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+#          api-key: ${{ secrets.MY_RENDER_API_KEY }}
+#      - name: Wait Render to finish deploy - 04m30s
+#        run: sleep 270
     needs: build
 
   keep-it-alive:
@@ -50,10 +52,14 @@ jobs:
         run: |
           while true
           do
-            echo "Wait before GET request - 14:00m"
-            sleep 840
+            echo "Wait before GET request - 14m00s"
+            sleep 5
             echo "Execute GET request"
-            curl https://yr-portoflio.onrender.com/
-            echo "Request was successful" 
+            curl https://yr-portoflio.onrender.com/  -o /dev/null
+            echo "First GET request"
+            curl https://yr-portoflio.onrender.com/#skills -o /dev/null
+            echo "Second GET request"
+            curl https://yr-portoflio.onrender.com/#contact  -o /dev/null
+            echo "GET Request operation was successful" 
           done
     needs: deploy

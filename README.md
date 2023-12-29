@@ -6,13 +6,11 @@
 
 
 
-This is simple web app with Flask. And small Chatbot.
+This is simple web app with Flask. And small Chatbot with tensorflow, nltk, numpy, keras.
 
 Check it:
 
-http://yr-portfolio.westeurope.azurecontainer.io/
-
-
+https://yr-portoflio.onrender.com/
 
 
 ![img.png](img.png)
