@@ -2,7 +2,7 @@ name: Schedule for GET requests
 
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/14 * * * *'
 
 jobs:
   keep-it-alive-cron:
@@ -10,6 +10,22 @@ jobs:
     steps:
       - name: Keep WebApp alive
         run: |
-            echo "Execute GET request"
-            curl https://yr-portoflio.onrender.com/
+          while true
+          do
+            echo "Execute first GET requests"
+            curl https://yr-portoflio.onrender.com/ -o /dev/null
+            echo "Wait 5 seconds"
+            sleep 5
+            echo "Execute second GET requests"
+            curl https://yr-portoflio.onrender.com/#skills -o /dev/null
+            echo "Wait 5 seconds"
+            sleep 5
+            echo "Execute third GET requests"
+            curl https://yr-portoflio.onrender.com/#contact -o /dev/null
+            echo "Wait 5 seconds"
+            sleep 5
+            echo "Execute fourth GET requests"
+            curl https://yr-portoflio.onrender.com/#certificates -o /dev/null
             echo "GET Request operation was successful"
+            break
+          done
