@@ -2,7 +2,7 @@ name: Schedule for GET requests
 
 on:
   schedule:
-    - cron: '*/14 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   keep-it-alive:
