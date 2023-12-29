@@ -58,7 +58,7 @@
                         class="navbar-toggler bg-secondary-gradient text-white px-2">
                     <i class="fas fa-robot"></i>
                 </button>
-                <button id="navBut" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button id="navBut" class="navbar-toggler" type="button" onclick="closeNavBar()" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
@@ -968,13 +968,13 @@
                         </li>
                     </ul>
                 {% else %}
-                    <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
                         <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Study Experience
+                            <button class=" button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">Study Experience
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
+                            <button class=" button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
                         </li>
                     </ul>
                 {% endif %}

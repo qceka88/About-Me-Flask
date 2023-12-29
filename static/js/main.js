@@ -25,7 +25,6 @@
         }
     });
 
-
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
@@ -41,7 +40,6 @@
             }
         }
     });
-
 
     // Back to top button
     $(window).scroll(function () {
