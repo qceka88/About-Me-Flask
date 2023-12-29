@@ -44,17 +44,17 @@ jobs:
     needs: build
 
 
-  keep-it-alive:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Keep WebApp alive
-        run: |
-          while true
-          do
-            echo "Wait before GET request - 14m00s"
-            sleep 840
-            echo "Execute GET request"
-            curl https://yr-portoflio.onrender.com/
-            echo "GET Request operation was successful" 
-          done
-    needs: deploy
+#  keep-it-alive:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Keep WebApp alive
+#        run: |
+#          while true
+#          do
+#            echo "Wait before GET request - 14m00s"
+#            sleep 840
+#            echo "Execute GET request"
+#            curl https://yr-portoflio.onrender.com/
+#            echo "GET Request operation was successful"
+#          done
+#    needs: deploy
