@@ -1,0 +1,19 @@
+name: Schedule for GET requests
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  keep-it-alive-cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep
+        run: |
+          while true
+          do
+            echo "Execute GET request"
+            curl https://yr-portoflio.onrender.com/echo
+            echo "GET Request operation was successful"
+            break 
+          done
