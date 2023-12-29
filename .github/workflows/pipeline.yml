@@ -33,11 +33,26 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to production in Render.com
-        uses: johnbeynon/render-deploy-action@v0.0.8
-        with:
-          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
-          api-key: ${{ secrets.MY_RENDER_API_KEY }}
-    #      - name: Wait Render to finish deploy
-    #        run: sleep 120
+      - name: Test
+        run: echo "Fake deploy"
+#      - name: Deploy to production in Render.com
+#        uses: johnbeynon/render-deploy-action@v0.0.8
+#        with:
+#          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+#          api-key: ${{ secrets.MY_RENDER_API_KEY }}
+#      - name: Wait Render to finish deploy - 270 seconds
+#        run: sleep 270
     needs: build
+
+  keepItAlive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep WebApp alive
+        run: '/bin/sh'
+            |
+            while true
+            do
+              sleep 5
+              echo "qnko"
+            done
+    needs: deploy
