@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Keep WebApp alive
         run: |
-          while true
+          for i in {1..3}
           do
             echo "Execute first GET requests"
             curl https://yr-portoflio.onrender.com/ -o /dev/null
@@ -27,5 +27,4 @@ jobs:
             echo "Execute fourth GET requests"
             curl https://yr-portoflio.onrender.com/#certificates -o /dev/null
             echo "GET Request operation was successful"
-            break
           done
