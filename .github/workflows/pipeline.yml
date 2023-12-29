@@ -4,6 +4,7 @@ on:
   push:
     branches: [ "main" ]
 
+
 jobs:
 
   build:
@@ -33,15 +34,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo "Fake deploy"
-    #      - name: Deploy to production in Render.com
-    #        uses: johnbeynon/render-deploy-action@v0.0.8
-    #        with:
-    #          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
-    #          api-key: ${{ secrets.MY_RENDER_API_KEY }}
-    #      - name: Wait Render to finish deploy - 270 seconds
-    #        run: sleep 270
+      - name: Deploy to production in Render.com
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
+      - name: Wait Render to finish deploy - 270 seconds
+        run: sleep 270
     needs: build
 
   keep-it-alive:
@@ -51,7 +50,10 @@ jobs:
         run: |
           while true
           do
-            sleep 5
-            echo "qnko"
+            echo "Wait before GET request"
+            sleep 840
+            echo "Execute GET request"
+            curl https://yr-portoflio.onrender.com/
+            echo "Request was successful" 
           done
     needs: deploy
