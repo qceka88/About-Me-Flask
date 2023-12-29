@@ -17,4 +17,3 @@ jobs:
             echo "GET Request operation was successful"
             break 
           done
-    needs:
