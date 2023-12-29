@@ -8,9 +8,8 @@ jobs:
   keep-it-alive-cron:
     runs-on: ubuntu-latest
     steps:
-      - name: Keep It Alive
+      - name: Keep WebApp alive
         run: |
             echo "Execute GET request"
-            curl https://yr-portoflio.onrender.com/echo
+            curl https://yr-portoflio.onrender.com/
             echo "GET Request operation was successful"
-
