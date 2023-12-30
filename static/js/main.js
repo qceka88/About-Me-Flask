@@ -147,7 +147,7 @@ function closeNavbar() {
 // Check nav but is visible
 function isNavButVisible() {
     var navBut = document.getElementById('navBut');
-    var navItems = document.querySelectorAll('.nav-item');
+    var navItems = document.querySelectorAll('.menuButton');
 
     if (navBut.offsetParent !== null) {
         // #navBut is visible
