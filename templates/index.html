@@ -58,30 +58,20 @@
                         class="navbar-toggler bg-secondary-gradient text-white px-2">
                     <i class="fas fa-robot"></i>
                 </button>
-                <button id="navBut" class="navbar-toggler" type="button" onclick="closeNavBar()" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse">
+                <button id="navBut" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" onclick="isNavButVisible()">
                     <span class="fa fa-bars"></span>
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    {% if not mobile_device %}
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link ">About</a>
-                        <a href="#skills" class="nav-item nav-link">Skills</a>
-                        <a href="#projects" class="nav-item nav-link">Projects</a>
-                        <a href="#certificates" class="nav-item nav-link">Certificates</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    {% else %}
-                        <a href="#home" class="nav-item nav-link active" onclick="closeNavBar()">Home</a>
-                        <a href="#about" class="nav-item nav-link " onclick="closeNavBar()">About</a>
-                        <a href="#skills" class="nav-item nav-link" onclick="closeNavBar()">Skills</a>
-                        <a href="#projects" class="nav-item nav-link" onclick="closeNavBar()">Projects</a>
-                        <a href="#certificates" class="nav-item nav-link" onclick="closeNavBar()">Certificates</a>
-                        <a href="#experience" class="nav-item nav-link" onclick="closeNavBar()">Experience</a>
-                        <a href="#contact" class="nav-item nav-link" onclick="closeNavBar()">Contact</a>
-                    {% endif %}
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link ">About</a>
+                    <a href="#skills" class="nav-item nav-link">Skills</a>
+                    <a href="#projects" class="nav-item nav-link">Projects</a>
+                    <a href="#certificates" class="nav-item nav-link">Certificates</a>
+                    <a href="#experience" class="nav-item nav-link">Experience</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <button onclick="openCloseChat()"
                         class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
@@ -970,11 +960,13 @@
                 {% else %}
                     <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
                         <li class="nav-item">
-                            <button class=" button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">Study Experience
+                            <button class=" button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">Study
+                                Experience
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button class=" button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience</button>
+                            <button class=" button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work Experience
+                            </button>
                         </li>
                     </ul>
                 {% endif %}

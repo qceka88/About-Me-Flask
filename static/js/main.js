@@ -123,8 +123,8 @@
     });
 })(jQuery);
 
-// Open/Close chat window
 
+// Open/Close chat window
 function openCloseChat() {
     var form = document.getElementById("mychat");
     if (form.style.display === "block") {
@@ -134,13 +134,34 @@ function openCloseChat() {
     }
 }
 
-function closeNavBar() {
+
+// Close Collapsed Nav Bar
+function closeNavbar() {
     var form = document.getElementById("navbarCollapse");
     const navButton = document.getElementById("navBut");
     if (form.style.display !== "none") {
         navButton.click()
     }
 }
+
+// Check nav but is visible
+function isNavButVisible() {
+    var navBut = document.getElementById('navBut');
+    var navItems = document.querySelectorAll('.nav-item');
+
+    if (navBut.offsetParent !== null) {
+        // #navBut is visible
+        navItems.forEach(function(navItem) {
+            navItem.addEventListener('click', closeNavbar);
+        });
+    } else {
+        // #navBut is not visible
+        navItems.forEach(function(navItem) {
+            navItem.removeEventListener('click', closeNavbar);
+        });
+    }
+}
+
 
 // For initial bot message take current time.
 function getCurrentDateAndTime() {
