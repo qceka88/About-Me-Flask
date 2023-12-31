@@ -121,6 +121,32 @@
             }
         }
     });
+
+    // Testimonials carousel Mobile Version
+    $(".testimonial-carousel-mobile").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        loop: true,
+        center: true,
+        dots: false,
+        nav: true,
+        page: true,
+        navText: [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 2
+            },
+            1536: {
+                items: 4
+            },
+            1948: {
+                items: 6
+            }
+        }
+    });
 })(jQuery);
 
 

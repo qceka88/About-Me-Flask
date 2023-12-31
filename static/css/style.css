@@ -162,7 +162,6 @@ h6,
 
 .mobileChatButton {
     position: fixed;
-    /*display: none;*/
     display: flex;
     right: 15px;
     bottom: 15px;
@@ -343,47 +342,50 @@ h6,
 }
 
 .button-3d:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom left, #2a5f8c, #7600dc);
-  border-radius: inherit;
-  transform: translate3d(0, 0.5em, -1em);
-  transition: transform 0.3s cubic-bezier(0,0,0.58,1);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom left, #2a5f8c, #7600dc);
+    border-radius: inherit;
+    transform: translate3d(0, 0.5em, -1em);
+    transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
+
 .button-3d:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  filter: blur(4px);
-  border-radius: inherit;
-  top: 0;
-  left: 0;
-  transform: translate3d(0, .7em, -1em);
-  transition: transform 0.3s cubic-bezier(0,0,0.58,1);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    filter: blur(4px);
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, .7em, -1em);
+    transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
-.button-3d:hover {
-  transform: translateY(-0.25em);
-}
-.button-3d:hover:after {
-  transform: translate3d(0, 0.75em, -1em);
-}
-.button-3d:hover:before {
-  transform: translate3d(0, 1.05em, -1em);
-}
+
+/*.button-3d:hover {*/
+/*  transform: translateY(-0.25em);*/
+/*}*/
+/*.button-3d:hover:after {*/
+/*  transform: translate3d(0, 0.75em, -1em);*/
+/*}*/
+/*.button-3d:hover:before {*/
+/*  transform: translate3d(0, 1.05em, -1em);*/
+/*}*/
 .button-3d:active {
-  transform: translate(0, 0.5em);
+    transform: translate(0, 0.5em);
 }
+
 .button-3d:active:after,
 .button-3d:active:before {
-  transform: translate3d(0,0,-1em);
+    transform: translate3d(0, 0, -1em);
 }
 
 
@@ -462,6 +464,7 @@ h6,
     width: 394px;
     height: 207px;
     transition-duration: -1.5s, -1.5s;
+    place-content: center;
 }
 
 /*** Screenshot-mobile ***/
@@ -471,7 +474,6 @@ h6,
     height: 307px;
     padding-right: 70px;
     padding-left: 70px;
-    /*margin-left: 20px; */
 }
 
 .screenshot-carousel-mobile::before {
@@ -534,6 +536,54 @@ h6,
     background: linear-gradient(to bottom right, var(--secondary), var(--primary));
 }
 
+/*** Testimonial Mobile version***/
+.testimonial-carousel-mobile .owl-item .testimonial-item,
+.testimonial-carousel-mobile .owl-item .testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-carousel-mobile .owl-item.center .testimonial-item {
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.testimonial-carousel-mobile .owl-item.center .testimonial-item h5,
+.testimonial-carousel-mobile .owl-item.center .testimonial-item p {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel-mobile .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-carousel-mobile .owl-nav .owl-prev,
+.testimonial-carousel-mobile .owl-nav .owl-next {
+    margin: 0 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    border-radius: 60px;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.testimonial-carousel-mobile .owl-nav .owl-prev:hover,
+.testimonial-carousel-mobile .owl-nav .owl-next:hover {
+    background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+}
+
+.mobileTestimonialImage {
+    width: 125px;
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*** Footer ***/
 .footer {
@@ -658,10 +708,10 @@ h6,
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap:  21%;
+    grid-column-gap: 21%;
 }
 
-.messageBox-header-mobile{
+.messageBox-header-mobile {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     font-size: medium;
@@ -671,7 +721,7 @@ h6,
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap:  23%;
+    grid-column-gap: 23%;
 }
 
 .messageBox-chat {
@@ -789,18 +839,19 @@ h6,
     width: 3rem;
     height: 3rem;
 }
+
 /* 3D button */
 .button-3d {
-  display: inline-block;
-  position: relative;
-  border: 0;
-  background: linear-gradient(to bottom left, var(--primary), var(--secondary));
-  padding: 1.25em 1.5em;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  transform-style: preserve-3d;
-  transition: transform 0.3s cubic-bezier(0,0,0.58,1),
-    background 0.3s cubic-bezier(0,0,0.58,1);
-  cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border: 0;
+    background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+    padding: 1.25em 1.5em;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1),
+    background 0.3s cubic-bezier(0, 0, 0.58, 1);
+    cursor: pointer;
 }
