@@ -38,3 +38,4 @@ jobs:
           repository: ${{ github.repository }}
           older-than-seconds: 3600
           event: schedule
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
