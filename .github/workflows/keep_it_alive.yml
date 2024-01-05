@@ -36,3 +36,5 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: fabriziocacicia/self-delete-workflow-action@93a62fee031d0e459a598609f0e53b8e3858db30
         uses: fabriziocacicia/self-delete-workflow-action@v0.1.0
+        env:
+          SET_OUTPUT_COMMAND_DEPRECATED: true
