@@ -31,3 +31,8 @@ jobs:
             sleep 5
             echo "GET Request operation was successful"
           done
+
+      - name: Remove scheduled job
+        uses: cardinalby/unschedule-job-action@v1
+        with:
+          ghToken: ${{ secrets.MY_TOKEN }}
