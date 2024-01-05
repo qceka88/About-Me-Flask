@@ -33,7 +33,7 @@ jobs:
           done
 
       - name: Delete old scheduled workflow runs
-        uses: MajorScruffy/delete-old-workflow-runs@latest
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
         with:
           repository: ${{ github.repository }}
           workflow: ".github/workflows/keep_it_alive.yml"
