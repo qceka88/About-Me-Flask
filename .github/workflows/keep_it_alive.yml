@@ -31,6 +31,9 @@ jobs:
             sleep 5
             echo "GET Request operation was successful"
           done
+          
+      - name: Set DELAYED_JOB_WORKFLOW_FILE_PATH
+        run: echo "DELAYED_JOB_WORKFLOW_FILE_PATH=$(find .github/workflows -name 'keep_it_alive.yml')" >> $GITHUB_ENV
 
       - name: Remove scheduled job
         uses: cardinalby/unschedule-job-action@v1
