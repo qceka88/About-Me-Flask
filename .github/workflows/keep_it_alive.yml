@@ -32,8 +32,9 @@ jobs:
             echo "GET Request operation was successful"
           done
 
-      - name: Remove scheduled job
-        uses: fabriziocacicia/self-delete-workflow-action@v0.1.0
-        env:
-          SET_OUTPUT_COMMAND_DEPRECATED: true
-          MY_TOKEN: ${{ secrets.MY_TOKEN }}
+      - name: Delete old scheduled workflow runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+        with:
+          repository: ${{ github.repository }}
+          older-than-seconds: 3600
+          event: schedule
