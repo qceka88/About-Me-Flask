@@ -39,4 +39,5 @@ jobs:
           workflow: ".github/workflows/keep_it_alive.yml"
           older-than-seconds: 3600
           event: schedule
+        env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
