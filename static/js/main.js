@@ -149,19 +149,23 @@
     });
 })(jQuery);
 
-// Hide see phone number
-function phoneNumberReveal() {
+// Hide/See phone number
+function phoneNumberToggle() {
     const phone = document.getElementById("my-number")
-    const toggle = document.getElementById("phone-toggle")
+    const toggle = document.getElementById("number-toggle")
+    const text = document.getElementById("see-number-text")
     const revealedNumber = "+359889110846"
     const hiddenNumber = "+359*********"
+
     if (phone.innerText === hiddenNumber) {
         phone.innerText = revealedNumber
-        toggle.className = "fa fa-toggle-off fa-xl"
-    }
-    else {
-       phone.innerText =hiddenNumber
-       toggle.className = "fa fa-toggle-on fa-xl text-primary"
+        toggle.className = "fa fa-toggle-off fa-xl my-0"
+        toggle.style.color = "gray"
+        text.innerText = ""
+    } else {
+        phone.innerText = hiddenNumber
+        toggle.className = "fa fa-toggle-on fa-xl text-primary my-0"
+        text.innerText = "(see number)"
     }
 
 }
