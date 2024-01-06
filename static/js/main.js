@@ -149,6 +149,23 @@
     });
 })(jQuery);
 
+// Hide see phone number
+function phoneNumberReveal() {
+    const phone = document.getElementById("my-number")
+    const toggle = document.getElementById("phone-toggle")
+    const revealedNumber = "+359889110846"
+    const hiddenNumber = "+359*********"
+    if (phone.innerText === hiddenNumber) {
+        phone.innerText = revealedNumber
+        toggle.className = "fa fa-toggle-off fa-xl"
+    }
+    else {
+       phone.innerText =hiddenNumber
+       toggle.className = "fa fa-toggle-on fa-xl text-primary"
+    }
+
+}
+
 
 // Open/Close chat window
 function openCloseChat() {
@@ -177,12 +194,12 @@ function isNavButVisible() {
 
     if (navBut.offsetParent !== null) {
         // #navBut is visible
-        navItems.forEach(function(navItem) {
+        navItems.forEach(function (navItem) {
             navItem.addEventListener('click', closeNavbar);
         });
     } else {
         // #navBut is not visible
-        navItems.forEach(function(navItem) {
+        navItems.forEach(function (navItem) {
             navItem.removeEventListener('click', closeNavbar);
         });
     }

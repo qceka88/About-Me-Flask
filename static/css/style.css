@@ -855,3 +855,25 @@ h6,
     background 0.3s cubic-bezier(0, 0, 0.58, 1);
     cursor: pointer;
 }
+
+/* Small Custom Styles */
+
+.keep-together {
+    white-space: nowrap;
+}
+
+.custom-j-letter {
+    font-weight: bolder;
+    padding-top: 2px;
+    margin-right: 1px;
+    margin-left: 2px;
+    color: black;
+}
+
+.custom-j-letter-mobile {
+    font-weight: 500;
+    padding-bottom: 2px;
+    margin-left: 2px;
+    font-size: 14px;
+    color: #262b47;
+}
