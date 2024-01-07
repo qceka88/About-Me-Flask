@@ -6,7 +6,7 @@ from flask import Flask
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
-from WebApp.views import IndexView
+from WebApp.views import IndexView, BotResponseView
 
 nltk.download('popular')
 nltk.download('omw-1.4')
