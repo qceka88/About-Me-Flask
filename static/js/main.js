@@ -154,18 +154,24 @@ function phoneNumberToggle() {
     const phone = document.getElementById("my-number")
     const toggle = document.getElementById("number-toggle")
     const text = document.getElementById("see-number-text")
+    // const img = document.getElementById("my-img");
     const revealedNumber = "+359889110846"
     const hiddenNumber = "+359*********"
 
     if (phone.innerText === hiddenNumber) {
         phone.innerText = revealedNumber
+        // phone.style.display = "none"
+        // img.style.display = "block"
         toggle.className = "fa fa-toggle-off fa-xl my-0"
         toggle.style.color = "gray"
         text.innerText = ""
     } else {
         phone.innerText = hiddenNumber
+        // phone.style.display = "block"
+        // img.style.display = "none"
         toggle.className = "fa fa-toggle-on fa-xl text-primary my-0"
         text.innerText = "(see number)"
+
     }
 
 }
