@@ -647,10 +647,19 @@
                                 <div class="d-flex justify-content-between mb-2">
                                     <span>HTML & CSS</span><i
                                         class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <a href="https://qceka88.pythonanywhere.com/" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Go to Site</a>
-                                <a href="https://github.com/qceka88/MyMotoMadness" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
+                                {% if mobile_device %}
+                                    <div class="keep-together justify-content-center">
+                                        <a href="https://github.com/qceka88/MyMotoMadness" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">GitHub Repo</a>
+                                        <a href="https://qceka88.pythonanywhere.com/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">Go to Site</a>
+                                    </div>
+                                {% else %}
+                                    <a href="https://github.com/qceka88/MyMotoMadness" target="_blank"
+                                       class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
+                                    <a href="https://qceka88.pythonanywhere.com/" target="_blank"
+                                       class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Go to Site</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -708,14 +717,14 @@
                                         class="fa fa-check text-primary-gradient pt-1"></i></div>
                                 {% if mobile_device %}
                                     <div class="keep-together justify-content-center">
-                                    <a href="https://github.com/qceka88/ImageTranslate-Tkinter" target="_blank"
-                                       class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">GitHub Repo</a>
-                                    <a href="https://www.youtube.com/watch?v=5mmO8RUHiuc" target="_blank"
-                                       class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">YouTube Demo</a>
+                                        <a href="https://github.com/qceka88/ImageTranslate-Tkinter" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">GitHub Repo</a>
+                                        <a href="https://www.youtube.com/watch?v=5mmO8RUHiuc" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">YouTube Demo</a>
                                     </div>
                                 {% else %}
                                     <a href="https://github.com/qceka88/ImageTranslate-Tkinter" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
+                                       class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
                                     <a href="https://www.youtube.com/watch?v=5mmO8RUHiuc" target="_blank"
                                        class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">YouTube Demo</a>
                                 {% endif %}
@@ -748,22 +757,22 @@
                                         class="fa fa-check text-primary-gradient pt-1"></i></div>
                                 {% if mobile_device %}
                                     <div class="justify-content-center keep-together">
-                                <a href="https://github.com/qceka88/Fuel-Calculator-Tkinter-Project/tree/main"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">GitHub Repo</a>
-                                <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">Run on
-                                    Replit</a>
+                                        <a href="https://github.com/qceka88/Fuel-Calculator-Tkinter-Project/tree/main"
+                                           target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">GitHub Repo</a>
+                                        <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
+                                           target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 mx-1 mt-4">Run on
+                                            Replit</a>
                                     </div>
                                 {% else %}
                                     <a href="https://github.com/qceka88/Fuel-Calculator-Tkinter-Project/tree/main"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
-                                <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Run on
-                                    Replit</a>
+                                       target="_blank"
+                                       class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">GitHub Repo</a>
+                                    <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
+                                       target="_blank"
+                                       class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Run on
+                                        Replit</a>
 
                                 {% endif %}
                             </div>
@@ -1059,20 +1068,23 @@
                 {% if mobile_device %}
                     <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
                         <li class="nav-item">
-                            <button class="btn btn-sm button-3d nav-link active px-2 py-2" data-bs-toggle="pill" href="#tab-1">
+                            <button class="btn btn-sm button-3d nav-link active px-2 py-2" data-bs-toggle="pill"
+                                    href="#tab-1">
                                 Educational Experience
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-sm button-3d shadow-lg nav-link px-2 py-2" data-bs-toggle="pill" href="#tab-2">
-                                 Work Experience
+                            <button class="btn btn-sm button-3d shadow-lg nav-link px-2 py-2" data-bs-toggle="pill"
+                                    href="#tab-2">
+                                Work Experience
                             </button>
                         </li>
                     </ul>
                 {% else %}
                     <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
                         <li class="nav-item">
-                            <button class="btn button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">Educational
+                            <button class="btn button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">
+                                Educational
                                 Experience
                             </button>
                         </li>
@@ -1337,7 +1349,7 @@
                                     </a>
                                     <small id="see-number-text" onclick="phoneNumberToggle()">(see number)</small>
                                     <h5 id="my-number">+359*********</h5>
-{#                                    <img id="my-img" class="mb-0" height="24px" src="{{ url_for('static', filename='img/contact/phone.png') }}" style="display: none;" alt="number">#}
+                                    {#                                    <img id="my-img" class="mb-0" height="24px" src="{{ url_for('static', filename='img/contact/phone.png') }}" style="display: none;" alt="number">#}
                                 </div>
                             </div>
                             <div class="col-md-5">
