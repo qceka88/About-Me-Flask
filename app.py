@@ -31,7 +31,7 @@ app.config['SECRET_KEY'] = 'FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2'
 
 # Define URL
 app.add_url_rule('/', view_func=IndexView.as_view("class_view", "index.html"))
-# app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response', bot))
+app.add_url_rule('/get', view_func=BotResponseView.as_view('bot_response', bot))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
