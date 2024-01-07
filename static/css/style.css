@@ -877,3 +877,7 @@ h6,
     font-size: 14px;
     color: #262b47;
 }
+
+.smoothTransition {
+    transition: all 0.3s ease;
+}
