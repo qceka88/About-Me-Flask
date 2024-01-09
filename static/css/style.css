@@ -317,28 +317,43 @@ h6,
 
 
 /*** Experience button ***/
-.pricing .nav {
+.doubleButton .nav {
     padding: 2px;
 }
 
-.pricing .nav-link {
+.doubleButton .nav-link {
     padding: 12px 30px;
     font-weight: 500;
     color: #5d5d5d;
     background: #c4c0c0;
 }
 
-.pricing .nav-item:first-child .nav-link {
+.doubleButton .nav-item:first-child .nav-link {
     border-radius: 30px 0 0 30px;
 }
 
-.pricing .nav-item:last-child .nav-link {
+.doubleButton .nav-item:last-child .nav-link {
     border-radius: 0 30px 30px 0;
 }
 
-.pricing .nav-link.active {
+.doubleButton .nav-link.active {
     color: #FFFFFF;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+
+}
+.button-3d {
+    display: inline-block;
+    position: relative;
+    border: 0;
+    background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+    padding: 1.25em 1.5em;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1),
+    background 0.3s cubic-bezier(0, 0, 0.58, 1);
+    cursor: pointer;
 }
 
 .button-3d:after {
@@ -568,11 +583,11 @@ h6,
 }
 
 .mobileTestimonialImage {
-    width: 125px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 /*** Footer ***/
@@ -828,22 +843,6 @@ h6,
 .customSpinnerStyle {
     width: 3rem;
     height: 3rem;
-}
-
-/* 3D button */
-.button-3d {
-    display: inline-block;
-    position: relative;
-    border: 0;
-    background: linear-gradient(to bottom left, var(--primary), var(--secondary));
-    padding: 1.25em 1.5em;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    transform-style: preserve-3d;
-    transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1),
-    background 0.3s cubic-bezier(0, 0, 0.58, 1);
-    cursor: pointer;
 }
 
 /* Small Custom Styles */
