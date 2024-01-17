@@ -215,7 +215,7 @@
         "What version control system can use?"
       ],
       "responses": [
-        "During the long path of education Yanko has learned to use Git/GitHub/GitLab version control systems. You can check his profiles in Contact section."
+        "During the long path of education Yanko has learned to use Git/GitHub/GitLab version control systems. You can check his profiles in Contact section. Also Yanko learned how to build CI/CD workflow with GitHub Actions."
       ],
       "context": [
         "github_gitlab_git_knowledge"
