@@ -34,7 +34,7 @@ class Tokenizer(Data):
 
                 self.documents.append((tokenized_words, intent["tag"]))
 
-                if intent['tag'] not in self.labels:
+                if intent["tag"] not in self.labels:
                     self.labels.append(intent["tag"])
         self.labels = sorted(list(set(self.labels)))
 
@@ -52,8 +52,8 @@ class Lemmatizer(Tokenizer):
 class AddDataForChatBot(Lemmatizer):
 
     def dump_words_and_classes(self):
-        pickle.dump(self.words, open("texts.pkl", "wb"))
-        pickle.dump(self.labels, open("labels.pkl", "wb"))
+        pickle.dump(self.words, open("ChatBot/texts.pkl", "wb"))
+        pickle.dump(self.labels, open("ChatBot/labels.pkl", "wb"))
 
 
 class Trainer(AddDataForChatBot):
@@ -92,17 +92,17 @@ class Model(Trainer):
 
     def create_model(self):
         self.model = Sequential()
-        self.model.add(Dense(256, input_shape=(len(self.train_x[0]),), activation='relu'))
+        self.model.add(Dense(256, input_shape=(len(self.train_x[0]),), activation="relu"))
         self.model.add(Dropout(0.5))
-        self.model.add(Dense(128, activation='relu'))
+        self.model.add(Dense(128, activation="relu"))
         self.model.add(Dropout(0.5))
-        self.model.add(Dense(64, activation='relu'))
+        self.model.add(Dense(64, activation="relu"))
         self.model.add(Dropout(0.5))
-        self.model.add(Dense(len(self.train_y[0]), activation='softmax'))
+        self.model.add(Dense(len(self.train_y[0]), activation="softmax"))
 
     def compile_model(self):
         sgd = tf.keras.optimizers.legacy.SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
-        self.model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+        self.model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
 
 class FitModel(Model):
@@ -112,10 +112,10 @@ class FitModel(Model):
         self.hist = self.model.fit(np.array(self.train_x), np.array(self.train_y), epochs=200, batch_size=5, verbose=1)
 
     def save_model(self):
-        self.model.save('model.h5', self.hist)
+        self.model.save("ChatBot/model.h5", self.hist)
 
 
-data_file = open("training_source.json").read()
+data_file = open("ChatBot/training_source.json").read()
 
 model = FitModel(data_file)
 model.process_initial_data_from_source()

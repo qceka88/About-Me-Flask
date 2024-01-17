@@ -55,12 +55,12 @@ class Predict(BOW):
 class GetResponse(TrainedData):
 
     def get_response(self, user_msg):
-        tag = user_msg[0]['intent']
-        list_of_intents = self.intents['intents']
+        tag = user_msg[0]["intent"]
+        list_of_intents = self.intents["intents"]
 
         for intent in list_of_intents:
-            if intent['tag'] == tag:
-                result = random.choice(intent['responses'])
+            if intent["tag"] == tag:
+                result = random.choice(intent["responses"])
 
                 return result
 
