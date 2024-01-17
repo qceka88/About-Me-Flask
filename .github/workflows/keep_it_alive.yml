@@ -22,11 +22,11 @@ jobs:
             echo "Wait 5 seconds"
             sleep 5
             echo "Execute third GET requests"
-            response=$(curl -sS https://yr-portoflio.onrender.com/get?message=Hi)
+            response=$(curl -sS https://yr-portoflio.onrender.com/get?message="Hi, how are you?")
             echo "Wait 5 seconds"
             sleep 5
             echo "Execute fourth GET requests"
-            response=$(curl -sS https://yr-portoflio.onrender.com/get?message=Hello)
+            response=$(curl -sS https://yr-portoflio.onrender.com/get?message="Tell me about tech stack?")
             echo "Wait 5 seconds"
             sleep 5
             echo "GET Request operation was successful"
