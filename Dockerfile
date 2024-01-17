@@ -16,7 +16,7 @@ COPY . .
 EXPOSE 80
 
 # Train the ChatBot
-RUN echo python ChatBot/chat_bot_training.py
+RUN echo python3 ChatBot/chat_bot_training.py
 
 # Define our command to be run when launching the container
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=80"]

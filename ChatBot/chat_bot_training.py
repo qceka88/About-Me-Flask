@@ -52,8 +52,8 @@ class Lemmatizer(Tokenizer):
 class AddDataForChatBot(Lemmatizer):
 
     def dump_words_and_classes(self):
-        pickle.dump(self.words, open("ChatBot/texts.pkl", "wb"))
-        pickle.dump(self.labels, open("ChatBot/labels.pkl", "wb"))
+        pickle.dump(self.words, open("app/ChatBot/texts.pkl", "wb"))
+        pickle.dump(self.labels, open("app/ChatBot/labels.pkl", "wb"))
 
 
 class Trainer(AddDataForChatBot):
@@ -112,19 +112,20 @@ class FitModel(Model):
         self.hist = self.model.fit(np.array(self.train_x), np.array(self.train_y), epochs=200, batch_size=5, verbose=1)
 
     def save_model(self):
-        self.model.save("ChatBot/model.h5", self.hist)
+        self.model.save("app/ChatBot/model.h5", self.hist)
 
 
-data_file = open("ChatBot/training_source.json").read()
+if __name__ == '__main__':
+    data_file = open("app/ChatBot/training_source.json").read()
 
-model = FitModel(data_file)
-model.process_initial_data_from_source()
-model.lemmatize_and_lower_words()
-model.dump_words_and_classes()
-model.training_set()
-model.shuffle_and_transform_into_array()
-model.train_and_test_lists()
-model.create_model()
-model.compile_model()
-model.fit_and_save_model()
-model.save_model()
+    model = FitModel(data_file)
+    model.process_initial_data_from_source()
+    model.lemmatize_and_lower_words()
+    model.dump_words_and_classes()
+    model.training_set()
+    model.shuffle_and_transform_into_array()
+    model.train_and_test_lists()
+    model.create_model()
+    model.compile_model()
+    model.fit_and_save_model()
+    model.save_model()
