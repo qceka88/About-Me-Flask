@@ -11,10 +11,7 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
-nltk.download("popular")
-nltk.download("omw-1.4")
-nltk.download("punkt")
-nltk.download("wordnet")
+
 class Data:
 
     def __init__(self, source_file):
