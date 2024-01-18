@@ -11,7 +11,10 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
-
+nltk.download("popular")
+nltk.download("omw-1.4")
+nltk.download("punkt")
+nltk.download("wordnet")
 class Data:
 
     def __init__(self, source_file):
@@ -52,8 +55,10 @@ class Lemmatizer(Tokenizer):
 class AddDataForChatBot(Lemmatizer):
 
     def dump_words_and_classes(self):
-        pickle.dump(self.words, open("app/ChatBot/texts.pkl", "wb"))
-        pickle.dump(self.labels, open("app/ChatBot/labels.pkl", "wb"))
+        pickle.dump(self.words, open("/app/ChatBot/texts.pkl", "wb"))
+        #pickle.dump(self.words, open("texts.pkl", "wb"))
+        pickle.dump(self.labels, open("/app/ChatBot/labels.pkl", "wb"))
+        #pickle.dump(self.labels, open("labels.pkl", "wb"))
 
 
 class Trainer(AddDataForChatBot):
@@ -112,11 +117,13 @@ class FitModel(Model):
         self.hist = self.model.fit(np.array(self.train_x), np.array(self.train_y), epochs=200, batch_size=5, verbose=1)
 
     def save_model(self):
-        self.model.save("app/ChatBot/model.h5", self.hist)
+       self.model.save("/app/ChatBot/model.h5", self.hist)
+       #self.model.save("model.h5", self.hist)
 
 
 if __name__ == '__main__':
-    data_file = open("app/ChatBot/training_source.json").read()
+    data_file = open("/app/ChatBot/training_source.json").read()
+    #data_file = open("training_source.json").read()
 
     model = FitModel(data_file)
     model.process_initial_data_from_source()
