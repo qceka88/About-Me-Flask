@@ -117,7 +117,7 @@ class FitModel(Model):
         self.model.save("model.h5", self.hist)
 
 
-data_file = open("ChatBot/training_source.json").read()
+data_file = open("training_source.json").read()
 model = FitModel(data_file)
 model.process_initial_data_from_source()
 model.lemmatize_and_lower_words()
