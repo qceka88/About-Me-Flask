@@ -58,9 +58,9 @@ class Lemmatizer(Tokenizer):
 class AddDataForChatBot(Lemmatizer):
 
     def dump_words_and_classes(self):
-        file = open("ChatBot/texts.pkl", "r")
+        file = open("ChatBot/texts.pkl", "w")
         file.close()
-        file2 = open("ChatBot/texts.pkl", "r")
+        file2 = open("ChatBot/texts.pkl", "w")
         file2.close()
         pickle.dump(self.words, open("ChatBot/texts.pkl", "wb"))
         pickle.dump(self.labels, open("ChatBot/labels.pkl", "wb"))
@@ -122,7 +122,7 @@ class FitModel(Model):
         self.hist = self.model.fit(np.array(self.train_x), np.array(self.train_y), epochs=200, batch_size=5, verbose=1)
 
     def save_model(self):
-        file = open("ChatBot/model.h5", "r")
+        file = open("ChatBot/model.h5", "w")
         file.close()
         self.model.save("ChatBot/model.h5", self.hist)
 
