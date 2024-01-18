@@ -99,10 +99,11 @@ class Model(Trainer):
 
     def create_model(self):
         self.model = Sequential()
-        self.model.add(Dense(256, input_shape=(len(self.train_x[0]),), activation="relu"))
+        #self.model.add(Dense(256, input_shape=(len(self.train_x[0]),), activation="relu"))
+        self.model.add(Dense(128, input_shape=(len(self.train_x[0]),), activation="relu"))
         self.model.add(Dropout(0.5))
-        self.model.add(Dense(128, activation="relu"))
-        self.model.add(Dropout(0.5))
+       # self.model.add(Dense(128, activation="relu"))
+       # self.model.add(Dropout(0.5))
         self.model.add(Dense(64, activation="relu"))
         self.model.add(Dropout(0.5))
         self.model.add(Dense(len(self.train_y[0]), activation="softmax"))
