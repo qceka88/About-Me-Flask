@@ -8,10 +8,6 @@ from keras.models import load_model
 from ChatBot.chat_bot_actions import BotResponse
 from WebApp.views import IndexView, BotResponseView
 
-nltk.download("popular")
-nltk.download("omw-1.4")
-nltk.download("punkt")
-nltk.download("wordnet")
 
 # Initialise Chatbot Object
 model = load_model("/app/ChatBot/model.h5")
@@ -20,7 +16,7 @@ words = pickle.load(open("/app/ChatBot/texts.pkl", "rb"))
 labels = pickle.load(open("/app/ChatBot/labels.pkl", "rb"))
 bot = BotResponse(model, intents, words, labels)
 
-# initialise Flask App
+# Initialise Flask App
 app = Flask(__name__,
             static_url_path="/static",
             static_folder="static",
@@ -29,7 +25,7 @@ app = Flask(__name__,
 # Config Secret Key
 app.config["SECRET_KEY"] = "FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2"
 
-# Define URL
+# urlpatterns
 app.add_url_rule("/", view_func=IndexView.as_view("class_view", "index.html"))
 app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
 
