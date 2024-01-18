@@ -10,10 +10,6 @@ from keras.layers import Dense, Dropout
 from keras.models import Sequential
 from nltk.stem import WordNetLemmatizer
 
-nltk.download("popular")
-nltk.download("omw-1.4")
-nltk.download("punkt")
-nltk.download("wordnet")
 
 lemmatizer = WordNetLemmatizer()
 
@@ -58,12 +54,8 @@ class Lemmatizer(Tokenizer):
 class AddDataForChatBot(Lemmatizer):
 
     def dump_words_and_classes(self):
-        file = open("ChatBot/texts.pkl", "w")
-        file.close()
-        file2 = open("ChatBot/texts.pkl", "w")
-        file2.close()
-        pickle.dump(self.words, open("ChatBot/texts.pkl", "wb"))
-        pickle.dump(self.labels, open("ChatBot/labels.pkl", "wb"))
+        pickle.dump(self.words, open("texts.pkl", "wb"))
+        pickle.dump(self.labels, open("labels.pkl", "wb"))
 
 
 class Trainer(AddDataForChatBot):
@@ -122,9 +114,7 @@ class FitModel(Model):
         self.hist = self.model.fit(np.array(self.train_x), np.array(self.train_y), epochs=200, batch_size=5, verbose=1)
 
     def save_model(self):
-        file = open("ChatBot/model.h5", "w")
-        file.close()
-        self.model.save("ChatBot/model.h5", self.hist)
+        self.model.save("model.h5", self.hist)
 
 
 data_file = open("ChatBot/training_source.json").read()
