@@ -15,6 +15,7 @@ COPY . .
 # Make port 80 available for links and/or publish
 EXPOSE 80
 
-
+RUN apt-get update && apt-get install -y dos2unix
+RUN dos2unix ChatBot/chat_bot_training.py
 # Define our command to be run when launching the container
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=80"]

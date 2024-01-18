@@ -6,7 +6,6 @@ from flask import Flask
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
-from ChatBot.chat_bot_training import start_training
 from WebApp.views import IndexView, BotResponseView
 
 nltk.download("popular")
@@ -14,8 +13,7 @@ nltk.download("omw-1.4")
 nltk.download("punkt")
 nltk.download("wordnet")
 
-#Train ChatBot
-start_training(open("ChatBot/training_source.json").read())
+
 # Initialise Chatbot Object
 model = load_model("ChatBot/model.h5")
 intents = json.loads(open("ChatBot/training_source.json").read())
