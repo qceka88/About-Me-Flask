@@ -8,9 +8,10 @@ services:
     image: yankoaboutmecr.azurecr.io/about_me:1
     #image: about_me:1
     container_name: my-portfolio-yanko
+    restart: on-failure
     ports:
       - "80:80"
     domainname: "yr-portfolio"
-#    command: >
-#       python app.py
+    command: >
+       python app.py
 
