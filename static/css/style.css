@@ -341,6 +341,7 @@ h6,
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 
 }
+
 .button-3d {
     display: inline-block;
     position: relative;
@@ -869,4 +870,8 @@ h6,
 
 .smoothTransition {
     transition: all 0.3s ease;
+}
+
+.my-email {
+    color: black;
 }

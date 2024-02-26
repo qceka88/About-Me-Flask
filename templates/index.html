@@ -901,6 +901,23 @@
             </div>
             {% if mobile_device %}
                 <div class="owl-carousel testimonial-carousel-mobile">
+                <div class="testimonial-item p-3">
+                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
+                            <a class="mobileTestimonialImage"
+                               href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                               target="_blank">
+                                <img class="feature-item rounded"
+                                     src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                                     alt="HTML&CSS">
+                            </a>
+                            <h6 class="te mt-1 mb-0">HTML</h6>
+                            <h6 class="te my-0">&</h6>
+                            <h6 class="te mt-0 mb-1">CSS</h6>
+                            <h6><a href="https://softuni.bg/certificates/details/205588/860b72e5" target="_blank">
+                                Complete data of certificate</a>
+                            </h6>
+                        </div>
+                    </div>
                     <div class="testimonial-item p-3">
                         <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
                             <a class="mobileTestimonialImage"
@@ -908,7 +925,7 @@
                                target="_blank">
                                 <img class="feature-item rounded"
                                      src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                                     alt="CloudAndContainers">
+                                     alt="SoftwareEngineeringAndDevOps">
                             </a>
                             <h6 class="te mt-1 mb-0">Software</h6>
                             <h6 class="te my-0">Engineering</h6>
@@ -1034,6 +1051,20 @@
                 </div>
             {% else %}
                 <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light pt-5 pb-4 px-4">
+                            <a href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                               target="_blank">
+                                <img class="feature-item rounded"
+                                     src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                                     style="width: 140px; height: 200px;" alt="HTML&CSS">
+                                <h5 class="mt-2 mb-0">HTML</h5>
+                                <h5 class="my-0 mb-1">& CSS</h5>
+                            </a>
+                            <a href="https://softuni.bg/certificates/details/205588/860b72e5" target="_blank">
+                                Complete data of certificate</a>
+                        </div>
+                    </div>
                     <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="position-relative bg-light pt-5 pb-4 px-4">
                             <a href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
@@ -1468,7 +1499,9 @@
                                 <i class="fa fa-envelope  fa-2x me-2 text-secondary-gradient"></i>
                                 <div class="d-inline-block">
                                     E-mail:
-                                    <h5>yanko.rashkov@gmail.com</h5>
+                                    <h5><a href="mailto:yanko.rashkov@gmail.com" class="my-email" target="_blank">
+                                        yanko.rashkov@gmail.com </a>
+                                    </h5>
                                 </div>
                             </div>
                             <div class="col-12 text-center">
