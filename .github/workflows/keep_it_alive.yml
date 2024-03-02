@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  keep-it-alive:
+  Keep-It-Alive:
     runs-on: ubuntu-latest
     steps:
       - name: Keep WebApp alive
@@ -15,16 +15,16 @@ jobs:
           do
             echo "Execute first GET requests"
             response=$(curl -sS https://yr-portoflio.onrender.com/)
-            echo "Wait 5 seconds"
-            sleep 5
+            echo "Wait 3 seconds"
+            sleep 3
             echo "Execute second GET requests"
             response=$(curl -sS https://yr-portoflio.onrender.com/#skills)
-            echo "Wait 5 seconds"
-            sleep 5
+            echo "Wait 6 seconds"
+            sleep 6
             echo "Execute third GET requests"
             response=$(curl -sS "https://yr-portoflio.onrender.com/get?message=Hi%20how%20are%20you?")
-            echo "Wait 5 seconds"
-            sleep 5
+            echo "Wait 4 seconds"
+            sleep 4
             echo "Execute fourth GET requests"
             response=$(curl -sS "https://yr-portoflio.onrender.com/get?message=Tell%20me%20about%20tech%20stack?")
             echo "Wait 5 seconds"
