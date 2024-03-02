@@ -179,11 +179,10 @@ function phoneNumberToggle() {
 //Draggable window
 function dragChatWindow(window) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    let windowContent = document.getElementById(window.id + 'header')
-    if (windowContent) {
-        windowContent.onmousedown = dragMouseDown;
-    } else {
-        window.onmousedown = dragMouseDown;
+
+    let isHeader = window.querySelector('.messageBox-header')
+    if (isHeader) {
+        isHeader.onmousedown = dragMouseDown;
     }
 
     function dragMouseDown(element) {
@@ -214,9 +213,7 @@ function dragChatWindow(window) {
         document.onmouseup = null;
         document.onmousemove = null;
     }
-
 }
-
 
 // Open/Close chat window
 function openCloseChat() {
@@ -229,6 +226,8 @@ function openCloseChat() {
     }
 }
 
+let element = document.getElementById("mychat")
+dragChatWindow(element);
 
 // Close Collapsed Nav Bar
 function closeNavbar() {

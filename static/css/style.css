@@ -679,7 +679,7 @@ h6,
     border-radius: 20px;
     right: 50px;
     z-index: 2500;
-    flex: 0 0  auto;
+    flex: 0 0 auto;
     width: 363px;
 }
 
@@ -705,7 +705,7 @@ h6,
     border-radius: 20px;
     background: repeating-radial-gradient(var(--chat1), var(--chat2));
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-    flex:  0 auto;
+    flex: 0 auto;
 }
 
 .messageBox-header {
@@ -719,7 +719,7 @@ h6,
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
     grid-column-gap: 21%;
-    cursor:grab;
+    cursor: grab;
 }
 
 .messageBox-header:active {
@@ -902,4 +902,12 @@ h6,
     padding: 0;
     position: relative;
     left: -1px;
+}
+
+#close-chat-button {
+    border-color: rgba(8, 127, 252, 0.37);
+}
+
+#close-chat-button h5 {
+
 }

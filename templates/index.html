@@ -166,7 +166,7 @@
 
         <!-- ChatBot Start  -->
         <div class="container-xxl bg-white justify-content-center d-inline-flex">
-            <div id="mychat" draggable="true"
+            <div id="mychat"
                     {% if not mobile_device %}
                  class="message-box-popup"
                     {% else %}
@@ -182,7 +182,7 @@
                             <i class="fa-solid fa-chalkboard-user pt-2"></i>
                         </h5>
                         <h4 class="text-primary-gradient my-1">ROBO CHAT</h4>
-                        <button onclick="openCloseChat()" class="bg-primary-gradient rounded-circle my-1">
+                        <button id="close-chat-button" onclick="openCloseChat()" class="bg-primary-gradient rounded-circle my-1">
                             <h5 class="my-0 text-white">X</h5>
                         </button>
                     </header>
