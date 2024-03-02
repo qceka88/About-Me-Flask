@@ -699,7 +699,6 @@ h6,
     flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 363px;
     height: 450px;
     border: var(--border);
     border-radius: 20px;
@@ -718,26 +717,16 @@ h6,
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap: 21%;
+    display: flex;
+    justify-content: space-between;
     cursor: grab;
+    padding: 0 5px;
 }
 
 .messageBox-header:active {
     cursor: grabbing;
 }
 
-.messageBox-header-mobile {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-size: medium;
-    text-align: left;
-    place-content: center;
-    width: 100%;
-    border-bottom: var(--border);
-    background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
-    color: #666;
-    grid-column-gap: 22%;
-}
 
 .messageBox-chat {
     flex: 1;
