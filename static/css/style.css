@@ -149,6 +149,11 @@ h6,
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
 
+.back-to-top i {
+    position: relative;
+    top: 1px;
+}
+
 .back-to-top-mobile {
     position: fixed;
     display: none;
