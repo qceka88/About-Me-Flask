@@ -176,14 +176,56 @@ function phoneNumberToggle() {
 
 }
 
+//Draggable window
+function dragChatWindow(window) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    let windowContent = document.getElementById(window.id + 'header')
+    if (windowContent) {
+        windowContent.onmousedown = dragMouseDown;
+    } else {
+        window.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(element) {
+        element = element || window.event;
+        element.preventDefault();
+
+        pos3 = element.clientX;
+        pos4 = element.clientY;
+
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(element) {
+        element = element || window.event;
+        element.preventDefault();
+
+        pos1 = pos3 - element.clientX;
+        pos2 = pos4 - element.clientY;
+        pos3 = element.clientX;
+        pos4 = element.clientY;
+
+        window.style.top = (window.offsetTop - pos2) + 'px';
+        window.style.left = (window.offsetLeft - pos1) + 'px';
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+
+}
+
 
 // Open/Close chat window
 function openCloseChat() {
-    var form = document.getElementById("mychat");
-    if (form.style.display === "block") {
-        form.style.display = "none";
+    let element = document.getElementById("mychat");
+    if (element.style.display === "block") {
+        element.style.display = "none";
     } else {
-        form.style.display = "block";
+        element.style.display = "block";
+        dragChatWindow(element);
     }
 }
 

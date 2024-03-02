@@ -679,6 +679,8 @@ h6,
     border-radius: 20px;
     right: 50px;
     z-index: 2500;
+    flex: 0 0  auto;
+    width: 363px;
 }
 
 
@@ -689,6 +691,7 @@ h6,
     border-radius: 20px;
     place-content: center;
     z-index: 2500;
+
 }
 
 .messageBox {
@@ -702,6 +705,7 @@ h6,
     border-radius: 20px;
     background: repeating-radial-gradient(var(--chat1), var(--chat2));
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+    flex:  0 auto;
 }
 
 .messageBox-header {
@@ -715,6 +719,11 @@ h6,
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
     grid-column-gap: 21%;
+    cursor:grab;
+}
+
+.messageBox-header:active {
+    cursor: grabbing;
 }
 
 .messageBox-header-mobile {
@@ -727,7 +736,7 @@ h6,
     border-bottom: var(--border);
     background: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     color: #666;
-    grid-column-gap: 23%;
+    grid-column-gap: 22%;
 }
 
 .messageBox-chat {
@@ -874,4 +883,23 @@ h6,
 
 .my-email {
     color: black;
+}
+
+#send-message-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+}
+
+#send-message-icon {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    position: relative;
+    left: -1px;
 }
