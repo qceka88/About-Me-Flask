@@ -15,19 +15,23 @@ jobs:
           do
             echo "Execute first GET requests"
             response=$(curl -sS https://yr-portoflio.onrender.com/)
-            echo "Wait 3 seconds"
+            echo "Request done"
+            echo "Wait 3 seconds before next request"
             sleep 3
             echo "Execute second GET requests"
             response=$(curl -sS https://yr-portoflio.onrender.com/#skills)
-            echo "Wait 6 seconds"
+            echo "Request done"
+            echo "Wait 6 seconds before next request"
             sleep 6
             echo "Execute third GET requests"
             response=$(curl -sS "https://yr-portoflio.onrender.com/get?message=Hi%20how%20are%20you?")
-            echo "Wait 4 seconds"
+            echo "Request done"
+            echo "Wait 4 seconds before next request"
             sleep 4
             echo "Execute fourth GET requests"
             response=$(curl -sS "https://yr-portoflio.onrender.com/get?message=Tell%20me%20about%20tech%20stack?")
-            echo "Wait 5 seconds"
+            echo "Request done"
+            echo "Wait 5 seconds before next request"
             sleep 5
             echo "GET Request operation was successful"
           done
