@@ -600,13 +600,8 @@ h6,
 .footer {
     margin-top: 6rem;
     padding-top: 9rem;
-    background: url(../img/body/bg-circle.png),
-    url(../img/body/bg-triangle.png),
-    url(../img/body/bg-top.png),
-    linear-gradient(to bottom right, var(--primary), var(--secondary));
-    background-position: left 0px bottom 0px,
-    right 0px top 50%,
-    center top;
+    background: url(../img/body/bg-circle.png), url(../img/body/bg-triangle.png), url(../img/body/bg-top.png), linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background-position: left 0 bottom 0, right 0 top 50%, center top;
     background-repeat: no-repeat;
 }
 
@@ -901,7 +896,27 @@ h6,
 #close-chat-button {
     border-color: rgba(8, 127, 252, 0.37);
 }
+#send-email-text,
+#see-number-text {
+    cursor: pointer;
+}
 
-#close-chat-button h5 {
+#send-message-icon:active,
+#close-chat-button h5:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
 
+.back-to-top i:active,
+.owl-prev i:active,
+.owl-next i:active,
+button *:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s ease;
+}
+.send-email-button {
+    color: gray;
 }
