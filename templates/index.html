@@ -173,12 +173,13 @@
                  class="message-box-mobile-popup"
                     {% endif %}>
                 <section class="messageBox">
-                    <header class="messageBox-header d-inline-flex" >
+                    <header class="messageBox-header d-inline-flex">
                         <h5 class="my-0 text-primary-gradient">
                             <i class="fa-solid fa-chalkboard-user pt-2"></i>
                         </h5>
                         <h4 class="text-primary-gradient my-1">ROBO CHAT</h4>
-                        <button id="close-chat-button" onclick="openCloseChat()" class="bg-primary-gradient rounded-circle my-1">
+                        <button id="close-chat-button" onclick="openCloseChat()"
+                                class="bg-primary-gradient rounded-circle my-1">
                             <h5 class="my-0 text-white">X</h5>
                         </button>
                     </header>
@@ -1508,24 +1509,34 @@
                                 <div class="col-md-4">
                                     <i class="fa fa-phone fa-2x me-2 text-secondary-gradient"></i>
                                     <div class="d-inline-block">
-                                        Phone:
-                                        <a class="ms-2 smoothTransition" type="submit" onclick="phoneNumberToggle()">
-                                            <i id="number-toggle" class="fa fa-toggle-on fa-xl text-primary my-0"></i>
-                                        </a>
-                                        <small id="see-number-text" onclick="phoneNumberToggle()">(see number)</small>
+                                        <div class="pone-wrap">
+                                            Phone:
+                                            <a class="ms-2 smoothTransition" type="submit"
+                                               onclick="phoneNumberToggle()">
+                                                <i id="number-toggle"
+                                                   class="fa fa-toggle-on fa-xl text-primary my-0"></i>
+                                            </a>
+                                            <small id="see-number-text" onclick="phoneNumberToggle()">(see
+                                                number)</small>
+                                        </div>
                                         <h5 id="my-number">+359*********</h5>
-                                        {#                                    <img id="my-img" class="mb-0" height="24px" src="{{ url_for('static', filename='img/contact/phone.png') }}" style="display: none;" alt="number">#}
+                                        {#<img id="my-img" class="mb-0" height="24px" src="{{ url_for('static', filename='img/contact/phone.png') }}" style="display: none;" alt="number">#}
                                     </div>
                                 </div>
                                 <div class="col-md-5">
                                     <i class="fa fa-envelope  fa-2x me-2 text-secondary-gradient"></i>
                                     <div class="d-inline-block">
-                                        E-mail:
-                                        <a class="ms-2 smoothTransition send-email-button"  href="mailto:yanko.rashkov@gmail.com" target="_blank">
-                                            <i  class="fa fa-envelope fa-xl my-0"></i>
-                                        </a>
-                                        <small href="mailto:yanko.rashkov@gmail.com" id="send-email-text"  >(send email)</small>
-
+                                        <div class="send-email-wrap">
+                                            E-mail:
+                                            <a class="ms-2 smoothTransition send-email-button"
+                                               href="mailto:yanko.rashkov@gmail.com" target="_blank">
+                                                <img class="email-icon-image"
+                                                     src="{{ url_for('static', filename='img/contact/black_email.png') }}"
+                                                     alt="emailImg">
+                                            </a>
+                                            <small href="mailto:yanko.rashkov@gmail.com" id="send-email-text">(send
+                                                email)</small>
+                                        </div>
                                         <h5 class="my-email">
                                             yanko.rashkov@gmail.com
                                         </h5>

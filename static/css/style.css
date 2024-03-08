@@ -896,9 +896,11 @@ h6,
 #close-chat-button {
     border-color: rgba(8, 127, 252, 0.37);
 }
+
 #send-email-text,
 #see-number-text {
     cursor: pointer;
+    margin: auto 0;
 }
 
 #send-message-icon:active,
@@ -917,6 +919,19 @@ button *:active {
     left: 1px;
     transition: all 0.3s ease;
 }
-.send-email-button {
-    color: gray;
+.pone-wrap,
+.send-email-wrap {
+    display: flex;
+    vertical-align: middle;
+    gap: 5px;
 }
+
+.email-icon-image {
+    width: 25px;
+    height: auto;
+}
+
+.email-icon-image:hover {
+    content: url("../img/contact/blue_email.png");
+}
+
