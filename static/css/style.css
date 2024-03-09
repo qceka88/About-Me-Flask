@@ -903,6 +903,7 @@ h6,
     cursor: default;
     margin: auto 0;
 }
+
 #send-message-icon:active,
 #close-chat-button h5:active {
     position: relative;
@@ -919,6 +920,7 @@ button *:active {
     left: 1px;
     transition: all 0.3s ease;
 }
+
 .pone-wrap,
 .send-email-wrap {
     display: flex;
@@ -931,7 +933,14 @@ button *:active {
     height: auto;
 }
 
-.email-icon-image:hover {
-    content: url("../img/contact/blue_email.png");
+
+.send-email-button {
+    background-image: url("../img/contact/black_email.png");
+    background-size: 25px auto;
+    width: 25px;
+    height: auto;
 }
 
+.send-email-button:hover {
+    background-image: url("../img/contact/blue_email.png");
+}
