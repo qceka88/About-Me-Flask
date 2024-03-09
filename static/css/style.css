@@ -897,12 +897,12 @@ h6,
     border-color: rgba(8, 127, 252, 0.37);
 }
 
-#send-email-text,
-#see-number-text {
-    cursor: pointer;
+
+#see-number-text,
+#send-email-text {
+    cursor: default;
     margin: auto 0;
 }
-
 #send-message-icon:active,
 #close-chat-button h5:active {
     position: relative;
