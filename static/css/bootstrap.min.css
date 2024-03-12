@@ -11977,3 +11977,15 @@ textarea.form-control-lg {
         display: none !important
     }
 }
+
+@media (max-width: 600px) {
+    .py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important
+    }
+
+    .footer > .py-5 {
+        padding-top: 3rem !important;
+    }
+
+}

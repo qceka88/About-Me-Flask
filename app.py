@@ -33,6 +33,6 @@ app.add_url_rule("/", view_func=IndexView.as_view("class_view", "index.html"))
 app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=80, debug=False)
 
 # TODO: Add more data for ChatBot

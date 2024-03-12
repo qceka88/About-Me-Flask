@@ -154,16 +154,6 @@ h6,
     top: 1px;
 }
 
-.back-to-top-mobile {
-    position: fixed;
-    display: none;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99;
-    border: none;
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
-}
-
 
 .mobileChatButton {
     position: fixed;
@@ -289,7 +279,6 @@ h6,
 }
 
 
-
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
@@ -413,8 +402,10 @@ h6,
 /*** My Skills Style ***/
 
 #skills div {
-    padding: 0; !important;
+    padding: 0;
+!important;
 }
+
 .my-skills-style {
     display: flex;
     flex-wrap: wrap;
@@ -436,27 +427,12 @@ h6,
 
 }
 
-@media (max-width: 600px) {
-    .my-skills-style {
-        gap: 1px 15px;
-    }
-
-    .my-skills-style div a div img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .my-skills-style div h5 {
-        font-size: 1rem;
-    }
-
-    .my-skills-style div:nth-child(7) h5:last-of-type {
-        display: block;
-    }
-
-    .my-skills-style div:nth-child(7) h5:first-of-type {
-        display: none;
-    }
+.custom-j-letter {
+    font-weight: bolder;
+    padding-top: 2px;
+    margin-right: 1px;
+    margin-left: 2px;
+    color: black;
 }
 
 
@@ -885,14 +861,6 @@ h6,
     white-space: nowrap;
 }
 
-.custom-j-letter {
-    font-weight: bolder;
-    padding-top: 2px;
-    margin-right: 1px;
-    margin-left: 2px;
-    color: black;
-}
-
 .custom-j-letter-mobile {
     font-weight: 500;
     padding-bottom: 2px;
@@ -978,4 +946,59 @@ button *:active {
 
 .send-email-button:hover {
     background-image: url("../img/contact/blue_email.png");
+}
+
+@media (max-width: 600px) {
+    /* ABOUT ME SECTION */
+    #about div div div {
+        text-align: justify;
+    }
+
+    #about div div div h1,
+    #about div div div h5 {
+        text-align: center;
+    }
+
+    /* MY SKILLS SECTION */
+    .my-skills-style {
+        gap: 1px 15px;
+    }
+
+    .my-skills-style div a div img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .my-skills-style div h5 {
+        font-size: 1rem;
+    }
+
+    .my-skills-style div:nth-child(7) h5:last-of-type {
+        display: block;
+    }
+
+    .my-skills-style div:nth-child(7) h5:first-of-type {
+        display: none;
+    }
+
+    .custom-j-letter {
+        padding-top: 0;
+        font-size: 0.9rem;
+    }
+    /* PROJECTS SECTION */
+    #projects a {
+        padding: 0.5em 0.8em;
+
+    }
+
+    /* FOOTER SECTION */
+    .footer {
+        margin-top: 0;
+    }
+
+    /*  Back to top Button  */
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
 }
