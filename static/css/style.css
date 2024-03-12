@@ -289,6 +289,7 @@ h6,
 }
 
 
+
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
@@ -410,20 +411,54 @@ h6,
 }
 
 /*** My Skills Style ***/
+
+#skills div {
+    padding: 0; !important;
+}
 .my-skills-style {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 190px);
-    grid-auto-rows: 215px;
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
 }
 
-/*** My Skills Mobile Style ***/
-.my-skills-mobile-style {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 75px);
-    grid-auto-rows: 95px;
-    grid-gap: 30px;
+.my-skills-style div:nth-child(7) h5:last-child {
+    display: none;
 }
+
+.my-skills-style div a div img {
+    width: 150px;
+    height: 150px;
+}
+
+.my-skills-style div {
+    flex: 0 0 auto;
+
+}
+
+@media (max-width: 600px) {
+    .my-skills-style {
+        gap: 1px 15px;
+    }
+
+    .my-skills-style div a div img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .my-skills-style div h5 {
+        font-size: 1rem;
+    }
+
+    .my-skills-style div:nth-child(7) h5:last-of-type {
+        display: block;
+    }
+
+    .my-skills-style div:nth-child(7) h5:first-of-type {
+        display: none;
+    }
+}
+
 
 /*** My Certificates Mobile Style ***/
 .my-certificates-mobile-style {
