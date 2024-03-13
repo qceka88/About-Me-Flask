@@ -36,3 +36,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=False)
 
 # TODO: Add more data for ChatBot
+# TODO: Fix the training

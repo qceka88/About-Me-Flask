@@ -861,13 +861,6 @@ h6,
     white-space: nowrap;
 }
 
-.custom-j-letter-mobile {
-    font-weight: 500;
-    padding-bottom: 2px;
-    margin-left: 2px;
-    font-size: 14px;
-    color: #262b47;
-}
 
 .smoothTransition {
     transition: all 0.3s ease;
@@ -986,8 +979,37 @@ button *:active {
         font-size: 0.9rem;
     }
     /* PROJECTS SECTION */
-    #projects a {
-        padding: 0.5em 0.8em;
+
+    #projects .testimonial-item.rounded.p-4 {
+        padding: 1rem !important;
+    }
+
+    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 {
+        padding: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h4{
+        margin-bottom: 0.5rem !important;
+    }
+    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h1 {
+        margin-bottom: 0.5rem !important;
+        margin-right: 0.5rem !important;
+        margin-left: 0.5rem !important;
+    }
+    #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies {
+        padding: 0.25rem !important;  /* Technologies wrapper  */
+    }
+    #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies .d-flex.justify-content-between.mb-3 {
+        margin-bottom: 0.5rem !important;  /* Technologies used for projects  */
+        margin-right: 0.5rem !important;
+        margin-left: 0.5rem !important;
+    }
+    #projects .bg-light.rounded .d-flex.justify-content-evenly.pt-3.pb-4 {
+        padding: 0 0 0.5em !important; /* Reference buttons  CONTAINER on projects  */
+
+    }
+    #projects a {  /* Reference buttons on projects  */
+        padding: 0.5em 0.8em !important;
 
     }
 
