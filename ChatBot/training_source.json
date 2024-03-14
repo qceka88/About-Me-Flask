@@ -99,7 +99,7 @@
     },
     {"tag": "hobbies",
       "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?"],
-      "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #2bfeff' href='http://127.0.0.1:5000/hobbies'>#Hobbies</a>.</p>"],
+      "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #2bfeff' href='{{ url_for(\"index_view\") }}hobbies'>#Hobbies</a>.</p>"],
       "context": ["hobbies","free_time"]
     }
   ]
