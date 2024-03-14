@@ -85,16 +85,7 @@
         items: 1
     });
 
-    // Screenshot carousel
-    $(".screenshot-carousel-mobile").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        dots: false,
-        autoplayTimeout: 3000,
-        items: 1
-    });
-
+    //TODO: Delete mobile Versions!
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({

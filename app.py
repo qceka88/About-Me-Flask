@@ -31,7 +31,7 @@ app.config["SECRET_KEY"] = "FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2"
 # urlpatterns
 app.add_url_rule("/", view_func=IndexView.as_view("index_view", "index.html"))
 app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
-app.add_url_rule("/asAsdcvPooijd93249j3rsdfASDIjfdmf429jsdfmbS9fdsnfnmfFFSUFE2345323", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
+app.add_url_rule("/GasAsdWcoijd9329sASD1jdMf4dfzS9fdn5", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
 app.add_url_rule("/<path:invalid_path>", view_func=PageNotFoundView.as_view("page_not_found"))
 
 

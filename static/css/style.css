@@ -401,9 +401,8 @@ h6,
 
 /*** My Skills Style ***/
 
-#skills div {
-    padding: 0;
-!important;
+#skills > div {
+    padding: 0 !important;
 }
 
 .my-skills-style {
@@ -490,32 +489,6 @@ h6,
     place-content: center;
 }
 
-/*** Screenshot-mobile ***/
-.screenshot-carousel-mobile {
-    position: relative;
-    width: 320px;
-    height: 245px;
-    padding-right: 55px;
-    padding-left: 55px;
-}
-
-.screenshot-carousel-mobile::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: -21px;
-    left: 0;
-    background: url(../img/laptop/laptop_frame.png) center center no-repeat;
-    background-size: 320px 245px;
-    z-index: 1;
-}
-
-.screenshot-carousel-mobile .owl-item img {
-    position: relative;
-    width: 209px;
-    height: 121px;
-}
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -942,6 +915,45 @@ button *:active {
 }
 
 @media (max-width: 600px) {
+    /* HERO HEADER */
+    .hero-header {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .hero-header .container.px-lg-5 .row.g-5 {
+        --bs-gutter-y: 1.5rem;
+        --bs-gutter-x: 1.5rem;
+    }
+
+    /*** Screenshot-mobile ***/
+    .screenshot-carousel {
+        width: 320px;
+        height: 245px;
+        padding-right: 55px;
+        padding-left: 55px;
+        margin: 0;
+    }
+
+    .screenshot-carousel::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -21px;
+        left: 0;
+        background: url(../img/laptop/laptop_frame.png) center center no-repeat;
+        background-size: 320px 245px;
+        z-index: 1;
+    }
+
+    .screenshot-carousel .owl-item img {
+        position: relative;
+        width: 209px;
+        height: 121px;
+    }
+
     /* ABOUT ME SECTION */
     #about div div div {
         text-align: justify;
@@ -978,8 +990,8 @@ button *:active {
         padding-top: 0;
         font-size: 0.9rem;
     }
-    /* PROJECTS SECTION */
 
+    /* PROJECTS SECTION */
     #projects .testimonial-item.rounded.p-4 {
         padding: 1rem !important;
     }
@@ -988,27 +1000,33 @@ button *:active {
         padding: 0.5rem !important;
         margin-bottom: 1rem !important;
     }
-    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h4{
+
+    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h4 {
         margin-bottom: 0.5rem !important;
     }
+
     #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h1 {
         margin-bottom: 0.5rem !important;
         margin-right: 0.5rem !important;
         margin-left: 0.5rem !important;
     }
+
     #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies {
-        padding: 0.25rem !important;  /* Technologies wrapper  */
+        padding: 0.25rem !important; /* Technologies wrapper  */
     }
+
     #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies .d-flex.justify-content-between.mb-3 {
-        margin-bottom: 0.5rem !important;  /* Technologies used for projects  */
+        margin-bottom: 0.5rem !important; /* Technologies used for projects  */
         margin-right: 0.5rem !important;
         margin-left: 0.5rem !important;
     }
+
     #projects .bg-light.rounded .d-flex.justify-content-evenly.pt-3.pb-4 {
         padding: 0 0 0.5em !important; /* Reference buttons  CONTAINER on projects  */
 
     }
-    #projects a {  /* Reference buttons on projects  */
+
+    #projects a { /* Reference buttons on projects  */
         padding: 0.5em 0.8em !important;
 
     }

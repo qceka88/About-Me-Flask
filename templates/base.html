@@ -49,7 +49,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="{{ url_for('index_view') }}" class="navbar-brand p-0">
                     <h1 class="m-0">Portfolio</h1>
-                    <a href="{{ url_for( 'hobbies_view') }}"> c</a>   <!--DELETE IT -->
+{#                    <a href="{{ url_for( 'hobbies_view') }}"> c</a>   <!--DELETE IT -->#}
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <div>
@@ -74,7 +74,9 @@
                     </button>
                 </div>
             </nav>
-        {% block hero %}
+
+        {% block hero_block %}
+
         {% endblock %}
 
         </div>
@@ -139,22 +141,22 @@
             <div class="container py-5 px-lg-5">
                 <div class="my-footer-style justify-content-center">
                     <div class="col-md-5">
-                        <a href="#about" class="btn btn-link">About</a>
+                        <a href="{{ url_for('index_view') }}#about" class="btn btn-link">About</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#skills" class="btn btn-link">Skills</a>
+                        <a href="{{ url_for('index_view') }}#skills" class="btn btn-link">Skills</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#projects" class="btn btn-link">Projects</a>
+                        <a href="{{ url_for('index_view') }}#projects" class="btn btn-link">Projects</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#certificates" class="btn btn-link">Certificates</a>
+                        <a href="{{ url_for('index_view') }}#certificates" class="btn btn-link">Certificates</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#experience" class="btn btn-link">Experience</a>
+                        <a href="{{ url_for('index_view') }}#experience" class="btn btn-link">Experience</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#contact" class="btn btn-link">Contact</a>
+                        <a href="{{ url_for('index_view') }}#contact" class="btn btn-link">Contact</a>
                     </div>
                 </div>
             </div>
