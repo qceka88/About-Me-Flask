@@ -1,4 +1,4 @@
-from flask import render_template, request, jsonify
+from flask import render_template, request, jsonify, redirect, url_for
 from flask.views import View
 
 from WebApp.helpers import MyDevice, MyTime, InfoClass
@@ -37,3 +37,8 @@ class BotResponseView(View):
         user_text = request.args.get("message")
         response = self.bot.chatbot_response(user_text)
         return jsonify(response)
+
+
+class PageNotFoundView(View):
+    def dispatch_request(self, **kwargs):
+        return redirect(url_for("index_view"))
