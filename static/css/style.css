@@ -458,7 +458,10 @@ h6,
     grid-auto-rows: 15px;
     grid-gap: 25px;
 }
-
+#about .col-lg-6.text-center img {
+    width: 500px;
+    height: auto;
+}
 /*** Screenshot ***/
 .screenshot-carousel {
     position: relative;
@@ -963,7 +966,10 @@ button *:active {
     #about div div div h5 {
         text-align: center;
     }
-
+    #about .col-lg-6.text-center img {
+        width: 250px;
+        height: auto;
+    }
     /* MY SKILLS SECTION */
     .my-skills-style {
         gap: 1px 15px;

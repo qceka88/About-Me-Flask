@@ -101,15 +101,8 @@
                             class="fa fa-download"></i> Download CV</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    {% if mobile_device %}
-                        <img class="img-fluid wow fadeInUp rounded-circle" width="250" height="300"
-                             data-wow-delay="0.5s"
-                             src="{{ url_for('static', filename='img/body/my_picture.png') }}" alt="my-myself">
-                    {% else %}
-                        <img class="img-fluid wow fadeInUp rounded-circle" width="500" height="300"
-                             data-wow-delay="0.5s"
-                             src="{{ url_for('static', filename='img/body/my_picture.png') }}" alt="my-myself">
-                    {% endif %}
+                    <img class="img-fluid wow fadeInUp rounded-circle" data-wow-delay="0.5s"
+                         src="{{ url_for('static', filename='img/body/my_picture.png') }}" alt="my-myself">
                 </div>
             </div>
         </div>
