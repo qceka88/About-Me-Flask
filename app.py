@@ -1,12 +1,12 @@
 import json
 import pickle
-
 import nltk
-from flask import Flask, redirect, url_for
+
+from flask import Flask
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
-from WebApp.views import IndexView, HobbiesView, BotResponseView, PageNotFoundView
+from WebApp.views import IndexView, HobbiesView, PageNotFoundView,  BotResponseView
 
 nltk.download("popular")
 nltk.download("omw-1.4")

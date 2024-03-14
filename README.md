@@ -13,12 +13,14 @@ ___________________________________________________________________________
 Technologies:
 
 [  ] BackEnd
-- Python/Flask
-- Tensorflow, numpy, nltk, pickle
+- Python
+- Flask
+- Tensorflow, keras, numpy, nltk, pickle
 - Unit Testing
 
 [  ] FrontEnd
  - HTML & CSS, Bootstrap, SCSS
+ - Jinja2
  - JavaScript/jQuery
 
 [  ] DevOps 
