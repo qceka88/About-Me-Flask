@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block navigation_block %}
+    <a href="{{ url_for('index_view') }}" class="menuButton nav-item nav-link active">RETURN TO HOME</a>
+    <a href="#" class="menuButton nav-item nav-link active">THIS PAGE IS UNDER CONSTRUCTION</a>
+
+{% endblock %}
+
+{% block hero %}
+       <div {% if mobile_device %}
+        class="container-xxl bg-primary hero-header mb-0 pb-0"
+    {% else %}
+        class="container-xxl bg-primary hero-header"
+    {% endif %}>
+        <div class="container px-lg-5">
+            {% if mobile_device %}
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <p class="text-white pb-3 animated slideInDown">Hello, my name is</p>
+                        <h1 class="text-white text-center  mb-4 animated slideInDown">Yanko Rashkov</h1>
+                        <p class="text-white pb-3 animated slideInDown max">I`m a Software Developer. Welcome to
+                            my
+                            portfolio! </p>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                         data-wow-delay="0.2s">
+                        <div id="screenshot-carousel-mobile" class="owl-carousel screenshot-carousel-mobile">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-python-logo.png') }}"
+                                 alt="python">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-django-logo.png') }}"
+                                 alt="django">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-docker-logo.png') }}"
+                                 alt="docker">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-github-actions-logo.png') }}"
+                                 alt="github">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-terraform-logo.png') }}"
+                                 alt="terraform">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-github-logo.png') }}"
+                                 alt="github">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-postgre-sql-logo.png') }}"
+                                 alt="postgresql">
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="row g-5">
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <p class="text-white pb-3 animated slideInDown" data-wow-delay="0.5s">Congratulations, you have just found Easter Egg.</p>
+                        <h1 class="text-white mb-4 animated slideInDown" data-wow-delay="0.6s">This is page of hobbies of Yanko.</h1>
+                        <p class="text-white pb-3 animated slideInDown max" data-wow-delay="0.7s">Enjoy!</p>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                         data-wow-delay="0.3s">
+                        <div id="screenshot-carousel" class="owl-carousel screenshot-carousel">
+                            <img class="img"
+                                 src="{{ url_for('static', filename='img/laptop/laptop-python-logo.png') }}"
+                                 alt="python">
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_content %}
+
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis eius ex minus nulla qui rem sed!
+        Asperiores dicta iste neque nisi odit possimus provident ratione, rem sapiente voluptate? Sunt.</h1>
+
+{% endblock %}

@@ -10,7 +10,6 @@ from keras.layers import Dense, Dropout
 from keras.models import Sequential
 from nltk.stem import WordNetLemmatizer
 
-
 lemmatizer = WordNetLemmatizer()
 
 
@@ -21,7 +20,7 @@ class Data:
         self.labels = []
         self.documents = []
         self.training = []
-        self.ignore_symbols = ["?", "!"]
+        self.ignore_symbols = ["?", "!", "."]
         self.intents = json.loads(source_file)
         self.model = None
 
@@ -79,6 +78,11 @@ class Trainer(AddDataForChatBot):
             output_row = list(output_empty)
             output_row[self.labels.index(document[1])] = 1
 
+            # TODO: Track thе behavior of ChatBot after new upgrade
+            # Create Equal parts for the Array
+            array_equalizer = [0] * (len(bag) - len(output_row))
+            output_row.extend(array_equalizer)
+
             self.training.append([bag, output_row])
 
     def shuffle_and_transform_into_array(self):
@@ -115,6 +119,8 @@ class FitModel(Model):
 
     def save_model(self):
         self.model.save("model.h5", self.hist)
+        logging.info(msg="Training complete!")
+        print("Training complete!")
 
 
 data_file = open("training_source.json").read()
@@ -129,4 +135,3 @@ model.create_model()
 model.compile_model()
 model.fit_and_save_model()
 model.save_model()
-logging.info(msg="Training complete!")

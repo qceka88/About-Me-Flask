@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Yanko Rashkov - Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='img/body/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary customSpinnerStyle" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="{{ url_for('index_view') }}" class="navbar-brand p-0">
+                    <h1 class="m-0">Portfolio</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <div>
+                    <button onclick="openCloseChat()"
+                            class="navbar-toggler bg-secondary-gradient text-white px-2">
+                        <i class="fas fa-robot"></i>
+                    </button>
+                    <button id="navBut" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" onclick="isNavButVisible()">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        {% block navigation_block %}
+
+                        {% endblock %}
+                    </div>
+                    <button onclick="openCloseChat()"
+                            class=" btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
+                        <span>CHAT BOT</span>
+                    </button>
+                </div>
+            </nav>
+        {% block hero %}
+        {% endblock %}
+
+        </div>
+        <!-- Navbar End -->
+
+        <!-- ChatBot Start  -->
+        <div class="container-xxl bg-white justify-content-center d-inline-flex">
+            <div id="mychat"
+                    {% if not mobile_device %}
+                 class="message-box-popup"
+                    {% else %}
+                 class="message-box-mobile-popup"
+                    {% endif %}>
+                <section class="messageBox">
+                    <header class="messageBox-header d-inline-flex">
+                        <h5 class="my-0 text-primary-gradient">
+                            <i class="fa-solid fa-chalkboard-user pt-2"></i>
+                        </h5>
+                        <h4 class="text-primary-gradient my-1">ROBO CHAT</h4>
+                        <button id="close-chat-button" onclick="openCloseChat()"
+                                class="bg-primary-gradient rounded-circle my-1">
+                            <h5 class="my-0 text-white">X</h5>
+                        </button>
+                    </header>
+                    <main class="messageBox-chat">
+                        <div class="message chat-bot-message">
+                            <div class="message-image"
+                                 style="background-image: url({{ url_for('static', filename='img/chat/bot_image.jpg') }})"></div>
+                            <div class="message-bubble">
+                                <div class="message-info">
+                                    <div class="message-info-name">Robo</div>
+                                    <span id="time-now" class="message-info-time"></span>
+                                </div>
+                                <div class="message-text">
+                                    Welcome to chat! My name is Robo and I`m trained to answer questions about
+                                    Yanko.
+                                    Also, I can tell you a joke.
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <form class="messageBox-inputArea">
+                        <input id="textInput" type="text" class="messageBox-input me-2"
+                               placeholder="Enter your message..."
+                               autocomplete="off">
+                        <button id="send-message-button" onclick="chatBot()" type="submit"
+                                class="btn btn-secondary-gradient rounded-circle text-white">
+                            <i id="send-message-icon" class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <!--  ChatBot  End -->
+        {% block page_content %}
+
+        {% endblock %}
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-secondary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="my-footer-style justify-content-center">
+                    <div class="col-md-5">
+                        <a href="#about" class="btn btn-link">About</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#skills" class="btn btn-link">Skills</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#projects" class="btn btn-link">Projects</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#certificates" class="btn btn-link">Certificates</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#experience" class="btn btn-link">Experience</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#contact" class="btn btn-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Yanko Rashkov</a>, All Right Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
+            <i class="bi bi-arrow-up text-white"></i>
+        </a>
+
+
+        <script src="https://kit.fontawesome.com/d8bd919f93.js" crossorigin="anonymous"></script>
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

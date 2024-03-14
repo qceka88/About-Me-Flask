@@ -21,10 +21,10 @@
       "responses": ["Sorry, I can't understand you.", "Please give me more info.", "Not sure I understand.", "Please, be more specific."],
       "context": [""]
     },
-    {"tag": "yanko",
+    {"tag": "who_is",
       "patterns": ["What do you know about Yanko?", "Who is Yanko?", "Tell me about Yanko?", "What can you tell me about Yanko?", "Tell me more about Yanko?"],
       "responses": ["Yanko is Junior Software developer with experience in BackEnd, FrontEnd, DevOps.Also is graduated Naval Architect with master degree and twelve years solid experience in the shipbuilding industry."],
-      "context": ["who_is_yanko"]
+      "context": ["who_is"]
     },
     {"tag": "tech_stack",
       "patterns": ["What is tech stack of Yanko?", "What software know?", "Tell me the skills?", "Tell me about tech stack of Yanko?", "What programs know Yanko?", "What is Yanko knowledge?", "What is tech knowledge of Yanko?", "What skills have Yanko?"],
@@ -94,13 +94,13 @@
     },
     {"tag": "age",
       "patterns": ["How many years is Yanko?", "How old is Yanko?", "What is age of Yanko?", "What is the age of Yanko?", "Do you know how old is Yanko?"],
-      "responses": ["Yanko is so old. That he know connection between cassette and pencil.", "Yanko is os old, that he raised a tamagotchi."],
-      "context": ["age_old"]
+      "responses": ["Yanko is so old. That he know connection between cassette and pencil.", "Yanko is so old, that he raised a tamagotchi."],
+      "context": ["age","old"]
     },
-    {"tag": "test",
-      "patterns": ["test"],
-      "responses": ["<a href='https://yr-portoflio.onrender.com/#skills'>Click here</a>"],
-      "context": ["test"]
+    {"tag": "hobbies",
+      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?"],
+      "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #2bfeff' href='http://127.0.0.1:5000/hobbies'>#Hobbies</a>.</p>"],
+      "context": ["hobbies","free_time"]
     }
   ]
 }
