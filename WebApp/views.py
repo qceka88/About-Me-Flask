@@ -4,14 +4,13 @@ from flask.views import View
 from WebApp.helpers import MyDevice, MyTime, InfoClass
 
 
-class IndexView(View, MyDevice, MyTime, InfoClass):
+class IndexView(View, MyTime, InfoClass):
     methods = ["GET", "POST"]
 
     def __init__(self, template):
         self.template = template
 
     def dispatch_request(self):
-        self.context["mobile_device"] = self.device_detect()
         self.context.update(self.active_coding_time())
         return render_template(self.template, **self.context)
 

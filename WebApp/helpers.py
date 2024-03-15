@@ -19,7 +19,13 @@ class InfoClass:
 
 
 class MyDevice:
+    """
+        Deprecated class not used in main page. Replaced by  Responsive Web Design.
 
+        :returns: True or False depend on user device.
+    """
+
+    # TODO: check is it applicable  in Hobbies section.
     @staticmethod
     def device_detect():
         user_agent = request.headers.get("User-Agent").lower()

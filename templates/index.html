@@ -242,7 +242,7 @@
                         <h5 class="mb-3">enkins</h5>
                     </div>
                 </div>
-                <div style="color: #0d6efd" class="wow fadeInUp text-center d-inline-flex flex-column"
+                <div class="wow fadeInUp text-center d-inline-flex flex-column"
                      data-wow-delay="0.6s">
                     <a href="https://grafana.com/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
@@ -426,298 +426,143 @@
                 <h1 class="text-primary-gradient fw-medium">Certificates</h1>
                 <h5 class="mb-5">-- Find my certificates --</h5>
             </div>
-            {% if mobile_device %}
-                <div class="owl-carousel testimonial-carousel-mobile">
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
-                                     alt="HTML&CSS">
-                            </a>
-                            <h6 class="te mt-1 mb-0">HTML</h6>
-                            <h6 class="te my-0">&</h6>
-                            <h6 class="te mt-0 mb-1">CSS</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/205588/860b72e5" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+            <div class="row gy-5 gx-4 justify-content-center" id="my-certificates">
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
+                                 alt="HTML&CSS">
+                        </a>
+                        <h5 class="mt-2 mb-0">HTML</h5>
+                        <h5 class="my-0 mb-1">& CSS</h5>
+                        <a href="https://softuni.bg/certificates/details/205588/860b72e5" target="_blank">
+                            Complete data of certificate</a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                                     alt="SoftwareEngineeringAndDevOps">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Software</h6>
-                            <h6 class="te my-0">Engineering</h6>
-                            <h6 class="te mt-0 mb-1">and DevOps</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/201259/4622e9c3" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div  class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
+                                 alt="SoftwareEngineeringAndDevOps">
+                        </a>
+                        <h5 class="mt-2 mb-0">Software Engineering</h5>
+                            <h5 class="my-0 mb-1">and DevOps</h5>
+                        <a href="https://softuni.bg/certificates/details/201259/4622e9c3" target="_blank">
+                            Complete data of certificate</a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage px-3"
-                               href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
-                                     alt="CloudAndContainers">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Containers</h6>
-                            <h6 class="te mt-0 mb-4">and Cloud</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/192051/93153a4b" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
+                                 alt="CloudAndContainers">
+                        </a>
+                        <h5 class="mt-2 mb-0">Containers</h5>
+                            <h5 class="my-0 mb-1">and Cloud</h5>
+                        <a href="https://softuni.bg/certificates/details/192051/93153a4b" target="_blank">
+                            Complete data of certificate</a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
-                                     alt="django">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python Web</h6>
-                            <h6 class="te mt-0 mb-4">Framework</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/182349/e14592a6" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div class="position-relative bg-light  pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
+                                 alt="django">
+                        </a>
+                        <h5 class="mt-2 mb-0">Python Web</h5>
+                            <h5 class="my-0 mb-1">Framework</h5>
+                        </a>
+                        <a href="https://softuni.bg/certificates/details/182349/e14592a6" target="_blank">
+                            Complete data of certificate</a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
-                                     alt="django basics">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python Web</h6>
-                            <h6 class="te mt-0 mb-4">Basics</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.3s">
+                    <div class="position-relative bg-light  pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
+                                 alt="django basics">
+                        </a>
+                        <h5 class="mt-2 mb-0">Python Web</h5>
+                            <h5 class="my-0 mb-1">Basics</h5>
+                        <a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">
+                            Complete data of certificate
+                        </a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
-                                     alt="python oop">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python</h6>
-                            <h6 class="te mt-0 mb-4">OOP</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/168051/135e14f7" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
+                                 alt="python oop">
+                        </a>
+                        <h5 class="mt-2 mb-0">Python</h5>
+                            <h5 class="my-0 mb-1">OOP</h5>
+                        <a href="https://softuni.bg/certificates/details/168051/135e14f7" target="_blank">
+                            Complete data of certificate
+                        </a>
                     </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
+                                 alt="python advanced">
 
-                                     alt="python advanced">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python</h6>
-                            <h6 class="te mt-0 mb-4">Advanced</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/159368/6eca017f" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
-                                     alt="python fundamentals">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python</h6>
-                            <h6 class="te mt-0 mb-4">Fundamentals</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/148718/012cedf6" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="testimonial-item p-3">
-                        <div class="position-relative bg-light pt-3 pb-2 justify-content-center text-center">
-                            <a class="mobileTestimonialImage"
-                               href="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
-                                     alt="python basic">
-                            </a>
-                            <h6 class="te mt-1 mb-0">Python</h6>
-                            <h6 class="te mt-0 mb-4">Basics</h6>
-                            <h6><a href="https://softuni.bg/certificates/details/135311/0f9fd045" target="_blank">
-                                Complete data of certificate</a>
-                            </h6>
-                        </div>
+                        </a>
+                        <h5 class="mt-2 mb-0">Python</h5>
+                            <h5 class="my-0 mb-1">Advanced</h5>
+                        <a href="https://softuni.bg/certificates/details/159368/6eca017f" target="_blank">
+                            Complete data of certificate
+                        </a>
                     </div>
                 </div>
-            {% else %}
-                <div class="row gy-5 gx-4 justify-content-center">
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
-                                     style="width: 140px; height: 200px;" alt="HTML&CSS">
-                                <h5 class="mt-2 mb-0">HTML</h5>
-                                <h5 class="my-0 mb-1">& CSS</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/205588/860b72e5" target="_blank">
-                                Complete data of certificate</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                                     style="width: 140px; height: 200px;" alt="SoftwareEngineeringAndDevOps">
-                                <h5 class="mt-2 mb-0">Software Engineering</h5>
-                                <h5 class="my-0 mb-1">and DevOps</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/201259/4622e9c3" target="_blank">
-                                Complete data of certificate</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
-                                     style="width: 140px; height: 200px;" alt="CloudAndContainers">
-                                <h5 class="mt-2 mb-0">Containers</h5>
-                                <h5 class="my-0 mb-1">and Cloud</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/192051/93153a4b" target="_blank">
-                                Complete data of certificate</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
-                                     style="width: 140px; height: 200px;" alt="django">
-                                <h5 class="mt-2 mb-0">Python Web</h5>
-                                <h5 class="my-0 mb-1">Framework</h5>
-                            </a>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/182349/e14592a6" target="_blank">
-                                Complete data of certificate</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
-                                     style="width: 140px; height: 200px;"
-                                     alt="django basics"
-                                >
-                                <h5 class="mt-2 mb-0">Python Web</h5>
-                                <h5 class="my-0 mb-1">Basics</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/177819/f72e1a40" target="_blank">
-                                Complete data of certificate
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
-                                     style="width: 140px; height: 200px;"
-                                     alt="python oop">
-                                <h5 class="mt-2 mb-0">Python</h5>
-                                <h5 class="my-0 mb-1">OOP</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/168051/135e14f7" target="_blank">
-                                Complete data of certificate
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
-                                     style="width: 140px; height: 200px;"
-                                     alt="python advanced">
-                                <h5 class="mt-2 mb-0">Python</h5>
-                                <h5 class="my-0 mb-1">Advanced</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/159368/6eca017f" target="_blank">
-                                Complete data of certificate
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
-                                     style="width: 140px; height: 200px;"
-                                     alt="python fundamentals">
-                                <h5 class="mt-2 mb-0">Python</h5>
-                                <h5 class="my-0 mb-1">Fundamentals</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/148718/012cedf6" target="_blank">
-                                Complete data of certificate
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="position-relative bg-light pt-5 pb-4 px-4">
-                            <a href="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
-                               target="_blank">
-                                <img class="feature-item rounded"
-                                     src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
-                                     style="width: 140px; height: 200px;"
-                                     alt="python basic">
-                                <h5 class="mt-2 mb-0">Python</h5>
-                                <h5 class="my-0 mb-1">Basics</h5>
-                            </a>
-                            <a href="https://softuni.bg/certificates/details/135311/0f9fd045" target="_blank">
-                                Complete data of certificate
-                            </a>
-                        </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
+                                 alt="python fundamentals">
+
+                        </a>
+                        <h5 class="mt-2 mb-0">Python</h5>
+                            <h5 class="my-0 mb-1">Fundamentals</h5>
+                        <a href="https://softuni.bg/certificates/details/148718/012cedf6" target="_blank">
+                            Complete data of certificate
+                        </a>
                     </div>
                 </div>
-            {% endif %}
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" href="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
+                                 alt="python basic">
+
+                        </a>
+                        <h5 class="mt-2 mb-0">Python</h5>
+                            <h5 class="my-0 mb-1">Basics</h5>
+                        <a href="https://softuni.bg/certificates/details/135311/0f9fd045" target="_blank">
+                            Complete data of certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Certificates End -->
@@ -730,36 +575,19 @@
                 <h5 class="mb-5">-- Learn more about my experience --</h5>
             </div>
             <div class="tab-class text-center doubleButton wow fadeInUp" data-wow-delay="0.1s">
-                {% if mobile_device %}
-                    <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
-                        <li class="nav-item">
-                            <button class="btn btn-sm button-3d nav-link active px-2 py-2" data-bs-toggle="pill"
-                                    href="#tab-1">
-                                Educational Experience
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-sm button-3d nav-link px-2 py-2" data-bs-toggle="pill"
-                                    href="#tab-2">
-                                Work Experience
-                            </button>
-                        </li>
-                    </ul>
-                {% else %}
-                    <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
-                        <li class="nav-item">
-                            <button class="btn button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">
-                                Educational
-                                Experience
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work
-                                Experience
-                            </button>
-                        </li>
-                    </ul>
-                {% endif %}
+                <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
+                    <li class="nav-item">
+                        <button class="btn button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">
+                            Educational
+                            Experience
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work
+                            Experience
+                        </button>
+                    </li>
+                </ul>
                 <div class="tab-content text-start">
                     <div id="tab-1" class="tab-pane fade show p-0 active">
                         <div class="owl-carousel testimonial-carousel wow fadeInUp">
@@ -1012,7 +840,7 @@
                             <div class="col-md-4">
                                 <i class="fa fa-phone fa-2x me-2 text-secondary-gradient"></i>
                                 <div class="d-inline-block">
-                                    <div class="pone-wrap">
+                                    <div class="phone-wrap">
                                         Phone:
                                         <a class="ms-2 smoothTransition" type="submit"
                                            onclick="phoneNumberToggle()">

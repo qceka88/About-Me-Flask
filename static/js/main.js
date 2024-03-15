@@ -1,6 +1,11 @@
 (function ($) {
     "use strict";
 
+    // Call changeCertificates function on page load and resize
+    $(window).ready(function () {
+        changeCertificates();
+    });
+
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -10,7 +15,6 @@
         }, 1);
     };
     spinner();
-
 
     // Initiate the wowjs
     new WOW().init();
@@ -24,6 +28,7 @@
             $('.navbar').removeClass('sticky-top shadow-sm position-fixed w-100');
         }
     });
+
 
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
@@ -113,32 +118,57 @@
         }
     });
 
-    // Testimonials carousel Mobile Version
-    $(".testimonial-carousel-mobile").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        page: true,
-        navText: [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 2
-            },
-            1536: {
-                items: 4
-            },
-            1948: {
-                items: 6
-            }
+
+    // Change Certificates Class
+    function changeCertificates() {
+        const certificatesContainer = document.getElementById("my-certificates");
+        let certificatesElements = document.querySelectorAll('.certificate-item');
+        let delayArray = [];
+
+        if (window.innerWidth <= 600 && certificatesContainer.className === "row gy-5 gx-4 justify-content-center") {
+            certificatesContainer.className = "owl-carousel testimonial-carousel";
+            certificatesElements.forEach(el => {
+                el.className = 'testimonial-item p-3 rounded certificate-item';
+                delayArray.push(el.getAttribute('data-wow-delay'));
+                el.removeAttribute('data-wow-delay');
+            });
+            let testimonialCertificateCarousel = $("#certificates").find(".testimonial-carousel");
+            // Testimonials carousel Mobile Version
+            testimonialCertificateCarousel.owlCarousel({
+                autoplay: true,
+                loop: true,
+                smartSpeed: 1000,
+                center: true,
+                dots: true,
+                nav: true,
+                page: true,
+                navText: [
+                    '<i class="bi bi-chevron-left"></i>',
+                    '<i class="bi bi-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 4
+                    },
+                    992: {
+                        items: 6
+                    }
+                }
+            });
+            testimonialCertificateCarousel.refresh()
+        } else {
+            certificatesContainer.className = "row gy-5 gx-4 justify-content-center";
+            certificatesElements.forEach(el => {
+                el.className = 'col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item';
+                el.addAttribute('data-wow-delay', String(delayArray.shift()));
+            });
         }
-    });
+    }
 })(jQuery);
+
 
 // Hide/See phone number
 function phoneNumberToggle() {
