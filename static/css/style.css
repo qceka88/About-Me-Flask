@@ -1027,26 +1027,25 @@ button *:active {
         padding-left: 8%;
         padding-right: 8%;
     }
+
     #certificates .testimonial-carousel .owl-item.center .testimonial-item h5,
     .certificate-item > div h5 {
         font-size: 1rem !important;
         color: var(--dark) !important;
         margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-family: "Jost", sans-serif;
-            font-weight: 500;
-            line-height: 1.2;
+        margin-bottom: 0.5rem;
+        font-family: "Jost", sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
     }
 
     .certificate-item > div a:last-of-type {
-         font-size: 1rem !important;
-
+        font-size: 1rem !important;
         margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-family: "Jost", sans-serif;
-            font-weight: 500;
-            line-height: 1.2;
-
+        margin-bottom: 0.5rem;
+        font-family: "Jost", sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
     }
 
     .certificate-item > div h5:first-of-type {
@@ -1059,6 +1058,9 @@ button *:active {
         margin-bottom: 1.5rem !important;
     }
 
+    .certificate-item #special-certificate-item {
+        margin-bottom: 0.25rem !important;
+    }
     .certificate-image {
         display: block;
         width: 100%;
@@ -1080,6 +1082,7 @@ button *:active {
         right: 15px;
         bottom: 15px;
     }
+
 }
 
 @media (max-width: 370px) {
