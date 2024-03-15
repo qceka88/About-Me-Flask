@@ -1,10 +1,7 @@
 (function ($) {
     "use strict";
 
-    // Call changeCertificates function on page load and resize
-    $(window).ready(function () {
-        changeCertificates();
-    });
+
 
     // Spinner
     var spinner = function () {
@@ -15,6 +12,10 @@
         }, 1);
     };
     spinner();
+
+
+
+
 
     // Initiate the wowjs
     new WOW().init();
@@ -90,7 +91,6 @@
         items: 1
     });
 
-    //TODO: Delete mobile Versions!
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -133,6 +133,7 @@
                 el.removeAttribute('data-wow-delay');
             });
             let testimonialCertificateCarousel = $("#certificates").find(".testimonial-carousel");
+
             // Testimonials carousel Mobile Version
             testimonialCertificateCarousel.owlCarousel({
                 autoplay: true,
@@ -158,15 +159,17 @@
                     }
                 }
             });
-            testimonialCertificateCarousel.refresh()
+
         } else {
             certificatesContainer.className = "row gy-5 gx-4 justify-content-center";
             certificatesElements.forEach(el => {
                 el.className = 'col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item';
-                el.addAttribute('data-wow-delay', String(delayArray.shift()));
+                el.setAttribute('data-wow-delay', String(delayArray.shift()));
             });
         }
+
     }
+    changeCertificates();
 })(jQuery);
 
 
