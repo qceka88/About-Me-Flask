@@ -431,10 +431,10 @@ h6,
     height: 200px;
 }
 
-/*** My start date Style ***/
+/***  About me start date Style ***/
 .my-start-date-style {
     display: grid;
-    grid-template-columns: repeat(3, 45px);
+    grid-template-columns: repeat(3, 50px);
     grid-auto-rows: 15px;
     grid-gap: 30px;
 }
@@ -442,9 +442,10 @@ h6,
 /*** About me projects Style ***/
 .my-personal-projects-style {
     display: grid;
-    grid-template-columns: repeat(1, 40px);
+    grid-template-columns: repeat(2, 50px);
     grid-auto-rows: 15px;
-    grid-gap: 25px;
+    grid-gap: 30px;
+    white-space: nowrap;
 }
 
 #about .col-lg-6.text-center img {
@@ -891,46 +892,8 @@ button *:active {
         height: 121px;
     }
 
-    /*!*** Testimonial Mobile version***!*/
-    /*.testimonial-carousel-mobile .owl-item .testimonial-item,*/
-    /*.testimonial-carousel-mobile .owl-item .testimonial-item * {*/
-    /*    transition: .5s;*/
-    /*}*/
-    /*.testimonial-carousel-mobile .owl-item.center .testimonial-item {*/
-    /*    background: linear-gradient(to bottom right, var(--primary), var(--secondary));*/
-    /*}*/
-    /*.testimonial-carousel-mobile .owl-item.center .testimonial-item h5,*/
-    /*.testimonial-carousel-mobile .owl-item.center .testimonial-item p {*/
-    /*    color: #FFFFFF !important;*/
-    /*}*/
-    /*.testimonial-carousel-mobile .owl-nav {*/
-    /*    margin-top: 30px;*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*}*/
-    /*.testimonial-carousel-mobile .owl-nav .owl-prev,*/
-    /*.testimonial-carousel-mobile .owl-nav .owl-next {*/
-    /*    margin: 0 12px;*/
-    /*    width: 50px;*/
-    /*    height: 50px;*/
-    /*    display: flex;*/
-    /*    align-items: center;*/
-    /*    justify-content: center;*/
-    /*    color: #FFFFFF;*/
-    /*    background: linear-gradient(to bottom right, var(--primary), var(--secondary));*/
-    /*    border-radius: 60px;*/
-    /*    font-size: 18px;*/
-    /*    transition: .5s;*/
-    /*}*/
-    /*.testimonial-carousel-mobile .owl-nav .owl-prev:hover,*/
-    /*.testimonial-carousel-mobile .owl-nav .owl-next:hover {*/
-    /*    background: linear-gradient(to bottom right, var(--secondary), var(--primary));*/
-    /*}*/
     /* About Me Section */
-    #about div div div {
-        text-align: justify;
-    }
-
+    #about div div div p.mb-4,
     #about div div div h1,
     #about div div div h5 {
         text-align: center;
@@ -1058,9 +1021,10 @@ button *:active {
         margin-bottom: 1.5rem !important;
     }
 
-    .certificate-item #special-certificate-item {
+    #special-certificate-item {
         margin-bottom: 0.25rem !important;
     }
+
     .certificate-image {
         display: block;
         width: 100%;

@@ -1,10 +1,15 @@
 from datetime import datetime
+from random import choice
+from string import ascii_letters, digits
 
 from dateutil.relativedelta import relativedelta
 from flask import request
 
 
 class InfoClass:
+    """
+        Base Info class representing some initial information for me.
+    """
     information = """I'm a junior in programming, driven by a deep passion and a constant eagerness to learn more about 
         this science, utilizing it to develop new technologies and explore new frontiers. I have a solid foundation in 
         programming and DevOps practices, aspiring to be part of this impressive and dynamic industry. Through my work 
@@ -20,7 +25,7 @@ class InfoClass:
 
 class MyDevice:
     """
-        Deprecated class not used in main page. Replaced by  Responsive Web Design.
+        Currently deprecated class not used in main page. Replaced by  Responsive Web Design.
 
         :returns: True or False depend on user device.
     """
@@ -29,13 +34,16 @@ class MyDevice:
     @staticmethod
     def device_detect():
         user_agent = request.headers.get("User-Agent").lower()
-        if "iphone" in user_agent or "android" in user_agent:
-            return True
-
-        return False
+        print("USER DATA", user_agent)
+        return user_agent
 
 
 class MyTime:
+    """
+        Class that calculate time from initial data that I stared to practice programming.
+
+        :return: dict with calculated period in {'years': .., 'months': .., 'days': ..}  format.
+    """
 
     @staticmethod
     def active_coding_time():
@@ -44,3 +52,17 @@ class MyTime:
         my_time = relativedelta(today, start_date)
 
         return {"years": my_time.years, "months": my_time.months, "days": my_time.days}
+
+
+def get_unique_url_extension():
+    """
+        Function that generate unique string fifty characters long, randomly chosen.
+
+        :return: Fifty characters long string
+    """
+    alpha_digits = str(digits) + ascii_letters
+    url_extension_length = choice([50, 60, 70, 80])
+    return ''.join(choice(alpha_digits) for _ in range(url_extension_length))
+
+
+unique_extension = get_unique_url_extension()

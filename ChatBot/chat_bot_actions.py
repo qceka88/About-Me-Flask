@@ -2,7 +2,10 @@ import random
 
 import nltk
 import numpy as np
+from flask import request
 from nltk.stem import WordNetLemmatizer
+
+from WebApp.helpers import unique_extension
 
 
 class TrainedData:
@@ -66,8 +69,26 @@ class GetResponse(TrainedData):
 
 
 class BotResponse(GetResponse, Predict):
+    """
+        Class that trigger process for chatbot response. Check for Easter egg question.
+
+        :returns: chatbot response in string format.
+    """
+
+    @staticmethod
+    def check_for_easter_egg(output_text):
+        if "url_hobbies_extension" in output_text:
+            current_domain = request.host_url  # temporary
+            output_text = output_text.replace("my_domain_name/", current_domain)  # temporary
+
+            output_text = output_text.replace("url_hobbies_extension", unique_extension)
+
+            return output_text
+
+        return output_text
 
     def chatbot_response(self, received_message):
         intents = self.prediction(received_message)
-        result = self.get_response(intents)
-        return result
+        response_result = self.get_response(intents)
+
+        return self.check_for_easter_egg(response_result)

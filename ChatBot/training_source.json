@@ -98,8 +98,8 @@
       "context": ["age","old"]
     },
     {"tag": "hobbies",
-      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?"],
-      "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #00f0d4; text-decoration: underline;' href='https://yr-portoflio.onrender.com/GasAsdWcoijd9329sASD1jdMf4dfzS9fdn5'>#Hobbies</a>.</p>"],
+      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?", "Is Yanko have any hobbies?"],
+      "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #00f0d4; text-decoration: underline;' href='my_domain_name/url_hobbies_extension'>#Hobbies</a>.</p>"],
       "context": ["hobbies","free_time"]
     }
   ]

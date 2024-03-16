@@ -4,6 +4,9 @@ from flask.views import View
 from WebApp.helpers import MyDevice, MyTime, InfoClass
 
 
+
+
+
 class IndexView(View, MyTime, InfoClass):
     methods = ["GET", "POST"]
 
@@ -22,7 +25,7 @@ class HobbiesView(View, MyDevice, MyTime):
         self.template = template
 
     def dispatch_request(self):
-        context = {"mobile_device": self.device_detect()}
+        context = {"device": self.device_detect()}
         return render_template(self.template, **context)
 
 
