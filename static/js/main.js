@@ -123,13 +123,11 @@
     function changeCertificates() {
         const certificatesContainer = document.getElementById("my-certificates");
         let certificatesElements = document.querySelectorAll('.certificate-item');
-        let delayArray = [];
 
         if (window.innerWidth <= 600 && certificatesContainer.className === "row gy-5 gx-4 justify-content-center") {
             certificatesContainer.className = "owl-carousel testimonial-carousel";
             certificatesElements.forEach(el => {
                 el.className = 'testimonial-item p-3 rounded certificate-item';
-                delayArray.push(el.getAttribute('data-wow-delay'));
                 el.removeAttribute('data-wow-delay');
             });
             let testimonialCertificateCarousel = $("#certificates").find(".testimonial-carousel");
@@ -160,14 +158,7 @@
                 }
             });
 
-        } else {
-            certificatesContainer.className = "row gy-5 gx-4 justify-content-center";
-            certificatesElements.forEach(el => {
-                el.className = 'col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item';
-                el.setAttribute('data-wow-delay', String(delayArray.shift()));
-            });
         }
-
     }
     changeCertificates();
 })(jQuery);

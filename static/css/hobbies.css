@@ -1,0 +1,31 @@
+#tm-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+.tm-video-wrapper { position: relative; }
+
+.nav-button {
+    width: 7em;
+}
+
+.tm-video-control-button {
+    cursor: pointer;
+    color: white;
+}
+
+.easter-egg i {
+    color: var(--primary);
+}
+
+.footer > div:first-of-type {
+    display: none;
+    text-align: center;
+}
+
+.hero-header,
+.container-xxl.bg-white.p-0.main-container {
+    background: transparent !important;
+}

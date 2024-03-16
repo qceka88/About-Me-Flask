@@ -240,6 +240,10 @@ h6,
     .navbar-light .navbar-brand img {
         max-height: 45px;
     }
+
+    .nav-button {
+        width: 2em !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -265,6 +269,8 @@ h6,
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+
 }
 
 
@@ -698,10 +704,11 @@ h6,
 .message-bubble {
     color: whitesmoke;
     max-width: 90%;
+    min-width: 5%;
     padding: 15px;
     border-radius: 15px;
     background: repeating-linear-gradient(to bottom right, rgb(66 148 227 / 80%), rgb(97 96 238 / 80%));
-    flex: 0 1 87%;
+    flex: 0 1 auto;
 }
 
 .message-info {
@@ -866,10 +873,17 @@ button *:active {
         right: auto;
         border-radius: 20px;
         z-index: 2500;
+        width: 90%;
+    }
+
+    .messageBox {
+        width: 100%;
+        min-width: 250px;
+        max-width: 5000px;
     }
 
     .message-bubble {
-        max-width: 270px;
+        max-width: 100%;
     }
 
     /* Hero Header Section */

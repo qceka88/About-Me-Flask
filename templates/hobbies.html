@@ -1,13 +1,47 @@
 {% extends "base.html" %}
 
 {% block navigation_block %}
-    <a href="{{ url_for('index_view') }}" class="menuButton nav-item nav-link active">Return to Home</a>
-    <a href="#" class="menuButton nav-item nav-link active">THIS PAGE IS UNDER CONSTRUCTION</a>
+    <link href="{{ url_for('static', filename='css/hobbies.css') }}" rel="stylesheet"
+          xmlns="http://www.w3.org/1999/html">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="{{ url_for('index_view') }}" class="navbar-brand d-flex p-0 easter-egg">
+            <h1 class="m-0">EasterEgg</h1>
+            <i class="fa fa-egg fa-2x ms-3"></i>
+            <!-- <img src="img/logo.png" alt="Logo"> -->
+        </a>
+        <div>
+            <button onclick="window.history.back()"
+                    class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button">
+                <i class="fas fa-arrow-alt-circle-left"></i>
+            </button>
+            <button class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button video-control">
+                <i class="fas fa-pause tm-video-control-button"></i>
+            </button>
+            <button onclick="openCloseChat()"
+                    class="navbar-toggler bg-secondary-gradient text-white px-2">
+                <i class="fas fa-robot"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+            </div>
+            <button onclick="window.history.back()"
+                    class="btn btn-primary-gradient rounded-pill mx-2 d-none d-lg-block nav-button">
+                <span>GO BACK</span>
+            </button>
+            <button class="btn btn-primary-gradient rounded-pill mx-2 d-none d-lg-block nav-button video-control">
+                <i class="fas fa-pause tm-video-control-button"></i>
+            </button>
+            <button onclick="openCloseChat()"
+                    class=" btn btn-primary-gradient rounded-pill mx-2  d-none d-lg-block nav-button">
+                <span>CHAT BOT</span>
+            </button>
+        </div>
+    </nav>
 {% endblock %}
 
 {% block hero_block %}
-    <div class="container-xxl bg-primary hero-header">
-{#    <div class="container-xxl bg-primary ">#}
+    <div class="container-xxl hero-header">
         <div class="container px-lg-5">
             <div class="row g-5">
                 <div class="col-lg-8 text-center text-lg-start">
@@ -34,5 +68,21 @@
 
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis eius ex minus nulla qui rem sed!
         Asperiores dicta iste neque nisi odit possimus provident ratione, rem sapiente voluptate? Sunt.</h1>
+
+{% endblock %}
+{% block video_background %}
+
+
+    <div class="tm-video-wrapper">
+        <video autoplay muted loop id="tm-video">
+            <source src="{{ url_for('static', filename='video/wave-cafe-video-bg.mp4') }}" type="video/mp4">
+        </video>
+        <audio autoplay loop id="sound-wrapper">
+            <source src="{{ url_for('static', filename='sound/seagull_sound.mp3') }}" type="audio/mp3"/>
+        </audio>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hobbies.js') }}"></script>
 
 {% endblock %}
