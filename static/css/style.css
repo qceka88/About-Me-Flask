@@ -620,11 +620,17 @@ h6,
     justify-content: space-between;
     width: 100%;
     height: 450px;
+    min-width: 380px;
+    min-height: 380px;
+    max-width: 1500px;
+    max-height: 800px;
     border: var(--border);
     border-radius: 20px;
     background: repeating-radial-gradient(var(--chat1), var(--chat2));
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
     flex: 0 auto;
+    overflow: hidden;
+    resize: both;
 }
 
 .messageBox-header {
@@ -652,7 +658,10 @@ h6,
     flex: 1;
     overflow-y: auto;
     padding: 10px;
+    background-color: linear-gradient(to bottom left, var(--chat1), var(--chat2));
+    width: 100%;
 }
+
 
 .messageBox-chat::-webkit-scrollbar {
     width: 6px;
@@ -670,10 +679,13 @@ h6,
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
+
 }
 
 .message-image {
     width: 40px;
+    max-width: 40px;
+    min-width: 40px;
     height: 40px;
     margin-right: 10px;
     background: #ddd;
@@ -685,10 +697,11 @@ h6,
 
 .message-bubble {
     color: whitesmoke;
-    max-width: 270px;
+    max-width: 90%;
     padding: 15px;
     border-radius: 15px;
     background: repeating-linear-gradient(to bottom right, rgb(66 148 227 / 80%), rgb(97 96 238 / 80%));
+    flex: 0 1 87%;
 }
 
 .message-info {
@@ -750,10 +763,6 @@ h6,
 .messageBox-input:focus {
     background-color: rgba(255, 255, 255, 0.85);
     outline: none;
-}
-
-.messageBox-chat {
-    background-color: linear-gradient(to bottom left, var(--chat1), var(--chat2));
 }
 
 
@@ -857,6 +866,10 @@ button *:active {
         right: auto;
         border-radius: 20px;
         z-index: 2500;
+    }
+
+    .message-bubble {
+        max-width: 270px;
     }
 
     /* Hero Header Section */
