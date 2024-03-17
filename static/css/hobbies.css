@@ -142,6 +142,7 @@ body {
     display: flex;
     gap: 4em;
 }
+
 .hobbies-title {
     background-color: rgba(126, 125, 125, 0.36);
     backdrop-filter: blur(10px);
@@ -161,20 +162,21 @@ body {
     font-weight: 500 !important;
     line-height: 1.5;
 }
+
 .hobbies-title h5 {
     font-size: 1.5em !important;
 }
+
 .sub-title {
     color: whitesmoke;
 }
 
 .hobbies-card {
-        background-color: rgba(126, 125, 125, 0.36);
+    background-color: rgba(126, 125, 125, 0.36);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(108, 108, 108, 0.65) !important;
     border-radius: 1em;
 }
-
 
 
 /*  Footer  */
@@ -266,7 +268,7 @@ body {
     }
 
     .hero-header .row.g-5 {
-        gap: 2em;
+        gap: 3em;
     }
 
     .hero-header .col-lg-8.text-center {
@@ -310,6 +312,24 @@ body {
         width: 317px;
         height: 179px;
 
+    }
+
+    /* Hobbies */
+    #hobbies {
+        top: -2em;
+    }
+    .hobbies-title {
+        width: 70%;
+    }
+
+
+    .hobbies-title h1 {
+        font-size: 2em !important;
+        line-height: 1.5;
+    }
+
+    .hobbies-title h5 {
+        font-size: 1em !important;
     }
 
     /* Footer */
