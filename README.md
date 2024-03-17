@@ -15,7 +15,7 @@ Technologies:
 [  ] BackEnd
 - Python
 - Flask
-- Tensorflow, keras, numpy, nltk, pickle
+- Tensorflow, Keras, Numpy, NLTK, Pickle
 - Unit Testing
 
 [  ] FrontEnd

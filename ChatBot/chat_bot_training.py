@@ -119,6 +119,7 @@ class FitModel(Model):
 
     def save_model(self):
         self.model.save("model.h5", self.hist)
+
         logging.info(msg="Training complete!")
         print("Training complete!")
 
