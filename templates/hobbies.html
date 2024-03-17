@@ -4,7 +4,8 @@
     <link href="{{ url_for('static', filename='css/hobbies.css') }}" rel="stylesheet"
           xmlns="http://www.w3.org/1999/html">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-        <a href="{{ url_for('index_view') }}" class="navbar-brand d-flex p-0 easter-egg">
+    <!-- #TODO: Check what to be # or redirect to home page -->
+        <a href="#" class="navbar-brand d-flex p-0 easter-egg-logo">
             <h1 class="m-0">EasterEgg</h1>
             <i class="fa fa-egg fa-2x ms-3"></i>
             <!-- <img src="img/logo.png" alt="Logo"> -->
@@ -14,11 +15,11 @@
                     class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button">
                 <i class="fas fa-arrow-alt-circle-left"></i>
             </button>
-            <button class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button video-control">
-                <i class="fas fa-pause tm-video-control-button"></i>
+            <button class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button video-button">
+                <i class="fas fa-pause video-button-symbol"></i>
             </button>
             <button onclick="openCloseChat()"
-                    class="navbar-toggler bg-secondary-gradient text-white px-2">
+                    class="navbar-toggler bg-secondary-gradient text-white px-2 nav-button">
                 <i class="fas fa-robot"></i>
             </button>
         </div>
@@ -29,8 +30,8 @@
                     class="btn btn-primary-gradient rounded-pill mx-2 d-none d-lg-block nav-button">
                 <span>GO BACK</span>
             </button>
-            <button class="btn btn-primary-gradient rounded-pill mx-2 d-none d-lg-block nav-button video-control">
-                <i class="fas fa-pause tm-video-control-button"></i>
+            <button class="btn btn-primary-gradient rounded-pill mx-2 d-none d-lg-block nav-button video-button">
+                <i class="fas fa-pause video-button-symbol"></i>
             </button>
             <button onclick="openCloseChat()"
                     class=" btn btn-primary-gradient rounded-pill mx-2  d-none d-lg-block nav-button">
@@ -44,14 +45,14 @@
     <div class="container-xxl hero-header">
         <div class="container px-lg-5">
             <div class="row g-5">
-                <div class="col-lg-8 text-center text-lg-start">
-                    <p class="text-white pb-3 animated slideInDown" data-wow-delay="0.5s">Congratulations, you have just
-                        found Easter Egg.</p>
-                    <h1 class="text-white mb-4 animated slideInDown" data-wow-delay="0.6s">This is page of hobbies of
+                <div class="col-lg-8 text-center">
+                    <p class="text-white pb-3 animated slideInDown" data-wow-delay="0.5s">Congratulations! Dear, Traveler, you have just
+                        found an <strong class="easter-egg-text" >Easter Egg.</strong> </p>
+                    <h1 class="text-white mb-4 animated slideInDown" data-wow-delay="0.6s">This is a page for hobbies of
                         Yanko.</h1>
                     <p class="text-white pb-3 animated slideInDown max" data-wow-delay="0.7s">Enjoy!</p>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                <div class="col-lg-4 d-flex mx-auto justify-content-center  wow fadeInUp"
                      data-wow-delay="0.3s">
                     <div id="screenshot-carousel" class="owl-carousel screenshot-carousel">
                         <img class="img"
@@ -65,17 +66,17 @@
 {% endblock %}
 
 {% block page_content %}
-
+    <h1 class="text-white">{{ device }}</h1>
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis eius ex minus nulla qui rem sed!
         Asperiores dicta iste neque nisi odit possimus provident ratione, rem sapiente voluptate? Sunt.</h1>
 
 {% endblock %}
 {% block video_background %}
 
-
-    <div class="tm-video-wrapper">
-        <video autoplay muted loop id="tm-video">
-            <source src="{{ url_for('static', filename='video/wave-cafe-video-bg.mp4') }}" type="video/mp4">
+    <!-- Video and Sound Section Start -->
+    <div class="video-background-wrapper">
+        <video autoplay muted loop id="video-background">
+            <source src="{{ url_for('static', filename='video/video.mp4') }}" type="video/mp4">
         </video>
         <audio autoplay loop id="sound-wrapper">
             <source src="{{ url_for('static', filename='sound/seagull_sound.mp3') }}" type="audio/mp3"/>
@@ -84,5 +85,5 @@
 
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/hobbies.js') }}"></script>
-
+    <!-- Video and Sound Section End -->
 {% endblock %}

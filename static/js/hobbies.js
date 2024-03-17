@@ -7,69 +7,14 @@ function setVideoSize() {
     const tempVidHeight = windowWidth * vidHeight / vidWidth;
     const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
     const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
-    const tmVideo = $('#tm-video');
+    const tmVideo = $('video-background');
 
     tmVideo.css('width', newVidWidth);
     tmVideo.css('height', newVidHeight);
 
 }
 
-function openTab(evt, id) {
-    $('.tm-tab-content').hide();
-    $('#' + id).show();
-    $('.tm-tab-link').removeClass('active');
-    $(evt.currentTarget).addClass('active');
-}
-
-function initPage() {
-    let pageId = location.hash;
-
-    if (pageId) {
-        highlightMenu($(`.tm-page-link[href^="${pageId}"]`));
-        showPage($(pageId));
-    } else {
-        pageId = $('.tm-page-link.active').attr('href');
-        showPage($(pageId));
-    }
-}
-
-function highlightMenu(menuItem) {
-    $('.tm-page-link').removeClass('active');
-    menuItem.addClass('active');
-}
-
-function showPage(page) {
-    $('.tm-page-content').hide();
-    page.show();
-}
-
 $(document).ready(function () {
-
-    /***************** Pages *****************/
-
-    initPage();
-
-    $('.tm-page-link').click(function (event) {
-
-        if (window.innerWidth > 991) {
-            event.preventDefault();
-        }
-
-        highlightMenu($(event.currentTarget));
-        showPage($(event.currentTarget.hash));
-    });
-
-
-    /***************** Tabs *******************/
-
-    $('.tm-tab-link').on('click', e => {
-        e.preventDefault();
-        openTab(e, $(e.target).data('id'));
-    });
-
-    $('.tm-tab-link.active').click(); // Open default tab
-
-    /************** Video background *********/
 
     setVideoSize();
 
@@ -81,21 +26,21 @@ $(document).ready(function () {
     };
 
     // Play/Pause button for video background
-    const btn = $(".tm-video-control-button");
-
+    const btn = $(".video-button");
+    const btnSymbol = $(".video-button-symbol")
     btn.on("click", function (e) {
-        const video = document.getElementById("tm-video");
+        const video = document.getElementById("video-background");
         const sound = document.getElementById("sound-wrapper");
-        $(this).removeClass();
+        btnSymbol.removeClass();
 
         if (video.paused) {
             video.play();
             sound.play();
-            btn.addClass("fas fa-pause");
+            btnSymbol.addClass("fas fa-pause");
         } else {
             video.pause();
             sound.pause();
-            btn.addClass("fas fa-play");
+            btnSymbol.addClass("fas fa-play");
         }
     });
 });

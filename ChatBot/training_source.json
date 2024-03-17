@@ -10,6 +10,11 @@
       "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone for too long.", "Goodbye my human friend.", "You, will be back!", "Human I will be happy to see you again!"],
       "context": [""]
     },
+    {"tag": "unfinished_ask",
+      "patterns": ["Tell me about?", "Do you know?", "Can you tell me?", "Please tell me?"],
+      "responses": ["Please be more specific, what do you want to tell you?", "What do you want to tell you?", "For what do you want to we talk?"],
+      "context": ["tell_me"]
+    },
     {"tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks!", "Thanks for helping me!"],
       "responses": ["Happy to help!", "Any time!", "My pleasure.", "No problem.", "You can ask me anything else.", "Awesome!", "I`m at your service!"

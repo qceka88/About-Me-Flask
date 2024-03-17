@@ -34,7 +34,6 @@ class MyDevice:
     @staticmethod
     def device_detect():
         user_agent = request.headers.get("User-Agent").lower()
-        print("USER DATA", user_agent)
         return user_agent
 
 
@@ -58,10 +57,10 @@ def get_unique_url_extension():
     """
         Function that generate unique string fifty characters long, randomly chosen.
 
-        :return: Fifty characters long string
+        :return: Randomly chosen length of string and randomly chosen characters.
     """
     alpha_digits = str(digits) + ascii_letters
-    url_extension_length = choice([50, 60, 70, 80])
+    url_extension_length = choice(range(50, 101))
     return ''.join(choice(alpha_digits) for _ in range(url_extension_length))
 
 
