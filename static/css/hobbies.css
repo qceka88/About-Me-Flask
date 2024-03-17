@@ -147,6 +147,7 @@ body {
     background-color: rgba(126, 125, 125, 0.36);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(108, 108, 108, 0.65) !important;
+    box-shadow: 0 0 7px 3px #0000004a;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
@@ -176,6 +177,7 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(108, 108, 108, 0.65) !important;
     border-radius: 1em;
+    box-shadow: 0 0 7px 3px #0000004a;
 }
 
 
@@ -286,7 +288,9 @@ body {
         font-weight: 500 !important;
         line-height: 1.5;
     }
-
+    .hero-header .col-lg-8.text-center p strong:first-of-type {
+        font-size: 1.4em !important;
+    }
     /*** Hero Header - TV Carousel ***/
     .screenshot-carousel {
         width: 320px;
@@ -304,7 +308,7 @@ body {
 
     .owl-carousel .owl-stage-outer {
         height: 179px;
-        box-shadow: 0 0 20px 20px #0000004a;
+        box-shadow: 0 0 10px 10px #0000004a;
     }
 
     .screenshot-carousel .owl-item img {
@@ -317,10 +321,14 @@ body {
     /* Hobbies */
     #hobbies {
         top: -2em;
+        position: relative;
+        padding: 0 1.5em;
     }
+
     .hobbies-title {
-        width: 70%;
+        width: 80%;
     }
+
     .hobbies-card {
         padding: 2em;
     }
@@ -332,6 +340,10 @@ body {
 
     .hobbies-title h5 {
         font-size: 1em !important;
+    }
+
+    .hobbies-card img {
+        padding-bottom: 0.6em;
     }
 
     /* Footer */

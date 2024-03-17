@@ -288,6 +288,10 @@ h6,
     background-repeat: no-repeat;
 }
 
+.hero-br {
+    display: none;
+}
+
 @media (max-width: 991.98px) {
     .hero-header {
         padding: 6rem 0 9rem 0;
@@ -879,7 +883,8 @@ button *:active {
     .messageBox {
         width: 100%;
         min-width: 250px;
-        max-width: 5000px;
+        max-width: 500px;
+        resize: none;
     }
 
     .message-bubble {
@@ -896,6 +901,22 @@ button *:active {
     .hero-header .container.px-lg-5 .row.g-5 {
         --bs-gutter-y: 1.5rem;
         --bs-gutter-x: 1.5rem;
+    }
+
+    .hero-header .col-lg-8.text-center.text-lg-start > p {
+        font-size: 1.3em !important;
+        line-height: 1.5;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .hero-header .col-lg-8.text-center.text-lg-start > h1 {
+        font-size: 2em !important;
+        line-height: 1.5;
+    }
+
+    .hero-br {
+        display: block;
     }
 
     /*** Hero Header - Laptop Carousel ***/
@@ -943,6 +964,7 @@ button *:active {
 
     .my-skills-style div h5 {
         font-size: 1rem;
+        margin-top: 0.3em;
     }
 
     .my-skills-style div:nth-child(7) h5:last-of-type {
@@ -969,17 +991,25 @@ button *:active {
     }
 
     #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h4 {
-        margin-bottom: 0.5rem !important;
+        margin-bottom: 0.8rem !important;
+        margin-top: 0.2rem !important;
     }
 
     #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 h1 {
         margin-bottom: 0.5rem !important;
-        margin-right: 0.5rem !important;
-        margin-left: 0.5rem !important;
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+    }
+
+    #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 span {
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+        display: flex;
+        text-align: center;
     }
 
     #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies {
-        padding: 0.25rem !important; /* Technologies wrapper  */
+        padding: 0.25rem 1em !important; /* Technologies wrapper  */
     }
 
     #projects .testimonial-item.rounded.p-4 .bg-light.rounded .technologies .d-flex.justify-content-between.mb-3 {
@@ -989,7 +1019,7 @@ button *:active {
     }
 
     #projects .bg-light.rounded .d-flex.justify-content-evenly.pt-3.pb-4 {
-        padding: 0 0 0.5em !important; /* Reference buttons  CONTAINER on projects  */
+        padding: 0 0 0.8em !important; /* Reference buttons  CONTAINER on projects  */
 
     }
 
