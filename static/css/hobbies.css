@@ -309,7 +309,7 @@ body {
 
     .screenshot-carousel .owl-item img {
         position: relative;
-        width: 317px;
+        width: 320px;
         height: 179px;
 
     }
@@ -321,7 +321,9 @@ body {
     .hobbies-title {
         width: 70%;
     }
-
+    .hobbies-card {
+        padding: 2em;
+    }
 
     .hobbies-title h1 {
         font-size: 2em !important;
