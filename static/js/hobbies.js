@@ -7,11 +7,10 @@ function setVideoSize() {
     const tempVidHeight = windowWidth * vidHeight / vidWidth;
     const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
     const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
-    const tmVideo = $('video-background');
 
-    tmVideo.css('width', newVidWidth);
-    tmVideo.css('height', newVidHeight);
-
+    // No need to select any elements, since the video is set as background in CSS
+    document.documentElement.style.setProperty('--vid-width', newVidWidth + 'px');
+    document.documentElement.style.setProperty('--vid-height', newVidHeight + 'px');
 }
 
 $(document).ready(function () {

@@ -8,12 +8,12 @@
     {"tag": "goodbye",
       "patterns": ["Bye.", "See you later.", "Goodbye.", "Nice chatting to you, bye.", "Till next time."],
       "responses": ["See you!", "Have a nice day.", "Bye! Come back again soon.", "Dont leave me alone for too long.", "Goodbye my human friend.", "You, will be back!", "Human I will be happy to see you again!"],
-      "context": [""]
+      "context": ["goodbye"]
     },
     {"tag": "unfinished_ask",
       "patterns": ["Tell me about?", "Do you know?", "Can you tell me?", "Please tell me?"],
       "responses": ["Please be more specific, what do you want to tell you?", "What do you want to tell you?", "For what do you want to we talk?"],
-      "context": ["tell_me"]
+      "context": ["tell_me_waht"]
     },
     {"tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks!", "Thanks for helping me!"],
@@ -63,7 +63,8 @@
       "responses": ["With PostgreSQL, Yanko have experience to build DB with docker and to use it with ORM. CRUD on db tables."],
       "context": ["postgresql_knowledge"]
     },
-    {"tag": "github_gitlab_git", "patterns": ["What GitHub experience have?", "What GitLab experience have?", "What GitHub skills have Yanko?", "What GitLab skills have Yanko?", "Tell me about GitHub?", "What can do with GitHub?", "What can do with Git?", "What is his GitHub knowledge?", "What is his GitLab knowledge?", "Can Yanko use version control system?", "Do Yanko use source control system?", "What version control system can use?"],
+    {"tag": "github_gitlab_git",
+      "patterns": ["What GitHub experience have?", "What GitLab experience have?", "What GitHub skills have Yanko?", "What GitLab skills have Yanko?", "Tell me about GitHub?", "What can do with GitHub?", "What can do with Git?", "What is his GitHub knowledge?", "What is his GitLab knowledge?", "Can Yanko use version control system?", "Do Yanko use source control system?", "What version control system can use?"],
       "responses": ["During the long path of education Yanko has learned to use Git/GitHub/GitLab version control systems. You can check his profiles in Contact section. Also Yanko learned how to build CI/CD workflow with GitHub Actions."],
       "context": ["github_gitlab_git_knowledge"]
     },

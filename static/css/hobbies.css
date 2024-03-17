@@ -1,3 +1,39 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.text-hobby-gradient-triple {
+    background: linear-gradient(to bottom right, #61eada, #296ed7, #40f1da) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.text-hobby-gradient-double {
+    background: linear-gradient(to bottom right, #61eada, #0a48a2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.text-hobby-gradient-rev-double {
+    background: linear-gradient(to bottom right, #00a6ff, #61eada) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+}
+
 .footer,
 .hero-header,
 .container-xxl.bg-white.p-0.main-container {
@@ -7,7 +43,7 @@
 /*  Video Background Styles  */
 #video-background {
     position: fixed;
-    right: 0;
+    left: 0;
     bottom: 0;
     z-index: -1000;
 }
@@ -16,20 +52,10 @@
     position: relative;
 }
 
-.easter-egg-text {
-    background: linear-gradient(to bottom right, #61eada, #296ed7, #40f1da) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-}
 
 .nav-button {
     width: 7em;
     background: linear-gradient(to bottom right, #61eada, #1216fd) !important;
-}
-
-.tm-video-control-button {
-    cursor: pointer;
-    color: white;
 }
 
 /*  Header  */
@@ -47,6 +73,10 @@
 
 .no-js .owl-carousel, .owl-carousel.owl-loaded {
     display: flex;
+}
+
+.hero-header .row.g-5 {
+    gap: 4em;
 }
 
 .hero-header .col-lg-8.text-center {
@@ -70,11 +100,15 @@
 
 
 /*** Hero Header - TV Carousel ***/
+.hero-header .col-lg-4.d-flex.justify-content-center.wow.fadeInUp {
+    margin: auto;
+}
+
 .screenshot-carousel {
     position: relative;
     width: 400px;
-    height: 250px;
-    margin-right: 0 !important;
+    height: auto;
+    margin: auto !important;
     padding: 0 !important;
 }
 
@@ -91,6 +125,11 @@
 
 }
 
+.owl-carousel .owl-stage-outer {
+    height: 226px;
+    box-shadow: 0 0 20px 20px #0000004a;
+}
+
 .screenshot-carousel .owl-item img {
     position: relative;
     width: 399px;
@@ -98,8 +137,51 @@
     transition-duration: -1.5s, -1.5s;
 }
 
+/* Hobbies Section */
+#hobbies {
+    display: flex;
+    gap: 4em;
+}
+.hobbies-title {
+    background-color: rgba(126, 125, 125, 0.36);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(108, 108, 108, 0.65) !important;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+}
+
+.hobbies-title h1 {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    font-size: 3em !important;
+    font-weight: 500 !important;
+    line-height: 1.5;
+}
+.hobbies-title h5 {
+    font-size: 1.5em !important;
+}
+.sub-title {
+    color: whitesmoke;
+}
+
+.hobbies-card {
+        background-color: rgba(126, 125, 125, 0.36);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(108, 108, 108, 0.65) !important;
+    border-radius: 1em;
+}
+
+
 
 /*  Footer  */
+.footer {
+    padding-bottom: 0.6em !important;
+}
+
 .footer > div:first-of-type {
     display: none;
 
@@ -125,10 +207,6 @@
     background: linear-gradient(to bottom right, #61eada, #1216fd) !important;
 }
 
-.owl-carousel .owl-stage-outer {
-    height: 226px;
-    box-shadow: 0 0 20px 20px #0000004a;
-}
 
 @media (max-width: 991.98px) {
     .navbar {
@@ -151,7 +229,11 @@
         border-top: 1px solid #DDDDDD;
     }
 
-        /* Footer */
+    .hero-header .row.g-5 {
+        gap: 3em;
+    }
+
+    /* Footer */
     .footer > div:last-of-type > div > div > div {
         width: 80%;
     }
@@ -183,6 +265,10 @@
         display: none;
     }
 
+    .hero-header .row.g-5 {
+        gap: 2em;
+    }
+
     .hero-header .col-lg-8.text-center {
         display: flex;
         flex-direction: column;
@@ -212,6 +298,11 @@
         top: -25px;
         background-size: 320px auto;
 
+    }
+
+    .owl-carousel .owl-stage-outer {
+        height: 179px;
+        box-shadow: 0 0 20px 20px #0000004a;
     }
 
     .screenshot-carousel .owl-item img {
@@ -265,6 +356,11 @@
         top: -29px;
         background-size: 220px auto;
 
+    }
+
+    .owl-carousel .owl-stage-outer {
+        height: 121px;
+        box-shadow: 0 0 20px 20px #0000004a;
     }
 
     .screenshot-carousel .owl-item img {

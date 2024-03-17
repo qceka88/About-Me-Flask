@@ -7,7 +7,7 @@ from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
 from WebApp.helpers import unique_extension
-from WebApp.views import IndexView, HobbiesView, PageNotFoundView, BotResponseView
+from WebApp.views import IndexView, HobbiesView#, PageNotFoundView, BotResponseView
 
 nltk.download("popular")
 nltk.download("omw-1.4")
@@ -29,7 +29,7 @@ app = Flask(__name__,
 
 # Config Secret Key
 app.config["SECRET_KEY"] = "FlasK/Pythonfi234j2fr2j-939jsdf2sdf43243a2"
-# unique_extension = 'hobbies'
+#unique_extension = 'hobbies'
 # urlpatterns
 app.add_url_rule("/", view_func=IndexView.as_view("index_view", "index.html"))
 app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
