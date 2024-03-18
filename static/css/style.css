@@ -292,12 +292,29 @@ h6,
     display: none;
 }
 
+.hero-header > div > div > div {
+    width: auto;
+    flex: 1 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-header > div > div > div > * {
+    text-align: center;
+    margin: 0 auto;
+}
+
 @media (max-width: 991.98px) {
     .hero-header {
         padding: 6rem 0 9rem 0;
     }
 }
 
+/* About Me */
+.data-counter-wrapper {
+    width: auto !important;
+
+}
 
 /*** Feature ***/
 .feature-item {
@@ -947,6 +964,7 @@ button *:active {
         text-align: center;
     }
 
+
     #about .col-lg-6.text-center img {
         width: 250px;
         height: auto;
@@ -964,9 +982,12 @@ button *:active {
 
     .my-skills-style div h5 {
         font-size: 1rem;
+        margin-top: 0.4em;
+    }
+    .my-skills-style div h6 {
+        font-size: 1rem;
         margin-top: 0.3em;
     }
-
     .my-skills-style div:nth-child(7) h5:last-of-type {
         display: block;
     }
@@ -1002,8 +1023,7 @@ button *:active {
     }
 
     #projects .testimonial-item.rounded.p-4 .border-bottom.p-4.mb-4 span {
-        margin-right: 1rem !important;
-        margin-left: 1rem !important;
+        margin: 0.5rem 1rem !important;
         display: flex;
         text-align: center;
     }
