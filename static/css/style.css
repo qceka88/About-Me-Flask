@@ -300,7 +300,6 @@ h6,
 }
 
 .hero-header > div > div > div > * {
-    text-align: center;
     margin: 0 auto;
 }
 
@@ -920,14 +919,14 @@ button *:active {
         --bs-gutter-x: 1.5rem;
     }
 
-    .hero-header .col-lg-8.text-center.text-lg-start > p {
+    .hero-header .col-lg-8.text-center > p {
         font-size: 1.3em !important;
         line-height: 1.5;
         padding-left: 1em;
         padding-right: 1em;
     }
 
-    .hero-header .col-lg-8.text-center.text-lg-start > h1 {
+    .hero-header .col-lg-8.text-center > h1 {
         font-size: 2em !important;
         line-height: 1.5;
     }
@@ -1139,7 +1138,7 @@ button *:active {
         height: 180px;
         padding-right: 40px;
         padding-left: 40px;
-        margin: 0;
+        margin: 2em auto 0 !important;
     }
 
     .screenshot-carousel::before {
