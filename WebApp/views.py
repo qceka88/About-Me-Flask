@@ -34,7 +34,7 @@ class HobbiesView(View, MyDevice, MyTime):
     def dispatch_request(self):
         context = {"device": self.device_detect()}
         print(context)
-        return render_template(self.template)
+        return render_template(self.template, **context)
 
 
 class BotResponseView(View):

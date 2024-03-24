@@ -2,7 +2,6 @@
     "use strict";
 
 
-
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -12,9 +11,6 @@
         }, 1);
     };
     spinner();
-
-
-
 
 
     // Initiate the wowjs
@@ -241,8 +237,6 @@ function openCloseChat() {
     }
 }
 
-let element = document.getElementById("mychat")
-dragChatWindow(element);
 
 // Close Collapsed Nav Bar
 function closeNavbar() {

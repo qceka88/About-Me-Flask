@@ -648,8 +648,8 @@ h6,
     height: 450px;
     min-width: 380px;
     min-height: 380px;
-    max-width: 1500px;
-    max-height: 800px;
+    max-width: 80vw;
+    max-height: 80vh;
     border: var(--border);
     border-radius: 20px;
     background: repeating-radial-gradient(var(--chat1), var(--chat2));

@@ -196,7 +196,7 @@
 
 {% endblock %}
 {% block video_background %}
-    <h1 class="text-white">{{ device }}</h1>
+{#    <!-- {{ device }} -->#}
     <!-- Video and Sound Section Start -->
     <div class="video-background-wrapper">
         <video autoplay muted loop id="video-background">
@@ -207,7 +207,7 @@
         </audio>
     </div>
 
-    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lib/window/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/hobbies.js') }}"></script>
     <!-- Video and Sound Section End -->
 {% endblock %}
