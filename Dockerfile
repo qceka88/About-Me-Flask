@@ -1,19 +1,19 @@
-# Using official python runtime base image
-FROM python:3.8.5-slim-buster
 
-# Set the application directory
+FROM python:3.8.5-slim-buster AS base
+
 WORKDIR /app
 
-# Install our requirements.txt
+FROM base AS builder
+
 COPY requirements.txt /app
+
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy our code from the current folder to /app inside the container
 COPY . .
 
-# Make port 80 available for links and/or publish
+FROM builder AS final
+
 EXPOSE 80
 
-# Define our command to be run when launching the container
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=80"]
