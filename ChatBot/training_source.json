@@ -89,22 +89,28 @@
       "context": ["linux_knowledge"]
     },
     {"tag": "grafana_prometheus_alertmanager",
-      "patterns": ["What Prometheus experience have?", "What Prometheus skills have Yanko?", "Tell me about Prometheus?", "Can Yano use Prometheus?", "What can do with Prometheus?", "What is him Prometheus knowledge?", "What Alertmanager experience have?", "What Alertmanager skills have Yanko?", "Tell me about Alertmanager?", "Can Yano use Alertmanager?", "What can do with Alertmanager?", "What is him Alertmanager knowledge?", "What Grafana experience have?", "What Grafana skills have Yanko?", "Tell me about Grafana?", "Can Yano use Grafana?", "What can do with Grafana?", "What is him Grafana knowledge?"],
+      "patterns": ["What Prometheus experience have?", "What Prometheus skills have Yanko?", "Tell me about Prometheus?", "Can Yano use Prometheus?", "What can do with Prometheus?", "What is him Prometheus knowledge?", "What Alertmanager experience have?", "What Alertmanager skills have Yanko?", "Tell me about Alertmanager?", "Can Yano use Alertmanager?", "What can do with Alertmanager?", "What is him Alertmanager knowledge?", "What Grafana experience have?", "What Grafana skills have Yanko?", "Tell me about Grafana?", "Can Yanko use Grafana?", "What can do with Grafana?", "What is him Grafana knowledge?"],
       "responses": ["In his path Yanko learned how to configurate a monitoring system of web app using Prometheus, Grafana, Alertmanager with web hook."],
       "context": ["grafana_prometheus_alertmanager_knowledge"]
     },
+    {
+      "tag": "devops",
+      "patterns": ["What is Yanko's expertise in DevOps?", "Can you tell me about Yanko's knowledge in DevOps?", "What does Yanko know about DevOps?", "Tell me about Yanko's DevOps skills.", "What skills does Yanko have in DevOps?", "What is Yanko's proficiency in DevOps?"],
+      "responses": ["Yanko has extensive experience in DevOps, specializing in building CI/CD workflows using tools like Jenkins, GitHub Actions, GitLab workflows, and seamlessly integrating them with Terraform, Docker, cloud services, and automated testing."],
+      "context": ["devops_knowledge"]
+    },
     {"tag": "joke",
       "patterns": ["Tell me a Joke.", "I want to hear Joke.", "Tell me one more joke.", "This was funny tell me another one.", "I want another joke.", "Yes", "I want to hear", "Tell me more jokes.", "More jokes.", "Another one."],
-      "responses": ["THe ultimate Hide and Seek champion is ' ; '. <br>Do you want another one?", "99 little bugs in the code, 99 little bugs, you take one down and patch it around, 125 little bugs in the code.", "Programming is 10% writing code and 90% understanding why it’s not working.<br> Wanna another one?", "Why do programmers prefer dark mode? Because light attracts bugs.", "Programmer: An organism that turns coffee into software.  Do you want another one?", "My mind is like an internet browser, 19 tabs open, 3 of them are frozen, ads popping up everywhere, I have no idea where the music is coming from. <br> Do you want another one?", "A programmer had a problem. He decided to use Java. He now has a ProblemFactory.<br> Wanna another one?", "To understand what recursion is, you must first understand recursion.", "UNIX is user friendly. It’s just very particular about who its friends are. <r> Another one?"],
+      "responses": ["THe ultimate Hide and Seek champion is ' ; '. <br>Do you want another one?", "99 little bugs in the code, 99 little bugs, you take one down and patch it around, 125 little bugs in the code.", "Programming is 10% writing code and 90% understanding why it's not working.<br> Wanna another one?", "Why do programmers prefer dark mode? Because light attracts bugs.", "Programmer: An organism that turns coffee into software.  Do you want another one?", "My mind is like an internet browser, 19 tabs open, 3 of them are frozen, ads popping up everywhere, I have no idea where the music is coming from. <br> Do you want another one?", "A programmer had a problem. He decided to use Java. He now has a ProblemFactory.<br> Wanna another one?", "To understand what recursion is, you must first understand recursion.", "UNIX is user friendly. It's just very particular about who its friends are. <r> Another one?"],
       "context": ["tell_me_joke"]
     },
     {"tag": "age",
-      "patterns": ["How many years is Yanko?", "How old is Yanko?", "What is age of Yanko?", "What is the age of Yanko?", "Do you know how old is Yanko?"],
-      "responses": ["Yanko is so old. That he know connection between cassette and pencil.", "Yanko is so old, that he raised a tamagotchi."],
+      "patterns": ["How many years is Yanko?", "How old is Yanko?", "What are years of Yanko?","What is age of Yanko?", "What is the age of Yanko?", "Do you know how old is Yanko?", "Do you know age of Yanko?"],
+      "responses": ["Yanko is so old. That he know connection between cassette and pencil.", "Yanko is so old, that he raised a tamagotchi.", "Yanko is so old. Than when he was a kid and want to watch a new movie, he should rent the Movie on VHS."],
       "context": ["age","old"]
     },
     {"tag": "hobbies",
-      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?", "Is Yanko have any hobbies?"],
+      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?", "Is Yanko have any hobbies?", "What does Yanko like to do for fun?"],
       "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #00f0d4; text-decoration: underline;' href='my_domain_name/url_hobbies_extension'>#Hobbies</a>.</p>"],
       "context": ["hobbies","free_time"]
     }
