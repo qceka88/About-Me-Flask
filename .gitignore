@@ -3,3 +3,5 @@ terminal_commands.sh
 *.pyc
 /backup/
 *.dockerignore
+/.idea
+/venv
