@@ -9,7 +9,7 @@
         <div>
             <button onclick="openCloseChat()"
                     class="navbar-toggler bg-secondary-gradient text-white px-2">
-                    <i class="fas fa-robot"></i>
+                <i class="fas fa-robot"></i>
             </button>
             <button id="navBut" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" onclick="isNavButVisible()">
@@ -239,6 +239,17 @@
                     </a>
                     <h5 class="mb-3">CSS</h5>
                 </div>
+                <div class="wow fadeInUp text-center d-inline-flex flex-column" data-wow-delay="0.3s">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                        <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
+                            <img src="{{ url_for('static', filename='img/skills/skills-js.png') }}" alt="js">
+                        </div>
+                    </a>
+                    <div class="d-inline-flex justify-content-center">
+                        <h6 class="mb-3 custom-j-letter">J</h6>
+                        <h5 class="mb-3">avaScript</h5>
+                    </div>
+                </div>
                 <div class="wow fadeInUp text-center d-inline-flex flex-column" data-wow-delay="0.4s">
                     <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">
                         <div class="d-inline-flex feature-item align-items-center bg-light rounded  justify-content-center p-3">
@@ -409,7 +420,8 @@
                                    class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
                                     GitLab Repo
                                 </a>
-                                <a href="https://nakov.com/blog/2024/02/05/team-leader-and-intern-dev-academy/#:~:text=Project%20%E2%80%9CAI%20Software,Peter%20Stoyanov%20(BE)" target="_blank"
+                                <a href="https://nakov.com/blog/2024/02/05/team-leader-and-intern-dev-academy/#:~:text=Project%20%E2%80%9CAI%20Software,Peter%20Stoyanov%20(BE)"
+                                   target="_blank"
                                    class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
                                     Details Info
                                 </a>
@@ -515,6 +527,21 @@
                         <h5 class="my-0 mb-1" id="special-certificate-item">Team Lead Academy</h5>
                         <a href="https://nakov.com/blog/2024/02/05/team-leader-and-intern-dev-academy/#:~:text=Project%20%E2%80%9CAI%20Software,Peter%20Stoyanov%20(BE)"
                            target="_blank">
+                            Complete data of certificate</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link"
+                           href="{{ url_for('static', filename='img/certificates/JSFrontEnd.jpeg') }}"
+                           target="_blank">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/JSFrontEnd.jpeg') }}"
+                                 alt="JS-FrontEnd">
+                        </a>
+                        <h5 class="mt-2 mb-0">JavaScript</h5>
+                        <h5 class="my-0 mb-1">FrontEnd</h5>
+                        <a href="https://softuni.bg/certificates/details/212568/2b675cd5" target="_blank">
                             Complete data of certificate</a>
                     </div>
                 </div>
@@ -790,8 +817,8 @@
                                         <h4 class="text-primary-gradient mb-1">Azure</h4>
                                         <h1 class="mb-3">
                                         </h1>
-                                        <span>Gained experience with Azure. Using Azure GUI, Azure CLI, deployment
-                                            with docker containers, terraform configuration, GitHub and other
+                                        <span>Gained experience with Azure. Using Azure CLI/GUI, deployment
+                                            with Docker containers, Terraform configuration, GitHub and other
                                             types of deployment in Azure, using different services.
                                         </span>
                                     </div>
@@ -805,6 +832,31 @@
                                                 class="fa fa-check text-primary-gradient pt-1"></i></div>
                                         <div class="d-flex justify-content-between mb-2">
                                             <span>Orchestrating</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">FrontEnd</h4>
+                                        <h1 class="mb-3">
+                                        </h1>
+                                        <span>Gained experience with HTML/CSS & JS. Learned how to make
+                                            good and responsive design. DOM manipulations, fetch requests
+                                            to server, and processing the received data.
+                                        </span>
+                                    </div>
+                                    <div class="p-4 pt-0">
+                                        <div class="d-flex justify-content-between mb-3"><span>HTML</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>CSS</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>JavaScript</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>DOM Manipulations</span><i
                                                 class="fa fa-check text-primary-gradient pt-1"></i></div>
                                     </div>
                                 </div>
@@ -980,10 +1032,10 @@
                                    href="https://www.linkedin.com/in/yanko-rashkov-9a8980aa/" target="_blank">
                                     <i class="fab fa-linkedin fa-2x"></i>
                                 </a>
-{#                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"#}
-{#                                   href="https://www.facebook.com/preslavascript" target="_blank">#}
-{#                                    <i class="fab fa-facebook fa-2x"></i>#}
-{#                                </a>#}
+                                {#                                <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"#}
+                                {#                                   href="https://www.facebook.com/preslavascript" target="_blank">#}
+                                {#                                    <i class="fab fa-facebook fa-2x"></i>#}
+                                {#                                </a>#}
                                 <a class="btn btn-primary-gradient rounded-pill py-2 px-5 mb-2"
                                    href="https://gitlab.com/qceka88" target="_blank">
                                     <i class="fab fa-gitlab fa-2x"></i>
