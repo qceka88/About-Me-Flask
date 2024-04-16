@@ -273,7 +273,7 @@ function getCurrentDateAndTime() {
 }
 
 const dateDisplay = document.getElementById("time-now");
-dateDisplay.innerHTML = getCurrentDateAndTime();
+dateDisplay.textContent = getCurrentDateAndTime();
 
 // Format hours for chat messages
 function formatDate(date) {

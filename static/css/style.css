@@ -485,8 +485,8 @@ h6,
     width: 555px;
     height: 416px;
     margin-right: 30px;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding-right: 96px;
+    padding-left: 96px;
 }
 
 .screenshot-carousel::before {
@@ -503,7 +503,7 @@ h6,
 
 .screenshot-carousel .owl-item img {
     position: relative;
-    width: 394px;
+    width: 375px;
     height: 207px;
     transition-duration: -1.5s, -1.5s;
     place-content: center;
