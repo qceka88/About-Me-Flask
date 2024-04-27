@@ -32,7 +32,7 @@ class HobbiesView(View, MyDevice, MyTime):
         self.template = template
 
     def dispatch_request(self):
-        context = {"device": self.device_detect()}
+        context = self.device_detect()
         print(context)
         return render_template(self.template, **context)
 

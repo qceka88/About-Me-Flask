@@ -42,13 +42,15 @@
 {% endblock %}
 
 {% block hero_block %}
+    <h5 style="color: white;">{{ user_agent }}</h5>
     <div class="container-xxl hero-header">
         <div class="container px-lg-5">
             <div class="row g-5">
                 <div class="col-lg-8 text-center">
                     <p class="text-white pb-3 animated slideInDown" data-wow-delay="0.5s"><strong
-                            class="text-hobby-gradient-triple">Congratulations!</strong> <br> Dear,
-                        Traveler, you have just
+                            class="text-hobby-gradient-triple">Congratulations!</strong> <br>Welcome dear,
+                        <img class="user-device-logo-img" src="{{ device }}" alt="visitor">
+                        traveler. You have just
                         found an <strong class="text-hobby-gradient-triple">Easter Egg.</strong></p>
                     <h1 class="text-white mb-4 animated slideInDown" data-wow-delay="0.6s">This is a page for hobbies of
                         Yanko.</h1>

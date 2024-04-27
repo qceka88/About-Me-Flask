@@ -90,6 +90,10 @@ body {
     flex: 0 1 55%;
 }
 
+.user-device-logo-img{
+    width: 55px;
+    height: auto;
+}
 .hero-header .col-lg-8.text-center > * {
     margin: 0 auto !important;
     padding: 0 !important;
@@ -272,7 +276,10 @@ body {
     .hero-header .row.g-5 {
         gap: 3em;
     }
-
+    .user-device-logo-img{
+    width: 35px;
+    height: auto;
+}
     .hero-header .col-lg-8.text-center {
         display: flex;
         flex-direction: column;

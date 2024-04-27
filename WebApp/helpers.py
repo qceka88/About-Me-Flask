@@ -29,12 +29,31 @@ class MyDevice:
 
         :returns: True or False depend on user device.
     """
+    __device_image_map = {
+        "windows": "/static/img/visitors/windows-visitor.png",
+        "linux": "/static/img/visitors/linux-visitor.png",
+        "android": "/static/img/visitors/android-visitor.png",
+        "iphone": "/static/img/visitors/apple-visitor.png",
+        "no_device": "/static/img/visitors/no-device.png",
+
+    }
 
     # TODO: check is it applicable  in Hobbies section.
-    @staticmethod
-    def device_detect():
+
+    def device_detect(self):
         user_agent = request.headers.get("User-Agent").lower()
-        return user_agent
+
+        try:
+            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0]]
+        except KeyError:
+            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
+        except:
+            user_device = self.__device_image_map["no_device"]
+        print(user_device)
+        return {
+            'device': user_device,
+            'user_agent': user_agent,
+        }
 
 
 class MyTime:
