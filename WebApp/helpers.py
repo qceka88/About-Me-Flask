@@ -34,6 +34,8 @@ class MyDevice:
         "linux": "/static/img/visitors/linux-visitor.png",
         "android": "/static/img/visitors/android-visitor.png",
         "iphone;": "/static/img/visitors/apple-visitor.png",
+        "ipad;": "/static/img/visitors/apple-visitor.png",
+        "macintosh;": "/static/img/visitors/apple-visitor.png",
         "no_device": "/static/img/visitors/no-device.png",
     }
 
