@@ -50,7 +50,6 @@ class MyDevice:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
         except:
             user_device = self.__device_image_map["no_device"]
-        print(user_device)
         return {
             'device': user_device,
             'user_agent': user_agent,
