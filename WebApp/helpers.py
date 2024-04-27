@@ -33,9 +33,8 @@ class MyDevice:
         "windows": "/static/img/visitors/windows-visitor.png",
         "linux": "/static/img/visitors/linux-visitor.png",
         "android": "/static/img/visitors/android-visitor.png",
-        "iphone": "/static/img/visitors/apple-visitor.png",
+        "iphone;": "/static/img/visitors/apple-visitor.png",
         "no_device": "/static/img/visitors/no-device.png",
-
     }
 
     # TODO: check is it applicable  in Hobbies section.
@@ -47,9 +46,7 @@ class MyDevice:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0]]
         except KeyError:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
-        except KeyError:
-            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0][0:-2]]
-        except KeyError:
+        except:
             user_device = self.__device_image_map["no_device"]
         print(user_device)
         return {
