@@ -42,12 +42,14 @@ class MyDevice:
 
     def device_detect(self):
         user_agent = request.headers.get("User-Agent").lower()
-
+        print(user_agent)
         try:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0]]
         except KeyError:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
-        except:
+        except KeyError:
+            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0][0:-2]]
+        except KeyError:
             user_device = self.__device_image_map["no_device"]
         print(user_device)
         return {
