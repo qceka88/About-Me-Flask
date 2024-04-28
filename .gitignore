@@ -5,3 +5,4 @@ terminal_commands.sh
 *.dockerignore
 /.idea
 /venv
+/envs

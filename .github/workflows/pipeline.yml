@@ -3,6 +3,9 @@ name: CI/CD Workflow for Flask App with deploy in Render.com
 on:
   push:
     branches: [ "main" ]
+env:
+  SECRET_KEY: ${{ secrets.ABOUT_ME_SECRET_KEY }}
+
 
 jobs:
 

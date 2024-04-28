@@ -2,6 +2,9 @@ FROM python:3.8.5-slim-buster AS base
 
 WORKDIR /app
 
+ARG SECRET_KEY
+ENV SECRET_KEY=$SECRET_KEY
+
 FROM base AS builder
 
 COPY requirements.txt /app
@@ -17,4 +20,3 @@ FROM builder AS final
 EXPOSE 80
 
 CMD ["gunicorn", "app:app", "-b", "0.0.0.0:80"]
-#CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=80"]
