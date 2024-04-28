@@ -3,13 +3,15 @@ import os
 import pickle
 
 import nltk
+from dotenv import load_dotenv
+
 from flask import Flask
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
 from WebApp.helpers import unique_extension
 from WebApp.views import IndexView, HobbiesView, Page404View, BotResponseView
-
+load_dotenv()
 nltk.download("popular")
 nltk.download("omw-1.4")
 nltk.download("punkt")
@@ -30,7 +32,6 @@ app = Flask(__name__,
 
 # Config Secret Key
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
-
 print(os.getenv('SECRET_KEY'))
 
 # urlpatterns

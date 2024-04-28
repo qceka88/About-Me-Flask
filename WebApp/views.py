@@ -1,8 +1,10 @@
+import os
+
 from flask import render_template, request, jsonify, redirect, url_for
 from flask.views import View
 
 from WebApp.helpers import MyDevice, MyTime, InfoClass
-
+print(os.getenv('SECRET_KEY'))
 
 class IndexView(View, MyTime, InfoClass):
     """

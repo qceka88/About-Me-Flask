@@ -50,7 +50,7 @@ scipy==1.10.1
 six
 tensorboard==2.13.0
 tensorboard-data-server==0.7.2
-tensorflow
+tensorflow~=2.13.0
 tqdm==4.66.1
 typing_extensions==4.5.0
 urllib3
@@ -58,3 +58,6 @@ Werkzeug==3.0.1
 win-inet-pton
 wrapt==1.15.0
 zipp
+
+python-dotenv~=1.0.1
+gunicorn
