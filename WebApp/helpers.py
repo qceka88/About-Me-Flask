@@ -25,9 +25,9 @@ class InfoClass:
 
 class MyDevice:
     """
-        Currently deprecated class not used in main page. Replaced by  Responsive Web Design.
+        Class that is used to detect the device OS of client and to return it as image.
 
-        :returns: True or False depend on user device.
+        :returns: image file.
     """
     __device_image_map = {
         "windows": "/static/img/visitors/windows-visitor.png",
@@ -39,8 +39,6 @@ class MyDevice:
         "no_device": "/static/img/visitors/no-device.png",
     }
 
-    # TODO: check is it applicable  in Hobbies section.
-
     def device_detect(self):
         user_agent = request.headers.get("User-Agent").lower()
         print(user_agent)
@@ -50,6 +48,7 @@ class MyDevice:
             user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
         except:
             user_device = self.__device_image_map["no_device"]
+
         return {
             'device': user_device,
             'user_agent': user_agent,

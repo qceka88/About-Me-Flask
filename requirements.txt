@@ -58,6 +58,5 @@ Werkzeug==3.0.1
 win-inet-pton
 wrapt==1.15.0
 zipp
-
 python-dotenv~=1.0.1
-gunicorn
+gunicorn~=22.0.0

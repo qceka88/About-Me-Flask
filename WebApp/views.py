@@ -1,10 +1,8 @@
-import os
-
 from flask import render_template, request, jsonify, redirect, url_for
 from flask.views import View
 
 from WebApp.helpers import MyDevice, MyTime, InfoClass
-print(os.getenv('SECRET_KEY'))
+
 
 class IndexView(View, MyTime, InfoClass):
     """
@@ -60,7 +58,7 @@ class Page404View(View):
     """
         Class for 404 handler. When user generate 404 error is redirected to 'index_view'
 
-        :returns: redirect to home page
+        :returns: redirect to home page.
     """
     methods = ["GET", "POST"]
 
