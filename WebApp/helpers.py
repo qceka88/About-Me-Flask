@@ -29,28 +29,30 @@ class MyDevice:
 
         :returns: image file.
     """
-    __device_image_map = {
+    __device_os_image_map = {
         "windows": "/static/img/visitors/windows-visitor.png",
         "linux": "/static/img/visitors/linux-visitor.png",
         "android": "/static/img/visitors/android-visitor.png",
-        "iphone;": "/static/img/visitors/apple-visitor.png",
-        "ipad;": "/static/img/visitors/apple-visitor.png",
-        "macintosh;": "/static/img/visitors/apple-visitor.png",
+        "apple": "/static/img/visitors/apple-visitor.png",
         "no_device": "/static/img/visitors/no-device.png",
     }
 
-    def device_detect(self):
+    def device_os_detect(self):
         user_agent = request.headers.get("User-Agent").lower()
-        print(user_agent)
-        try:
-            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[0]]
-        except KeyError:
-            user_device = self.__device_image_map[user_agent.split('(')[1].split(' ')[1]]
-        except:
-            user_device = self.__device_image_map["no_device"]
+
+        if "windows" in user_agent:
+            user_device_os = "windows"
+        elif "android" in user_agent:
+            user_device_os = "android"
+        elif "iphone" in user_agent or "ipad" in user_agent or "macintosh" in user_agent:
+            user_device_os = "apple"
+        elif "linux" in user_agent and "android" not in user_agent:
+            user_device_os = "linux"
+        else:
+            user_device_os = "no_device"
 
         return {
-            'device': user_device,
+            'device': self.__device_os_image_map[user_device_os],
             'user_agent': user_agent,
         }
 
@@ -59,7 +61,7 @@ class MyTime:
     """
         Class that calculate time from initial data that I stared to practice programming.
 
-        :return: dict with calculated period in {'years': .., 'months': .., 'days': ..}  format.
+        :returns: dict with calculated period in {'years': .., 'months': .., 'days': ..}  format.
     """
 
     @staticmethod
@@ -75,7 +77,7 @@ def get_unique_url_extension():
     """
         Function that generate unique string fifty characters long, randomly chosen.
 
-        :return: Randomly chosen length of string and randomly chosen characters.
+        :returns: Randomly chosen length of string and randomly chosen characters.
     """
     alpha_digits = str(digits) + ascii_letters
     url_extension_length = choice(range(50, 101))
