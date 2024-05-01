@@ -34,6 +34,7 @@ class MyDevice:
         "linux": "/static/img/visitors/linux-visitor.png",
         "android": "/static/img/visitors/android-visitor.png",
         "apple": "/static/img/visitors/apple-visitor.png",
+        "playstation": "/static/img/visitors/ps-visitor.png",
         "no_device": "/static/img/visitors/no-device.png",
     }
 
@@ -46,6 +47,8 @@ class MyDevice:
             user_device_os = "android"
         elif "iphone" in user_agent or "ipad" in user_agent or "macintosh" in user_agent:
             user_device_os = "apple"
+        elif "playstation" in user_agent:
+            user_device_os = "playstation"
         elif "linux" in user_agent and "android" not in user_agent:
             user_device_os = "linux"
         else:
