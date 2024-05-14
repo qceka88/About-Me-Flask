@@ -166,7 +166,7 @@ function phoneNumberToggle() {
     const toggle = document.getElementById("number-toggle")
     const text = document.getElementById("see-number-text")
     // const img = document.getElementById("my-img");
-    const revealedNumber = "+359889110846"
+    const revealedNumber = "&#8288;+&#8288;3&#8288;5&#8288;9&#8288;8&#8288;8&#8288;9&#8288;1&#8288;1&#8288;0&#8288;8&#8288;4&#8288;6&#8288;"
     const hiddenNumber = "+359*********"
 
     if (phone.innerText === hiddenNumber) {
