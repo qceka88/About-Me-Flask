@@ -156,6 +156,7 @@
 
         }
     }
+
     changeCertificates();
 })(jQuery);
 
@@ -233,6 +234,10 @@ function openCloseChat() {
         element.style.display = "none";
     } else {
         element.style.display = "block";
+        if (document.getElementById('welcome-message').textContent === '') {
+            simulateWriting('Welcome to chat! My name is Robo and I`m trained to answer questions about Yanko.Also, I can tell you a joke.', 'Robo')
+        }
+
         dragChatWindow(element);
     }
 }
@@ -240,7 +245,7 @@ function openCloseChat() {
 
 // Close Collapsed Nav Bar
 function closeNavbar() {
-    var form = document.getElementById("navbarCollapse");
+    let form = document.getElementById("navbarCollapse");
     const navButton = document.getElementById("navBut");
     if (form.style.display !== "none") {
         navButton.click()
@@ -249,8 +254,8 @@ function closeNavbar() {
 
 // Check nav but is visible
 function isNavButVisible() {
-    var navBut = document.getElementById('navBut');
-    var navItems = document.querySelectorAll('.menuButton');
+    let navBut = document.getElementById('navBut');
+    let navItems = document.querySelectorAll('.menuButton');
 
     if (navBut.offsetParent !== null) {
         // #navBut is visible
@@ -283,6 +288,32 @@ function formatDate(date) {
     return `${h.slice(-2)}:${m.slice(-2)}`;
 }
 
+// Simulate writing
+function simulateWriting(text, name) {
+    if (name.includes('Robo')) {
+        let i = 0;
+        let botMessage = text;
+        let speed = 50;
+
+        function typeWriter() {
+            if (i < botMessage.length) {
+                if (text.toLowerCase().includes('hobbies'.toLowerCase())) {
+                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML = botMessage;
+                    document.querySelector('.messageBox-chat').scrollTop += 150;
+                } else {
+                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML += botMessage.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                    document.querySelector('.messageBox-chat').scrollTop += 15;
+                }
+            }
+        }
+        typeWriter();
+    } else if (name === 'You') {
+        document.querySelector('.message.visitor-message:last-of-type div.message-text').textContent = text;
+    }
+}
+
 // Chatbot get message and return response
 function chatBot() {
 
@@ -292,11 +323,11 @@ function chatBot() {
 
     const BOT_IMG = '/static/img/chat/bot_image.jpg';
     const PERSON_IMG = '/static/img/chat/user_picture.jpg';
-    const BOT_NAME = "    Robo";
-    const PERSON_NAME = "You";
+    const BOT_NAME = '    Robo';
+    const PERSON_NAME = 'You';
 
-    messengerForm.addEventListener("submit", event => {
-        event.preventDefault();
+    messengerForm.addEventListener("submit", chatEvent => {
+        chatEvent.preventDefault();
 
         const messageText = messengerInput.value;
         if (!messageText) return;
@@ -307,6 +338,8 @@ function chatBot() {
     });
 
     function appendMessage(name, image, side, text) {
+
+
         //   Simple solution for small apps
         const messageHTML = `
 <div class="message ${side}-message">
@@ -317,13 +350,15 @@ function chatBot() {
       <div class="message-info-name">${name}</div>
       <div class="message-info-time">${formatDate(new Date())}</div>
     </div>
-    <div class="message-text">${text}</div>
+    <div class="message-text"></div>
   </div>
 </div>
 `;
 
         messengerChat.insertAdjacentHTML("beforeend", messageHTML);
+
         messengerChat.scrollTop += 500;
+        simulateWriting(text, name)
     }
 
     function botResponse(rawText) {

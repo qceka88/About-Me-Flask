@@ -110,7 +110,7 @@
       "context": ["age","old"]
     },
     {"tag": "hobbies",
-      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?", "Is Yanko have any hobbies?", "What does Yanko like to do for fun?"],
+      "patterns": ["What are hobbies of Yanko?", "What is doing Yanko in his free time?", "What Yanko is loving to do in his free time?","Is there a hobbies?", "Is Yanko have any hobbies?", "What does Yanko like to do for fun?", "Hi, tell me about hobbies?"],
       "responses": ["<p>You can see hobbies of, Yanko. Click <a style='color: #00f0d4; text-decoration: underline;' href='my_domain_name/url_hobbies_extension'>#Hobbies</a>.</p>"],
       "context": ["hobbies","free_time"]
     }
