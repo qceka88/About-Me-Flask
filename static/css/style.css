@@ -686,6 +686,7 @@ h6,
     padding: 10px;
     background-color: linear-gradient(to bottom left, var(--chat1), var(--chat2));
     width: 100%;
+    /*scroll-behavior: smooth;*/
 }
 
 

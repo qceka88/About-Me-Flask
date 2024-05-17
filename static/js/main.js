@@ -290,27 +290,31 @@ function formatDate(date) {
 
 // Simulate writing
 function simulateWriting(text, name) {
+    let scrollMyChat = (element) => element.scrollTo({top: element.scrollHeight, behavior: "auto"})
     if (name.includes('Robo')) {
         let i = 0;
         let botMessage = text;
-        let speed = 50;
+        let speed = 35;
 
         function typeWriter() {
             if (i < botMessage.length) {
                 if (text.toLowerCase().includes('hobbies'.toLowerCase())) {
                     document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML = botMessage;
-                    document.querySelector('.messageBox-chat').scrollTop += 150;
+                    scrollMyChat(document.querySelector('.messageBox-chat'));
                 } else {
                     document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML += botMessage.charAt(i);
                     i++;
                     setTimeout(typeWriter, speed);
-                    document.querySelector('.messageBox-chat').scrollTop += 15;
+                    document.querySelector('.messageBox-chat').scrollTop += 10
                 }
+
             }
         }
+
         typeWriter();
     } else if (name === 'You') {
         document.querySelector('.message.visitor-message:last-of-type div.message-text').textContent = text;
+        scrollMyChat(document.querySelector('.messageBox-chat'));
     }
 }
 
@@ -356,8 +360,6 @@ function chatBot() {
 `;
 
         messengerChat.insertAdjacentHTML("beforeend", messageHTML);
-
-        messengerChat.scrollTop += 500;
         simulateWriting(text, name)
     }
 
