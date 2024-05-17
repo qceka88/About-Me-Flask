@@ -291,18 +291,59 @@ function formatDate(date) {
 // Simulate writing
 function simulateWriting(text, name) {
     let scrollMyChat = (element) => element.scrollTo({top: element.scrollHeight, behavior: "auto"})
+
+    function stringToHtmlElement(htmlString) {
+        let tempDiv = document.createElement('div');
+        tempDiv.innerHTML = htmlString.trim();
+        return tempDiv.firstChild;
+    }
+
+    function typeEasterEggMessage(element, text, delay, hyperLink) {
+        let index = 0;
+
+        function addCharacter() {
+            const letter = text[index]
+            if (letter === '#') {
+                element.appendChild(hyperLink);
+                element.innerHTML += ' .';
+                index = text.length;
+                document.querySelector('.messageBox-chat').scrollTop += 30
+                setTimeout(addCharacter, delay);
+            }
+            if (index < text.length) {
+                element.textContent += letter;
+                index++;
+                setTimeout(addCharacter, delay);
+            }
+        }
+
+        addCharacter();
+    }
+
+
     if (name.includes('Robo')) {
         let i = 0;
         let botMessage = text;
         let speed = 35;
 
-        function typeWriter() {
+        async function typeWriter() {
             if (i < botMessage.length) {
                 if (text.toLowerCase().includes('hobbies'.toLowerCase())) {
-                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML = botMessage;
+                    const chatElement = document.querySelector('.message.chat-bot-message:last-of-type div.message-text');
+                    const convertedText = stringToHtmlElement(botMessage);
+                    const newPElement = document.createElement('p');
+                    chatElement.appendChild(newPElement);
+                    typeEasterEggMessage(newPElement, "You can see hobbies of, Yanko. Click #", speed, convertedText.querySelector('a'));
+
                     scrollMyChat(document.querySelector('.messageBox-chat'));
+                    i = text.length;
                 } else {
-                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML += botMessage.charAt(i);
+                    let chunk = botMessage.charAt(i);
+                    if (chunk === '<') {
+                        chunk = '<br>'
+                        i += 3
+                    }
+                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML += chunk;
                     i++;
                     setTimeout(typeWriter, speed);
                     document.querySelector('.messageBox-chat').scrollTop += 10
@@ -360,7 +401,7 @@ function chatBot() {
 `;
 
         messengerChat.insertAdjacentHTML("beforeend", messageHTML);
-        simulateWriting(text, name)
+        simulateWriting(text, name);
     }
 
     function botResponse(rawText) {
@@ -368,7 +409,6 @@ function chatBot() {
         // Bot Response
         $.get("/get", {"message": rawText}).done(function (data) {
             const messageText = data;
-            console.log(messageText)
             appendMessage(BOT_NAME, BOT_IMG, "chat-bot", messageText);
         });
     }
