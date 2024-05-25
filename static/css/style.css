@@ -154,6 +154,64 @@ h6,
     top: 1px;
 }
 
+/*** Modal-Images ***/
+.modal-container {
+    display: none;
+    flex-direction: row-reverse;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 5000;
+    overflow: auto;
+    font-size: 2em;
+}
+
+.modal-container .close-modal {
+    color: var(--light);
+    position: absolute;
+    display: flex;
+    right: 1em;
+    top: 0.5em;
+    cursor: pointer;
+    flex: 0 1 10%;
+}
+
+.modal-container .close-modal i {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: end;
+}
+
+.modal-container .modal-wrapper {
+    margin: 3em auto;
+    display: flex;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    flex: 0 1 auto;
+}
+
+.modal-wrapper .modal-image-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.modal-wrapper .modal-image {
+    cursor: zoom-in;
+    scale: 1;
+    width: 100%;
+    height: auto;
+    transform-origin: center center;
+}
+
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
@@ -455,6 +513,7 @@ h6,
 .certificate-image {
     width: 140px;
     height: 200px;
+    cursor: pointer;
 }
 
 /***  About me start date Style ***/
@@ -886,6 +945,20 @@ button *:active {
 }
 
 @media (max-width: 600px) {
+    .modal-container {
+        height: 100%;
+    }
+
+    .modal-container .modal-wrapper {
+        margin: 2em auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .modal-wrapper .modal-image-container {
+        width: auto;
+        height: 100%;
+    }
     /* Chat Window */
     .message-box-popup {
         display: none;
@@ -984,10 +1057,12 @@ button *:active {
         font-size: 1rem;
         margin-top: 0.4em;
     }
+
     .my-skills-style div h6 {
         font-size: 1rem;
         margin-top: 0.3em;
     }
+
     .my-skills-style div:nth-child(7) h5:last-of-type {
         display: block;
     }

@@ -252,6 +252,49 @@ function closeNavbar() {
     }
 }
 
+// Modal images for diplomas & certificates
+function modalImages(openEvent) {
+    function closeModalWindow(closeEvent) {
+        const forbiddenArea = Array.from(document.querySelectorAll('.modal-wrapper *'));
+        if (!forbiddenArea.includes(closeEvent.target)) {
+            closeModalButton.click();
+        }
+    }
+
+    function zoomInZoomOut(zoomEvent) {
+        const currentElement = zoomEvent.currentTarget;
+        if (currentElement.style.scale === '1' || !currentElement.style.scale) {
+            currentElement.style.cursor = 'zoom-out';
+            currentElement.style.scale = '1.5';
+        } else if (currentElement.style.scale === '1.5') {
+            currentElement.style.cursor = 'zoom-in';
+            currentElement.style.scale = '1';
+        }
+    }
+
+    const bodyElement = document.querySelector('body');
+    const modalContainer = document.querySelector('.modal-container');
+    const modalImageElement = document.querySelector('.modal-image');
+    const closeModalButton = document.querySelector('.close-modal');
+
+    modalImageElement.src = openEvent.currentTarget.querySelector('img').src;
+    modalImageElement.addEventListener('click', zoomInZoomOut);
+
+
+    modalContainer.style.display = 'flex';
+    bodyElement.style.overflow = 'hidden';
+    modalContainer.addEventListener('click', closeModalWindow);
+
+    closeModalButton.addEventListener('click', (closeBtnEvent) => {
+        closeBtnEvent.preventDefault();
+        modalImageElement.style.scale = '1';
+        modalContainer.style.display = 'none';
+        bodyElement.style.overflow = 'auto';
+        modalImageElement.removeEventListener('click', zoomInZoomOut)
+        modalImageElement.removeEventListener('click', closeModalWindow);
+    });
+}
+
 // Check nav but is visible
 function isNavButVisible() {
     let navBut = document.getElementById('navBut');
@@ -290,10 +333,10 @@ function formatDate(date) {
 
 // Simulate writing
 function simulateWriting(text, name) {
-    let scrollMyChat = (element) => element.scrollTo({top: element.scrollHeight, behavior: "auto"})
+    const scrollMyChat = (element) => element.scrollTo({top: element.scrollHeight, behavior: "auto"});
 
     function stringToHtmlElement(htmlString) {
-        let tempDiv = document.createElement('div');
+        const tempDiv = document.createElement('div');
         tempDiv.innerHTML = htmlString.trim();
         return tempDiv.firstChild;
     }
@@ -302,15 +345,14 @@ function simulateWriting(text, name) {
         let index = 0;
 
         function addCharacter() {
-            const letter = text[index]
+            const letter = text[index];
             if (letter === '#') {
                 element.appendChild(hyperLink);
                 element.innerHTML += ' .';
                 index = text.length;
-                document.querySelector('.messageBox-chat').scrollTop += 30
+                document.querySelector('.messageBox-chat').scrollTop += 30;
                 setTimeout(addCharacter, delay);
-            }
-            if (index < text.length) {
+            } else if (index < text.length) {
                 element.textContent += letter;
                 index++;
                 setTimeout(addCharacter, delay);
@@ -320,44 +362,46 @@ function simulateWriting(text, name) {
         addCharacter();
     }
 
-
-    if (name.includes('Robo')) {
+    function typeWriter(element, text, speed) {
         let i = 0;
-        let botMessage = text;
-        let speed = 35;
 
-        async function typeWriter() {
-            if (i < botMessage.length) {
+        async function typeCharacter() {
+            if (i < text.length) {
                 if (text.toLowerCase().includes('hobbies'.toLowerCase())) {
-                    const chatElement = document.querySelector('.message.chat-bot-message:last-of-type div.message-text');
-                    const convertedText = stringToHtmlElement(botMessage);
+                    const convertedText = stringToHtmlElement(text);
                     const newPElement = document.createElement('p');
-                    chatElement.appendChild(newPElement);
+                    element.appendChild(newPElement);
                     typeEasterEggMessage(newPElement, "You can see hobbies of, Yanko. Click #", speed, convertedText.querySelector('a'));
 
                     scrollMyChat(document.querySelector('.messageBox-chat'));
                     i = text.length;
                 } else {
-                    let chunk = botMessage.charAt(i);
+                    let chunk = text.charAt(i);
                     if (chunk === '<') {
-                        chunk = '<br>'
-                        i += 3
+                        chunk = '<br>';
+                        i += 3;
                     }
-                    document.querySelector('.message.chat-bot-message:last-of-type div.message-text').innerHTML += chunk;
+                    element.innerHTML += chunk;
                     i++;
-                    setTimeout(typeWriter, speed);
-                    document.querySelector('.messageBox-chat').scrollTop += 10
+                    setTimeout(typeCharacter, speed);
+                    document.querySelector('.messageBox-chat').scrollTop += 10;
                 }
-
             }
         }
 
-        typeWriter();
+        typeCharacter();
+    }
+
+    if (name.includes('Robo')) {
+        const chatElement = document.querySelector('.message.chat-bot-message:last-of-type div.message-text');
+        typeWriter(chatElement, text, 35);
     } else if (name === 'You') {
-        document.querySelector('.message.visitor-message:last-of-type div.message-text').textContent = text;
+        const chatElement = document.querySelector('.message.visitor-message:last-of-type div.message-text');
+        chatElement.textContent = text;
         scrollMyChat(document.querySelector('.messageBox-chat'));
     }
 }
+
 
 // Chatbot get message and return response
 function chatBot() {

@@ -516,9 +516,20 @@
             <div class="row gy-5 gx-4 justify-content-center" id="my-certificates">
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/CertificateStudentInternYankoRashkov.jpg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
+                            <img class="feature-item rounded certificate-image"
+                                 src="{{ url_for('static', filename='img/certificates/PythonWebDev.jpg') }}"
+                                 alt="HTML&CSS">
+                        </a>
+                        <h5 class="mt-2 mb-0">Python</h5>
+                        <h5 class="my-0 mb-1">Web Developer</h5>
+                        <a href="https://softuni.bg/certificates/details/215914/45b6aec8" target="_blank">
+                            Complete data of Diploma</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.2s">
+                    <div class="position-relative bg-light pt-5 pb-4 px-4">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/CertificateStudentInternYankoRashkov.jpg') }}"
                                  alt="Intern&TeamLeadAcademy">
@@ -530,11 +541,9 @@
                             Complete data of certificate</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.3s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/JSFrontEnd.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/JSFrontEnd.jpeg') }}"
                                  alt="JS-FrontEnd">
@@ -547,9 +556,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/HTML&CSS.jpeg') }}"
                                  alt="HTML&CSS">
@@ -562,9 +569,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/SoftwareEngineeringAndDevOps.jpeg') }}"
                                  alt="SoftwareEngineeringAndDevOps">
@@ -577,9 +582,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/CloudAndContainers.jpeg') }}"
                                  alt="CloudAndContainers">
@@ -592,9 +595,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonWebFramework.jpeg') }}"
                                  alt="django">
@@ -607,9 +608,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.3s">
                     <div class="position-relative bg-light  pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonWebBasics.jpeg') }}"
                                  alt="django basics">
@@ -623,9 +622,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonOOP.jpeg') }}"
                                  alt="python oop">
@@ -639,13 +636,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.1s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonAdvanced.jpeg') }}"
                                  alt="python advanced">
-
                         </a>
                         <h5 class="mt-2 mb-0">Python</h5>
                         <h5 class="my-0 mb-1">Advanced</h5>
@@ -656,13 +650,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonFundamentals.jpeg') }}"
                                  alt="python fundamentals">
-
                         </a>
                         <h5 class="mt-2 mb-0">Python</h5>
                         <h5 class="my-0 mb-1">Fundamentals</h5>
@@ -673,9 +664,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 text-center pt-4 wow fadeInUp certificate-item" data-wow-delay="0.5s">
                     <div class="position-relative bg-light pt-5 pb-4 px-4">
-                        <a class="certificate-link"
-                           href="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
-                           target="_blank">
+                        <a class="certificate-link" onclick="modalImages(event)">
                             <img class="feature-item rounded certificate-image"
                                  src="{{ url_for('static', filename='img/certificates/PythonBasics.jpeg') }}"
                                  alt="python basic">

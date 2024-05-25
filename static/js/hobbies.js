@@ -8,7 +8,6 @@ function setVideoSize() {
     const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
     const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
 
-    // No need to select any elements, since the video is set as background in CSS
     document.documentElement.style.setProperty('--vid-width', newVidWidth + 'px');
     document.documentElement.style.setProperty('--vid-height', newVidHeight + 'px');
 }
@@ -17,14 +16,12 @@ $(document).ready(function () {
 
     setVideoSize();
 
-    // Set video background size based on window size
     let timeout;
     window.onresize = function () {
         clearTimeout(timeout);
         timeout = setTimeout(setVideoSize, 100);
     };
 
-    // Play/Pause button for video background
     const btn = $(".video-button");
     const btnSymbol = $(".video-button-symbol")
     btn.on("click", function (e) {
