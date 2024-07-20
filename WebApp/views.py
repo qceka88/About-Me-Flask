@@ -51,6 +51,7 @@ class BotResponseView(View):
     def dispatch_request(self):
         user_text = request.args.get("message")
         response = self.bot.chatbot_response(user_text)
+
         return jsonify(response)
 
 
