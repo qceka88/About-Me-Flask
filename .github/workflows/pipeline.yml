@@ -42,22 +42,3 @@ jobs:
           service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
     needs: Build-And-Test
-
-
-#                 Initial JOB to keep alive the WebApp.                            #
-#         Unfortunately Cant use it because of 6h limit for GitHub Actions Job     #
-
-#  keep-it-alive:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Keep WebApp alive
-#        run: |
-#          while true
-#          do
-#            echo "Wait before GET request - 14m00s"
-#            sleep 840
-#            echo "Execute GET request"
-#            curl https://yr-portoflio.onrender.com/
-#            echo "GET Request operation was successful"
-#          done
-#    needs: deploy
