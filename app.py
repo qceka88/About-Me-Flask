@@ -40,6 +40,7 @@ app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
 app.add_url_rule(f"/{unique_extension}", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
 app.add_url_rule("/<path:invalid_path>", view_func=Page404View.as_view("page_not_found"))
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=False)
 
