@@ -485,7 +485,7 @@ h6,
     width: 100%;
 }
 
-.my-skills-style div:nth-child(7) h5:last-child {
+.my-skills-style div:nth-child(6) h5:last-child {
     display: none;
 }
 
@@ -1063,11 +1063,11 @@ button *:active {
         margin-top: 0.3em;
     }
 
-    .my-skills-style div:nth-child(7) h5:last-of-type {
+    .my-skills-style div:nth-child(6) h5:last-of-type {
         display: block;
     }
 
-    .my-skills-style div:nth-child(7) h5:first-of-type {
+    .my-skills-style div:nth-child(6) h5:first-of-type {
         display: none;
     }
 
