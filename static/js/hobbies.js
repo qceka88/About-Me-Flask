@@ -13,7 +13,6 @@ function setVideoSize() {
 }
 
 $(document).ready(function () {
-
     setVideoSize();
 
     let timeout;
