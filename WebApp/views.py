@@ -39,7 +39,7 @@ class HobbiesView(View, MyDevice, MyTime):
 
 class BotResponseView(View):
     """
-        Class that handle user messages and send them to the chatbot.
+        Class that handle user messages to communicate with  the chatbot.
 
         :returns: chatbot response string format.
     """
