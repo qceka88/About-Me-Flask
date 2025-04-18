@@ -1072,8 +1072,8 @@ button *:active {
     }
 
     .custom-j-letter {
-        padding-top: 0;
-        font-size: 0.9rem;
+        padding-top: 0.2rem !important;
+        font-size: 0.9rem !important;
     }
 
     /* Projects Section */
