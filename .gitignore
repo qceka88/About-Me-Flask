@@ -6,3 +6,4 @@ terminal_commands.sh
 /.idea
 /venv
 /envs
+.pyc
