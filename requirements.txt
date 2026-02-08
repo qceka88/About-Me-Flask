@@ -25,9 +25,6 @@ joblib==1.3.2
 keras==2.13.1
 Keras-Preprocessing
 libclang==16.0.6
-mkl-fft
-mkl-random
-mkl-service==2.4.0
 nltk==3.8.1
 numpy==1.24.3
 oauthlib==3.2.2
@@ -45,7 +42,7 @@ python-dateutil==2.8.2
 regex==2023.10.3
 requests
 requests-oauthlib==1.3.1
-rsa==4.9
+rsa
 scipy==1.10.1
 six
 tensorboard==2.13.0
@@ -55,7 +52,6 @@ tqdm==4.66.1
 typing_extensions==4.5.0
 urllib3
 Werkzeug==3.0.1
-win-inet-pton
 wrapt==1.15.0
 zipp
 python-dotenv~=1.0.1

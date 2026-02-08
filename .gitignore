@@ -5,5 +5,6 @@ terminal_commands.sh
 *.dockerignore
 /.idea
 /venv
+/.venv
 /envs
 .pyc
