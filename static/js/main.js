@@ -201,6 +201,13 @@ function dragChatWindow(window) {
         element = element || window.event;
         element.preventDefault();
 
+        // Convert bottom/right positioning to top/left before dragging
+        const rect = window.getBoundingClientRect();
+        window.style.top = rect.top + 'px';
+        window.style.left = rect.left + 'px';
+        window.style.bottom = 'auto';
+        window.style.right = 'auto';
+
         pos3 = element.clientX;
         pos4 = element.clientY;
 
@@ -217,8 +224,18 @@ function dragChatWindow(window) {
         pos3 = element.clientX;
         pos4 = element.clientY;
 
-        window.style.top = (window.offsetTop - pos2) + 'px';
-        window.style.left = (window.offsetLeft - pos1) + 'px';
+        const rect = window.getBoundingClientRect();
+        let newTop = window.offsetTop - pos2;
+        let newLeft = window.offsetLeft - pos1;
+
+        const maxTop = document.documentElement.clientHeight - rect.height;
+        const maxLeft = document.documentElement.clientWidth - rect.width;
+
+        newTop = Math.max(0, Math.min(newTop, maxTop));
+        newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+
+        window.style.top = newTop + 'px';
+        window.style.left = newLeft + 'px';
     }
 
     function closeDragElement() {
