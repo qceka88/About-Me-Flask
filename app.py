@@ -42,6 +42,6 @@ app.add_url_rule("/<path:invalid_path>", view_func=Page404View.as_view("page_not
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=80, debug=False)
 
 # TODO: Add more data for ChatBot
