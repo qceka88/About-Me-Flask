@@ -87,4 +87,4 @@ def get_unique_url_extension():
     return ''.join(choice(alpha_digits) for _ in range(url_extension_length))
 
 
-unique_extension = get_unique_url_extension()
+#unique_extension = get_unique_url_extension()

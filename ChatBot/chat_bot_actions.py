@@ -5,7 +5,8 @@ import numpy as np
 from flask import request
 from nltk.stem import WordNetLemmatizer
 
-from WebApp.helpers import unique_extension
+from WebApp.helpers import (#unique_extension,
+                            get_unique_url_extension)
 
 
 class TrainedData:
@@ -79,6 +80,7 @@ class BotResponse(GetResponse, Predict):
     def check_for_easter_egg(output_text):
         if "url_hobbies_extension" in output_text:
             current_domain = request.host_url  # temporary
+            unique_extension = get_unique_url_extension()
             output_text = output_text.replace("my_domain_name/", current_domain)  # temporary
 
             output_text = output_text.replace("url_hobbies_extension", unique_extension)

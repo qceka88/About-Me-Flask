@@ -1,4 +1,5 @@
-from flask import render_template, request, jsonify, redirect, url_for
+import re
+from flask import render_template, request, jsonify, redirect, url_for, session
 from flask.views import View
 
 from WebApp.helpers import MyDevice, MyTime, InfoClass
@@ -31,9 +32,11 @@ class HobbiesView(View, MyDevice, MyTime):
     def __init__(self, template):
         self.template = template
 
-    def dispatch_request(self):
-        context = self.device_os_detect()
+    def dispatch_request(self, key):
+        if key != session.pop("hobbies_key", None):
+            return redirect(url_for("index_view"))
 
+        context = self.device_os_detect()
         return render_template(self.template, **context)
 
 
@@ -51,6 +54,10 @@ class BotResponseView(View):
     def dispatch_request(self):
         user_text = request.args.get("message")
         response = self.bot.chatbot_response(user_text)
+
+        match = re.search(r"/([^/]+)'", response)
+        if match:
+            session["hobbies_key"] = match.group(1)
 
         return jsonify(response)
 

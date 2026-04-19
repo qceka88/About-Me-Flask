@@ -9,7 +9,7 @@ from flask import Flask
 from keras.models import load_model
 
 from ChatBot.chat_bot_actions import BotResponse
-from WebApp.helpers import unique_extension
+#from WebApp.helpers import unique_extension
 from WebApp.views import IndexView, HobbiesView, Page404View, BotResponseView
 
 load_dotenv()
@@ -32,12 +32,13 @@ app = Flask(__name__,
             template_folder="templates")
 
 # Config Secret Key
-app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY', "")
 
 # urlpatterns
 app.add_url_rule("/", view_func=IndexView.as_view("index_view", "index.html"))
 app.add_url_rule("/get", view_func=BotResponseView.as_view("bot_response", bot))
-app.add_url_rule(f"/{unique_extension}", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
+#app.add_url_rule(f"/{unique_extension}", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
+app.add_url_rule("/<string:key>/", view_func=HobbiesView.as_view("hobbies_view", "hobbies.html"))
 app.add_url_rule("/<path:invalid_path>", view_func=Page404View.as_view("page_not_found"))
 
 
