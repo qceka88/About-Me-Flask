@@ -62,8 +62,8 @@
                              src="{{ url_for('static', filename='img/laptop/laptop-github-actions-logo.png') }}"
                              alt="github">
                         <img class="img"
-                             src="{{ url_for('static', filename='img/laptop/laptop-terraform-logo.png') }}"
-                             alt="terraform">
+                             src="{{ url_for('static', filename='img/laptop/laptop-react-logo.png') }}"
+                             alt="react">
                         <img class="img"
                              src="{{ url_for('static', filename='img/laptop/laptop-github-logo.png') }}"
                              alt="github">
@@ -335,223 +335,348 @@
         <div class="container py-5 px-lg-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="text-primary-gradient fw-medium">Projects</h1>
-                <h5 class="mb-5">-- My personal/team projects --</h5>
+                <h5 class="mb-5">-- My personal/work projects --</h5>
             </div>
-            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="owl-carousel testimonial-carousel wow fadeInUp">
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">MyMotoMadness</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/mymotomadness.PNG') }}"
-                                         alt="MyMotoMadness">
-                                </h1>
-                                <span>Web Project with Django. About selling offers. News section. Users, registrations,
-                                            CRUDs, groups, personal messages, emails, admin panel, authorization.</span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>Python/Django</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Docker</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>PostgreSQL</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>HTML & CSS</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Cloud: PythonAnywhere</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://github.com/qceka88/MyMotoMadness" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
-                                <a href="https://qceka88.pythonanywhere.com/" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Go to Site</a>
-                            </div>
+            <div class="tab-class text-center wow doubleButton fadeInUp" data-wow-delay="0.1s">
+               <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
+                    <li class="nav-item">
+                        <button class="btn button-3d nav-link active" data-bs-toggle="pill" data-bs-target="#tab-personal">
+                            Personal Projects
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn button-3d nav-link" data-bs-toggle="pill" data-bs-target="#tab-working">
+                            Work Projects
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content text-start">
+                    <div id="tab-personal" class="tab-pane fade show p-0 active">
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp">
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">MyMotoMadness</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/mymotomadness.PNG') }}"
+                                                 alt="MyMotoMadness">
+                                        </h1>
+                                        <span>Web Project with Django. About selling offers. News section. Users, registrations,
+                                                    CRUDs, groups, personal messages, emails, admin panel, authorization.</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python/Django</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Docker</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>PostgreSQL</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>HTML & CSS</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Cloud: PythonAnywhere</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/MyMotoMadness" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
+                                        <a href="https://qceka88.pythonanywhere.com/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Go to Site</a>
+                                    </div>
+                                </div>
+                            </div> {#  MyMotoMadness #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">About Me</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/aboutme.PNG') }}"
+                                                 alt="About Me">
+                                        </h1>
+                                        <span>Simple web project with Flask. Portfolio website to show
+                                                    my skills, experience, projects and interests.
+                                            With trained chatbot to answer questions about me.</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python/Flask</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Tensorflow/Keras/NLTK</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>HTML&CSS/JS</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>CI/CD - GH Actions</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Cloud: Render/Azure </span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/About-Me-Flask" target="_blank"
+                                           class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
+                                            GitHub Repo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> {#  About me #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">Text From Image Translate</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/imagetranslator.PNG') }}"
+                                                 alt="imageTextTranslator">
+                                        </h1>
+                                        <span>Small project with Tkinter. It`s an app for extract and translate text from
+                                                    images. Option for "straight" photos if they are tilted or taken from some angle.</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Tkinter</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>OpenCV</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>PyTorch</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Numpy</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/ImageTranslate-Tkinter" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
+                                        <a href="https://www.youtube.com/watch?v=5mmO8RUHiuc" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">YouTube Demo</a>
+                                    </div>
+                                </div>
+                            </div>  {#  Text from image generator #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">Fuel Calculator</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/fuelcalculator.PNG') }}"
+                                                 alt="fuel calculator">
+                                        </h1>
+                                        <span>My first project. Small project with Tkinter/BeautifulSoup.
+                                                    It is about calculating price of fuel based on distance,
+                                                    vehicle consumption, fuel type.</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Tkinter</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>BeautifulSoup</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>PIL</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Requests</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/Fuel-Calculator-Tkinter-Project/tree/main"
+                                           target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
+                                        <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
+                                           target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Run on
+                                            Replit</a>
+                                    </div>
+                                </div>
+                            </div>  {#  Fuel calculator #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">RemoteSyncApp</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/remote-sync-app.png') }}"
+                                                 alt="fuel calculator">
+                                        </h1>
+                                        <span>Internal DevOps tool that streamlines our development workflow.
+                                            Live terminal streaming, smart git pull detection,
+                                            and one-click Docker rebuild our services.</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python\Flask SSE</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>VanillaJS, Jinja2, CSS</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Docker-In-Docker\Bash Script</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Git\GitHubApi</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Nostalgia Matrix UI</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/RemoteSyncAPP"
+                                           target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
+                                    </div>
+                                </div>
+                            </div>  {#  Remote sync app #}
                         </div>
                     </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">About Me</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/aboutme.PNG') }}"
-                                         alt="About Me">
-                                </h1>
-                                <span>Simple web project with Flask. Portfolio website to show
-                                            my skills, experience, projects and interests.
-                                    With trained chatbot to answer questions about me.</span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>Python/Flask</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Tensorflow/Keras/NLTK</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>HTML&CSS/JS</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>CI/CD - GH Actions</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Cloud: Render/Azure </span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://github.com/qceka88/About-Me-Flask" target="_blank"
-                                   class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">AI Software Generator</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/craftgenie.JPG') }}"
-                                         alt="About Me">
-                                </h1>
-                                <span>Currently Project is Under Construction - progress: 95%.
-                                    App generator with AI, based on chatbot with trained LLMs.
-                                            Used AI assistants, based on Open AI API.
-                                    </span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>Python/Django RestAPI</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Type Script/React</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Lang Chain/OpenAi API</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>GitLab + CI/CD</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Docker/Kubernetes cluster</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://www.craftgenie.ai/" target="_blank"
-                                   class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
-                                    Go to Site
-                                </a>
-                                <a href="https://nakov.com/blog/2024/02/05/team-leader-and-intern-dev-academy/#:~:text=Project%20%E2%80%9CAI%20Software,Peter%20Stoyanov%20(BE)"
-                                   target="_blank"
-                                   class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
-                                    Details Info
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">MA-Service</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/ma-service.jpg') }}"
-                                         alt="imageTextTranslator">
-                                </h1>
-                                <span>Static website. It is a visit card for hydrophore systems service.
-                                     Bilingual: Bulgarian and English. Integrated Google Maps.
-                                    SMTP Email server with EmailsJS</span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>JavaScript</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>HTML</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>CSS</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>SMTP Email server</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Cloud: Render</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://github.com/qceka88/PumpsRepairAndMaintenance" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
-                                <a href="https://ma-service.onrender.com/" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Go to site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">Text From Image Translate</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/imagetranslator.PNG') }}"
-                                         alt="imageTextTranslator">
-                                </h1>
-                                <span>Small project with Tkinter. It`s an app for extract and translate text from
-                                            images. Option for "straight" photos if they are tilted or taken from some angle.</span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>Python</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Tkinter</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>OpenCV</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>PyTorch</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Numpy</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://github.com/qceka88/ImageTranslate-Tkinter" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
-                                <a href="https://www.youtube.com/watch?v=5mmO8RUHiuc" target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">YouTube Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="bg-light rounded flex-column">
-                            <div class="border-bottom p-4 mb-4">
-                                <h4 class="text-primary-gradient mb-1">Fuel Calculator</h4>
-                                <h1 class="mb-3">
-                                    <img src="{{ url_for('static', filename='img/projects/fuelcalculator.PNG') }}"
-                                         alt="fuel calculator">
-                                </h1>
-                                <span>My first project. Small project with Tkinter/BeautifulSoup.
-                                            It is about calculating price of fuel based on distance,
-                                            vehicle consumption, fuel type.</span>
-                            </div>
-                            <div class="px-4 technologies">
-                                <div class="d-flex justify-content-between mb-3"><span>Python</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3"><span>Tkinter</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>BeautifulSoup</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>PIL</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Requests</span><i
-                                        class="fa fa-check text-primary-gradient pt-1"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-evenly pt-3 pb-4">
-                                <a href="https://github.com/qceka88/Fuel-Calculator-Tkinter-Project/tree/main"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
-                                <a href="https://replit.com/@qceka88/Fuel-Calculator-Small-Project#main.py"
-                                   target="_blank"
-                                   class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Run on
-                                    Replit</a>
-                            </div>
+                    <div id="tab-working" class="tab-pane fade p-0">
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp">
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">AI Software Generator</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/craftgenie.JPG') }}"
+                                                 alt="About Me">
+                                        </h1>
+                                        <span>Currently Project is Under Construction - progress: 95%.
+                                            App generator with AI, based on chatbot with trained LLMs.
+                                                    Used AI assistants, based on Open AI API.
+                                            </span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Python/Django RestAPI</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Type Script/React</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Lang Chain/OpenAi API</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>GitLab + CI/CD</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Docker/Kubernetes cluster</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://www.craftgenie.ai/" target="_blank"
+                                           class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
+                                            Go to Site
+                                        </a>
+                                        <a href="https://nakov.com/blog/2024/02/05/team-leader-and-intern-dev-academy/#:~:text=Project%20%E2%80%9CAI%20Software,Peter%20Stoyanov%20(BE)"
+                                           target="_blank"
+                                           class="btn btn-secondary-gradient rounded-pill py-2 px-4 m-1">
+                                            Details Info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> {#  AI GENERATOR #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">MA-Service</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/ma-service.jpg') }}"
+                                                 alt="imageTextTranslator">
+                                        </h1>
+                                        <span>Static website. It is a visit card for hydrophore systems service.
+                                             Bilingual: Bulgarian and English. Integrated Google Maps.
+                                            SMTP Email server with EmailsJS</span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>JavaScript</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>HTML</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>CSS</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>SMTP Email server</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Cloud: Render</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://github.com/qceka88/PumpsRepairAndMaintenance" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">GitHub Repo</a>
+                                        <a href="https://ma-service.onrender.com/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Go to site</a>
+                                    </div>
+                                </div>
+                            </div> {#  MA - SERVICE #}
+                            <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">AMA Coach</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/ama-coach.png') }}"
+                                                 alt="ama-coach">
+                                        </h1>
+                                        <span>AMA Coach AI supports students from 7th to 12th grade in mastering
+                                            school material and preparing for exams through
+                                            a personalized, intelligent learning system.
+                                        </span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Django\PostrgreSQL</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>LangChain\OpenAPI</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>React\TS\Vite</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Docker\Kubernetes</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Cloud: Google</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://amacoach.ai/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">Landing Page</a>
+                                        <a href="https://app.amacoach.ai/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">APP</a>
+                                    </div>
+                                </div>
+                            </div> {#  AMA - Coach #}
+                             <div class="testimonial-item rounded p-4">
+                                <div class="bg-light rounded flex-column">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">GANG Assist</h4>
+                                        <h1 class="mb-3">
+                                            <img src="{{ url_for('static', filename='img/projects/gang-assist.png') }}"
+                                                 alt="gang-assist">
+                                        </h1>
+                                        <span>GANG assist is a system for internal use of employees of GANG shops.
+                                            It is based on AI pretrained model for study materials. And implement an
+                                            system with exams.
+                                        </span>
+                                    </div>
+                                    <div class="px-4 technologies">
+                                        <div class="d-flex justify-content-between mb-3"><span>Django\PostrgreSQL</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>LangChain\OpenAPI</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>React\TS\Vite</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Docker</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Kubernetes</span><i
+                                                class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                    </div>
+                                    <div class="d-flex justify-content-evenly pt-3 pb-4">
+                                        <a href="https://gang-assist.craftgenie.ai/" target="_blank"
+                                           class="btn btn-primary-gradient rounded-pill py-2 px-4 m-1">APP</a>
+
+                                    </div>
+                                </div>
+                            </div> {#  GANG - Assist #}
                         </div>
                     </div>
                 </div>
@@ -746,13 +871,13 @@
             <div class="tab-class text-center doubleButton wow fadeInUp" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-center rounded-pill mb-5">
                     <li class="nav-item">
-                        <button class="btn button-3d nav-link active" data-bs-toggle="pill" href="#tab-1">
+                        <button class="btn button-3d nav-link active" data-bs-toggle="pill" data-bs-target="#tab-1">
                             Educational
                             Experience
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn button-3d nav-link" data-bs-toggle="pill" href="#tab-2">Work
+                        <button class="btn button-3d nav-link" data-bs-toggle="pill" data-bs-target="#tab-2">Work
                             Experience
                         </button>
                     </li>
@@ -929,7 +1054,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane fade show p-0">
+                    <div id="tab-2" class="tab-pane fade p-0">
                         <div class="owl-carousel testimonial-carousel wow fadeInUp">
                             <div class="testimonial-item rounded p-4">
                                 <div class="bg-light rounded">
